@@ -1,0 +1,1785 @@
+[18:09:42] [INFO    ] === IPC Simulation Starting ===
+[18:09:42] [INFO    ] Processes: 5
+[18:09:42] [INFO    ] Queue size: 20
+[18:09:42] [INFO    ] Msg loss:   5%
+[18:09:42] [INFO    ] Registered P1 (priority: HIGH)
+[18:09:42] [INFO    ] Registered P2 (priority: MEDIUM)
+[18:09:42] [INFO    ] Registered P3 (priority: LOW)
+[18:09:42] [INFO    ] Registered P4 (priority: HIGH)
+[18:09:42] [INFO    ] Registered P5 (priority: MEDIUM)
+[18:09:42] [INFO    ] Dispatcher thread started.
+[18:09:42] [SENT    ] QUEUED  [MSG#1 | P1->P5 | LOW | 18:09:42 | "Hello from P1"]
+[18:09:42] [SENT    ] QUEUED  [MSG#4 | P4->P3 | MEDIUM | 18:09:42 | "Hello from P4"]
+[18:09:42] [SENT    ] QUEUED  [MSG#2 | P2->P4 | LOW | 18:09:42 | "Hello from P2"]
+[18:09:42] [INFO    ] All processes started. Simulation running...
+[18:09:42] [SENT    ] QUEUED  [MSG#5 | P5->P2 | HIGH | 18:09:42 | "Hello from P5"]
+[18:09:42] [SENT    ] QUEUED  [MSG#3 | P3->P4 | LOW | 18:09:42 | "Hello from P3"]
+[18:09:43] [RECV    ] DELIVRD [MSG#5 | P5->P2 | HIGH | 18:09:42 | "Hello from P5"] -> P2
+[18:09:43] [RECV    ] DELIVRD [MSG#4 | P4->P3 | MEDIUM | 18:09:42 | "Hello from P4"] -> P3
+[18:09:43] [RECV    ] DELIVRD [MSG#1 | P1->P5 | LOW | 18:09:42 | "Hello from P1"] -> P5
+[18:09:43] [RECV    ] DELIVRD [MSG#2 | P2->P4 | LOW | 18:09:42 | "Hello from P2"] -> P4
+[18:09:43] [INFO    ] P4 processed: [MSG#2 | P2->P4 | LOW | 18:09:42 | "Hello from P2"]
+[18:09:43] [RECV    ] DELIVRD [MSG#3 | P3->P4 | LOW | 18:09:42 | "Hello from P3"] -> P4
+[18:09:43] [INFO    ] P3 processed: [MSG#4 | P4->P3 | MEDIUM | 18:09:42 | "Hello from P4"]
+[18:09:43] [INFO    ] P2 processed: [MSG#5 | P5->P2 | HIGH | 18:09:42 | "Hello from P5"]
+[18:09:43] [INFO    ] P5 processed: [MSG#1 | P1->P5 | LOW | 18:09:42 | "Hello from P1"]
+[18:09:43] [BLOCKED ] P1 is blocking on receive...
+[18:09:43] [SENT    ] QUEUED  [MSG#6 | P4->P1 | HIGH | 18:09:43 | "Hello from P4"]
+[18:09:43] [RECV    ] DELIVRD [MSG#6 | P4->P1 | HIGH | 18:09:43 | "Hello from P4"] -> P1
+[18:09:43] [SENT    ] QUEUED  [MSG#7 | P3->P4 | LOW | 18:09:43 | "Hello from P3"]
+[18:09:43] [RECV    ] DELIVRD [MSG#7 | P3->P4 | LOW | 18:09:43 | "Hello from P3"] -> P4
+[18:09:43] [SENT    ] QUEUED  [MSG#8 | P2->P1 | MEDIUM | 18:09:43 | "Hello from P2"]
+[18:09:43] [INFO    ] P4 processed: [MSG#3 | P3->P4 | LOW | 18:09:42 | "Hello from P3"]
+[18:09:43] [RECV    ] DELIVRD [MSG#8 | P2->P1 | MEDIUM | 18:09:43 | "Hello from P2"] -> P1
+[18:09:43] [UNBLOCKD] P1 unblocked.
+[18:09:43] [INFO    ] P1 processed: [MSG#6 | P4->P1 | HIGH | 18:09:43 | "Hello from P4"]
+[18:09:44] [SENT    ] QUEUED  [MSG#9 | P5->P1 | HIGH | 18:09:44 | "Hello from P5"]
+[18:09:44] [SENT    ] QUEUED  [MSG#10 | P1->P2 | MEDIUM | 18:09:44 | "Hello from P1"]
+[18:09:44] [RECV    ] DELIVRD [MSG#9 | P5->P1 | HIGH | 18:09:44 | "Hello from P5"] -> P1
+[18:09:44] [BLOCKED ] P2 is blocking on receive...
+[18:09:44] [RECV    ] DELIVRD [MSG#10 | P1->P2 | MEDIUM | 18:09:44 | "Hello from P1"] -> P2
+[18:09:44] [BLOCKED ] P3 is blocking on receive...
+[18:09:44] [SENT    ] QUEUED  [MSG#11 | P4->P2 | MEDIUM | 18:09:44 | "Hello from P4"]
+[18:09:44] [RECV    ] DELIVRD [MSG#11 | P4->P2 | MEDIUM | 18:09:44 | "Hello from P4"] -> P2
+[18:09:44] [UNBLOCKD] P2 unblocked.
+[18:09:44] [INFO    ] P2 processed: [MSG#10 | P1->P2 | MEDIUM | 18:09:44 | "Hello from P1"]
+[18:09:44] [UNBLOCKD] P3 unblocked.
+[18:09:44] [INFO    ] P4 processed: [MSG#7 | P3->P4 | LOW | 18:09:43 | "Hello from P3"]
+[18:09:44] [BLOCKED ] P5 is blocking on receive...
+[18:09:45] [INFO    ] P1 processed: [MSG#9 | P5->P1 | HIGH | 18:09:44 | "Hello from P5"]
+[18:09:45] [SENT    ] QUEUED  [MSG#12 | P4->P3 | MEDIUM | 18:09:45 | "Hello from P4"]
+[18:09:45] [RECV    ] DELIVRD [MSG#12 | P4->P3 | MEDIUM | 18:09:45 | "Hello from P4"] -> P3
+[18:09:45] [SENT    ] QUEUED  [MSG#13 | P3->P2 | LOW | 18:09:45 | "Hello from P3"]
+[18:09:45] [SENT    ] QUEUED  [MSG#14 | P2->P4 | MEDIUM | 18:09:45 | "Hello from P2"]
+[18:09:45] [RECV    ] DELIVRD [MSG#14 | P2->P4 | MEDIUM | 18:09:45 | "Hello from P2"] -> P4
+[18:09:45] [RECV    ] DELIVRD [MSG#13 | P3->P2 | LOW | 18:09:45 | "Hello from P3"] -> P2
+[18:09:45] [UNBLOCKD] P5 unblocked.
+[18:09:45] [INFO    ] P4 processed: [MSG#14 | P2->P4 | MEDIUM | 18:09:45 | "Hello from P2"]
+[18:09:45] [INFO    ] P2 processed: [MSG#11 | P4->P2 | MEDIUM | 18:09:44 | "Hello from P4"]
+[18:09:45] [INFO    ] P3 processed: [MSG#12 | P4->P3 | MEDIUM | 18:09:45 | "Hello from P4"]
+[18:09:45] [DROPPED ] DROPPED [MSG#15 | P1->P3 | LOW | 18:09:45 | "Hello from P1"]
+[18:09:45] [SENT    ] QUEUED  [MSG#16 | P5->P1 | MEDIUM | 18:09:45 | "Hello from P5"]
+[18:09:45] [RECV    ] DELIVRD [MSG#16 | P5->P1 | MEDIUM | 18:09:45 | "Hello from P5"] -> P1
+[18:09:45] [SENT    ] QUEUED  [MSG#17 | P2->P1 | MEDIUM | 18:09:45 | "Hello from P2"]
+[18:09:45] [RECV    ] DELIVRD [MSG#17 | P2->P1 | MEDIUM | 18:09:45 | "Hello from P2"] -> P1
+[18:09:45] [BLOCKED ] P5 is blocking on receive...
+[18:09:45] [SENT    ] QUEUED  [MSG#18 | P4->P2 | LOW | 18:09:45 | "Hello from P4"]
+[18:09:45] [RECV    ] DELIVRD [MSG#18 | P4->P2 | LOW | 18:09:45 | "Hello from P4"] -> P2
+[18:09:46] [INFO    ] P1 processed: [MSG#8 | P2->P1 | MEDIUM | 18:09:43 | "Hello from P2"]
+[18:09:46] [SENT    ] QUEUED  [MSG#19 | P3->P2 | LOW | 18:09:46 | "Hello from P3"]
+[18:09:46] [RECV    ] DELIVRD [MSG#19 | P3->P2 | LOW | 18:09:46 | "Hello from P3"] -> P2
+[18:09:46] [UNBLOCKD] P5 unblocked.
+[18:09:46] [SENT    ] QUEUED  [MSG#20 | P1->P2 | MEDIUM | 18:09:46 | "Hello from P1"]
+[18:09:46] [RECV    ] DELIVRD [MSG#20 | P1->P2 | MEDIUM | 18:09:46 | "Hello from P1"] -> P2
+[18:09:46] [INFO    ] P2 processed: [MSG#20 | P1->P2 | MEDIUM | 18:09:46 | "Hello from P1"]
+[18:09:46] [SENT    ] QUEUED  [MSG#21 | P5->P3 | HIGH | 18:09:46 | "Hello from P5"]
+[18:09:46] [RECV    ] DELIVRD [MSG#21 | P5->P3 | HIGH | 18:09:46 | "Hello from P5"] -> P3
+[18:09:46] [BLOCKED ] P4 is blocking on receive...
+[18:09:46] [INFO    ] P1 processed: [MSG#16 | P5->P1 | MEDIUM | 18:09:45 | "Hello from P5"]
+[18:09:46] [SENT    ] QUEUED  [MSG#22 | P2->P3 | MEDIUM | 18:09:46 | "Hello from P2"]
+[18:09:46] [RECV    ] DELIVRD [MSG#22 | P2->P3 | MEDIUM | 18:09:46 | "Hello from P2"] -> P3
+[18:09:46] [INFO    ] P3 processed: [MSG#21 | P5->P3 | HIGH | 18:09:46 | "Hello from P5"]
+[18:09:46] [UNBLOCKD] P4 unblocked.
+[18:09:47] [BLOCKED ] P5 is blocking on receive...
+[18:09:47] [SENT    ] QUEUED  [MSG#23 | P1->P5 | LOW | 18:09:47 | "Hello from P1"]
+[18:09:47] [RECV    ] DELIVRD [MSG#23 | P1->P5 | LOW | 18:09:47 | "Hello from P1"] -> P5
+[18:09:47] [SENT    ] QUEUED  [MSG#24 | P3->P4 | LOW | 18:09:47 | "Hello from P3"]
+[18:09:47] [UNBLOCKD] P5 unblocked.
+[18:09:47] [INFO    ] P5 processed: [MSG#23 | P1->P5 | LOW | 18:09:47 | "Hello from P1"]
+[18:09:47] [RECV    ] DELIVRD [MSG#24 | P3->P4 | LOW | 18:09:47 | "Hello from P3"] -> P4
+[18:09:47] [INFO    ] P2 processed: [MSG#13 | P3->P2 | LOW | 18:09:45 | "Hello from P3"]
+[18:09:47] [INFO    ] P3 processed: [MSG#22 | P2->P3 | MEDIUM | 18:09:46 | "Hello from P2"]
+[18:09:47] [SENT    ] QUEUED  [MSG#25 | P4->P2 | MEDIUM | 18:09:47 | "Hello from P4"]
+[18:09:47] [RECV    ] DELIVRD [MSG#25 | P4->P2 | MEDIUM | 18:09:47 | "Hello from P4"] -> P2
+[18:09:47] [INFO    ] P1 processed: [MSG#17 | P2->P1 | MEDIUM | 18:09:45 | "Hello from P2"]
+[18:09:48] [SENT    ] QUEUED  [MSG#26 | P5->P3 | LOW | 18:09:48 | "Hello from P5"]
+[18:09:48] [RECV    ] DELIVRD [MSG#26 | P5->P3 | LOW | 18:09:48 | "Hello from P5"] -> P3
+[18:09:48] [SENT    ] QUEUED  [MSG#27 | P2->P1 | LOW | 18:09:48 | "Hello from P2"]
+[18:09:48] [RECV    ] DELIVRD [MSG#27 | P2->P1 | LOW | 18:09:48 | "Hello from P2"] -> P1
+[18:09:48] [BLOCKED ] P5 is blocking on receive...
+[18:09:48] [INFO    ] P4 processed: [MSG#24 | P3->P4 | LOW | 18:09:47 | "Hello from P3"]
+[18:09:48] [SENT    ] QUEUED  [MSG#28 | P3->P2 | MEDIUM | 18:09:48 | "Hello from P3"]
+[18:09:48] [RECV    ] DELIVRD [MSG#28 | P3->P2 | MEDIUM | 18:09:48 | "Hello from P3"] -> P2
+[18:09:48] [SENT    ] QUEUED  [MSG#29 | P1->P5 | HIGH | 18:09:48 | "Hello from P1"]
+[18:09:48] [RECV    ] DELIVRD [MSG#29 | P1->P5 | HIGH | 18:09:48 | "Hello from P1"] -> P5
+[18:09:48] [UNBLOCKD] P5 unblocked.
+[18:09:48] [INFO    ] P5 processed: [MSG#29 | P1->P5 | HIGH | 18:09:48 | "Hello from P1"]
+[18:09:48] [INFO    ] P2 processed: [MSG#25 | P4->P2 | MEDIUM | 18:09:47 | "Hello from P4"]
+[18:09:48] [INFO    ] P1 processed: [MSG#27 | P2->P1 | LOW | 18:09:48 | "Hello from P2"]
+[18:09:48] [INFO    ] P3 processed: [MSG#26 | P5->P3 | LOW | 18:09:48 | "Hello from P5"]
+[18:09:48] [SENT    ] QUEUED  [MSG#30 | P4->P5 | LOW | 18:09:48 | "Hello from P4"]
+[18:09:48] [RECV    ] DELIVRD [MSG#30 | P4->P5 | LOW | 18:09:48 | "Hello from P4"] -> P5
+[18:09:49] [SENT    ] QUEUED  [MSG#31 | P3->P5 | MEDIUM | 18:09:49 | "Hello from P3"]
+[18:09:49] [RECV    ] DELIVRD [MSG#31 | P3->P5 | MEDIUM | 18:09:49 | "Hello from P3"] -> P5
+[18:09:49] [SENT    ] QUEUED  [MSG#32 | P1->P5 | HIGH | 18:09:49 | "Hello from P1"]
+[18:09:49] [RECV    ] DELIVRD [MSG#32 | P1->P5 | HIGH | 18:09:49 | "Hello from P1"] -> P5
+[18:09:49] [SENT    ] QUEUED  [MSG#33 | P5->P2 | HIGH | 18:09:49 | "Hello from P5"]
+[18:09:49] [RECV    ] DELIVRD [MSG#33 | P5->P2 | HIGH | 18:09:49 | "Hello from P5"] -> P2
+[18:09:49] [SENT    ] QUEUED  [MSG#34 | P2->P3 | HIGH | 18:09:49 | "Hello from P2"]
+[18:09:49] [RECV    ] DELIVRD [MSG#34 | P2->P3 | HIGH | 18:09:49 | "Hello from P2"] -> P3
+[18:09:49] [BLOCKED ] P4 is blocking on receive...
+[18:09:49] [BLOCKED ] P1 is blocking on receive...
+[18:09:49] [UNBLOCKD] P4 unblocked.
+[18:09:49] [INFO    ] P3 processed: [MSG#34 | P2->P3 | HIGH | 18:09:49 | "Hello from P2"]
+[18:09:49] [UNBLOCKD] P1 unblocked.
+[18:09:50] [SENT    ] QUEUED  [MSG#35 | P3->P5 | LOW | 18:09:50 | "Hello from P3"]
+[18:09:50] [RECV    ] DELIVRD [MSG#35 | P3->P5 | LOW | 18:09:50 | "Hello from P3"] -> P5
+[18:09:50] [INFO    ] P5 processed: [MSG#32 | P1->P5 | HIGH | 18:09:49 | "Hello from P1"]
+[18:09:50] [INFO    ] P2 processed: [MSG#33 | P5->P2 | HIGH | 18:09:49 | "Hello from P5"]
+[18:09:50] [SENT    ] QUEUED  [MSG#36 | P5->P1 | MEDIUM | 18:09:50 | "Hello from P5"]
+[18:09:50] [RECV    ] DELIVRD [MSG#36 | P5->P1 | MEDIUM | 18:09:50 | "Hello from P5"] -> P1
+[18:09:50] [SENT    ] QUEUED  [MSG#37 | P4->P5 | LOW | 18:09:50 | "Hello from P4"]
+[18:09:50] [RECV    ] DELIVRD [MSG#37 | P4->P5 | LOW | 18:09:50 | "Hello from P4"] -> P5
+[18:09:50] [DROPPED ] DROPPED [MSG#38 | P1->P5 | LOW | 18:09:50 | "Hello from P1"]
+[18:09:50] [INFO    ] P5 processed: [MSG#31 | P3->P5 | MEDIUM | 18:09:49 | "Hello from P3"]
+[18:09:50] [DROPPED ] DROPPED [MSG#39 | P2->P4 | LOW | 18:09:50 | "Hello from P2"]
+[18:09:50] [BLOCKED ] P3 is blocking on receive...
+[18:09:50] [INFO    ] P1 processed: [MSG#36 | P5->P1 | MEDIUM | 18:09:50 | "Hello from P5"]
+[18:09:50] [BLOCKED ] P4 is blocking on receive...
+[18:09:50] [UNBLOCKD] P3 unblocked.
+[18:09:51] [INFO    ] P2 processed: [MSG#28 | P3->P2 | MEDIUM | 18:09:48 | "Hello from P3"]
+[18:09:51] [SENT    ] QUEUED  [MSG#40 | P1->P2 | MEDIUM | 18:09:51 | "Hello from P1"]
+[18:09:51] [RECV    ] DELIVRD [MSG#40 | P1->P2 | MEDIUM | 18:09:51 | "Hello from P1"] -> P2
+[18:09:51] [UNBLOCKD] P4 unblocked.
+[18:09:51] [SENT    ] QUEUED  [MSG#41 | P5->P4 | MEDIUM | 18:09:51 | "Hello from P5"]
+[18:09:51] [RECV    ] DELIVRD [MSG#41 | P5->P4 | MEDIUM | 18:09:51 | "Hello from P5"] -> P4
+[18:09:51] [SENT    ] QUEUED  [MSG#42 | P2->P1 | HIGH | 18:09:51 | "Hello from P2"]
+[18:09:51] [BLOCKED ] P1 is blocking on receive...
+[18:09:51] [RECV    ] DELIVRD [MSG#42 | P2->P1 | HIGH | 18:09:51 | "Hello from P2"] -> P1
+[18:09:51] [SENT    ] QUEUED  [MSG#43 | P4->P1 | MEDIUM | 18:09:51 | "Hello from P4"]
+[18:09:51] [RECV    ] DELIVRD [MSG#43 | P4->P1 | MEDIUM | 18:09:51 | "Hello from P4"] -> P1
+[18:09:51] [UNBLOCKD] P1 unblocked.
+[18:09:51] [INFO    ] P1 processed: [MSG#42 | P2->P1 | HIGH | 18:09:51 | "Hello from P2"]
+[18:09:51] [INFO    ] P5 processed: [MSG#35 | P3->P5 | LOW | 18:09:50 | "Hello from P3"]
+[18:09:51] [SENT    ] QUEUED  [MSG#44 | P3->P1 | LOW | 18:09:51 | "Hello from P3"]
+[18:09:51] [RECV    ] DELIVRD [MSG#44 | P3->P1 | LOW | 18:09:51 | "Hello from P3"] -> P1
+[18:09:51] [SENT    ] QUEUED  [MSG#45 | P5->P2 | HIGH | 18:09:51 | "Hello from P5"]
+[18:09:51] [INFO    ] P2 processed: [MSG#40 | P1->P2 | MEDIUM | 18:09:51 | "Hello from P1"]
+[18:09:52] [RECV    ] DELIVRD [MSG#45 | P5->P2 | HIGH | 18:09:51 | "Hello from P5"] -> P2
+[18:09:52] [INFO    ] P4 processed: [MSG#41 | P5->P4 | MEDIUM | 18:09:51 | "Hello from P5"]
+[18:09:52] [BLOCKED ] P3 is blocking on receive...
+[18:09:52] [SENT    ] QUEUED  [MSG#46 | P1->P4 | MEDIUM | 18:09:52 | "Hello from P1"]
+[18:09:52] [RECV    ] DELIVRD [MSG#46 | P1->P4 | MEDIUM | 18:09:52 | "Hello from P1"] -> P4
+[18:09:52] [UNBLOCKD] P3 unblocked.
+[18:09:52] [INFO    ] P5 processed: [MSG#30 | P4->P5 | LOW | 18:09:48 | "Hello from P4"]
+[18:09:52] [SENT    ] QUEUED  [MSG#47 | P2->P3 | LOW | 18:09:52 | "Hello from P2"]
+[18:09:52] [RECV    ] DELIVRD [MSG#47 | P2->P3 | LOW | 18:09:52 | "Hello from P2"] -> P3
+[18:09:52] [SENT    ] QUEUED  [MSG#48 | P4->P5 | LOW | 18:09:52 | "Hello from P4"]
+[18:09:52] [SENT    ] QUEUED  [MSG#49 | P3->P5 | LOW | 18:09:52 | "Hello from P3"]
+[18:09:52] [RECV    ] DELIVRD [MSG#48 | P4->P5 | LOW | 18:09:52 | "Hello from P4"] -> P5
+[18:09:52] [RECV    ] DELIVRD [MSG#49 | P3->P5 | LOW | 18:09:52 | "Hello from P3"] -> P5
+[18:09:52] [INFO    ] P1 processed: [MSG#43 | P4->P1 | MEDIUM | 18:09:51 | "Hello from P4"]
+[18:09:52] [INFO    ] P4 processed: [MSG#46 | P1->P4 | MEDIUM | 18:09:52 | "Hello from P1"]
+[18:09:52] [INFO    ] P3 processed: [MSG#47 | P2->P3 | LOW | 18:09:52 | "Hello from P2"]
+[18:09:53] [SENT    ] QUEUED  [MSG#50 | P5->P2 | MEDIUM | 18:09:53 | "Hello from P5"]
+[18:09:53] [RECV    ] DELIVRD [MSG#50 | P5->P2 | MEDIUM | 18:09:53 | "Hello from P5"] -> P2
+[18:09:53] [INFO    ] P2 processed: [MSG#45 | P5->P2 | HIGH | 18:09:51 | "Hello from P5"]
+[18:09:53] [SENT    ] QUEUED  [MSG#51 | P4->P1 | MEDIUM | 18:09:53 | "Hello from P4"]
+[18:09:53] [RECV    ] DELIVRD [MSG#51 | P4->P1 | MEDIUM | 18:09:53 | "Hello from P4"] -> P1
+[18:09:53] [DROPPED ] DROPPED [MSG#52 | P3->P5 | MEDIUM | 18:09:53 | "Hello from P3"]
+[18:09:53] [INFO    ] P5 processed: [MSG#49 | P3->P5 | LOW | 18:09:52 | "Hello from P3"]
+[18:09:53] [SENT    ] QUEUED  [MSG#53 | P1->P2 | LOW | 18:09:53 | "Hello from P1"]
+[18:09:53] [BLOCKED ] P3 is blocking on receive...
+[18:09:53] [RECV    ] DELIVRD [MSG#53 | P1->P2 | LOW | 18:09:53 | "Hello from P1"] -> P2
+[18:09:53] [SENT    ] QUEUED  [MSG#54 | P5->P2 | MEDIUM | 18:09:53 | "Hello from P5"]
+[18:09:53] [RECV    ] DELIVRD [MSG#54 | P5->P2 | MEDIUM | 18:09:53 | "Hello from P5"] -> P2
+[18:09:53] [BLOCKED ] P4 is blocking on receive...
+[18:09:53] [UNBLOCKD] P3 unblocked.
+[18:09:53] [SENT    ] QUEUED  [MSG#55 | P2->P5 | MEDIUM | 18:09:53 | "Hello from P2"]
+[18:09:53] [RECV    ] DELIVRD [MSG#55 | P2->P5 | MEDIUM | 18:09:53 | "Hello from P2"] -> P5
+[18:09:54] [INFO    ] P1 processed: [MSG#51 | P4->P1 | MEDIUM | 18:09:53 | "Hello from P4"]
+[18:09:54] [INFO    ] P5 processed: [MSG#55 | P2->P5 | MEDIUM | 18:09:53 | "Hello from P2"]
+[18:09:54] [UNBLOCKD] P4 unblocked.
+[18:09:54] [INFO    ] P2 processed: [MSG#50 | P5->P2 | MEDIUM | 18:09:53 | "Hello from P5"]
+[18:09:54] [SENT    ] QUEUED  [MSG#56 | P3->P2 | MEDIUM | 18:09:54 | "Hello from P3"]
+[18:09:54] [RECV    ] DELIVRD [MSG#56 | P3->P2 | MEDIUM | 18:09:54 | "Hello from P3"] -> P2
+[18:09:54] [SENT    ] QUEUED  [MSG#57 | P4->P1 | HIGH | 18:09:54 | "Hello from P4"]
+[18:09:54] [RECV    ] DELIVRD [MSG#57 | P4->P1 | HIGH | 18:09:54 | "Hello from P4"] -> P1
+[18:09:54] [SENT    ] QUEUED  [MSG#58 | P5->P1 | HIGH | 18:09:54 | "Hello from P5"]
+[18:09:54] [SENT    ] QUEUED  [MSG#59 | P1->P2 | HIGH | 18:09:54 | "Hello from P1"]
+[18:09:54] [BLOCKED ] P4 is blocking on receive...
+[18:09:54] [RECV    ] DELIVRD [MSG#58 | P5->P1 | HIGH | 18:09:54 | "Hello from P5"] -> P1
+[18:09:54] [RECV    ] DELIVRD [MSG#59 | P1->P2 | HIGH | 18:09:54 | "Hello from P1"] -> P2
+[18:09:55] [BLOCKED ] P3 is blocking on receive...
+[18:09:55] [SENT    ] QUEUED  [MSG#60 | P2->P3 | MEDIUM | 18:09:55 | "Hello from P2"]
+[18:09:55] [UNBLOCKD] P4 unblocked.
+[18:09:55] [RECV    ] DELIVRD [MSG#60 | P2->P3 | MEDIUM | 18:09:55 | "Hello from P2"] -> P3
+[18:09:55] [INFO    ] P5 processed: [MSG#37 | P4->P5 | LOW | 18:09:50 | "Hello from P4"]
+[18:09:55] [INFO    ] P1 processed: [MSG#57 | P4->P1 | HIGH | 18:09:54 | "Hello from P4"]
+[18:09:55] [UNBLOCKD] P3 unblocked.
+[18:09:55] [INFO    ] P3 processed: [MSG#60 | P2->P3 | MEDIUM | 18:09:55 | "Hello from P2"]
+[18:09:55] [SENT    ] QUEUED  [MSG#61 | P5->P1 | LOW | 18:09:55 | "Hello from P5"]
+[18:09:55] [RECV    ] DELIVRD [MSG#61 | P5->P1 | LOW | 18:09:55 | "Hello from P5"] -> P1
+[18:09:55] [SENT    ] QUEUED  [MSG#62 | P4->P2 | MEDIUM | 18:09:55 | "Hello from P4"]
+[18:09:55] [RECV    ] DELIVRD [MSG#62 | P4->P2 | MEDIUM | 18:09:55 | "Hello from P4"] -> P2
+[18:09:55] [SENT    ] QUEUED  [MSG#63 | P1->P2 | HIGH | 18:09:55 | "Hello from P1"]
+[18:09:55] [RECV    ] DELIVRD [MSG#63 | P1->P2 | HIGH | 18:09:55 | "Hello from P1"] -> P2
+[18:09:55] [INFO    ] P5 processed: [MSG#48 | P4->P5 | LOW | 18:09:52 | "Hello from P4"]
+[18:09:55] [INFO    ] P2 processed: [MSG#59 | P1->P2 | HIGH | 18:09:54 | "Hello from P1"]
+[18:09:55] [SENT    ] QUEUED  [MSG#64 | P3->P1 | MEDIUM | 18:09:55 | "Hello from P3"]
+[18:09:56] [RECV    ] DELIVRD [MSG#64 | P3->P1 | MEDIUM | 18:09:55 | "Hello from P3"] -> P1
+[18:09:56] [BLOCKED ] P4 is blocking on receive...
+[18:09:56] [INFO    ] P1 processed: [MSG#58 | P5->P1 | HIGH | 18:09:54 | "Hello from P5"]
+[18:09:56] [BLOCKED ] P3 is blocking on receive...
+[18:09:56] [SENT    ] QUEUED  [MSG#65 | P5->P2 | MEDIUM | 18:09:56 | "Hello from P5"]
+[18:09:56] [RECV    ] DELIVRD [MSG#65 | P5->P2 | MEDIUM | 18:09:56 | "Hello from P5"] -> P2
+[18:09:56] [SENT    ] QUEUED  [MSG#66 | P2->P3 | MEDIUM | 18:09:56 | "Hello from P2"]
+[18:09:56] [RECV    ] DELIVRD [MSG#66 | P2->P3 | MEDIUM | 18:09:56 | "Hello from P2"] -> P3
+[18:09:56] [UNBLOCKD] P4 unblocked.
+[18:09:56] [UNBLOCKD] P3 unblocked.
+[18:09:56] [INFO    ] P3 processed: [MSG#66 | P2->P3 | MEDIUM | 18:09:56 | "Hello from P2"]
+[18:09:56] [SENT    ] QUEUED  [MSG#67 | P1->P3 | MEDIUM | 18:09:56 | "Hello from P1"]
+[18:09:56] [RECV    ] DELIVRD [MSG#67 | P1->P3 | MEDIUM | 18:09:56 | "Hello from P1"] -> P3
+[18:09:56] [SENT    ] QUEUED  [MSG#68 | P3->P4 | MEDIUM | 18:09:56 | "Hello from P3"]
+[18:09:56] [RECV    ] DELIVRD [MSG#68 | P3->P4 | MEDIUM | 18:09:56 | "Hello from P3"] -> P4
+[18:09:57] [BLOCKED ] P5 is blocking on receive...
+[18:09:57] [INFO    ] P2 processed: [MSG#63 | P1->P2 | HIGH | 18:09:55 | "Hello from P1"]
+[18:09:57] [SENT    ] QUEUED  [MSG#69 | P4->P1 | LOW | 18:09:57 | "Hello from P4"]
+[18:09:57] [RECV    ] DELIVRD [MSG#69 | P4->P1 | LOW | 18:09:57 | "Hello from P4"] -> P1
+[18:09:57] [UNBLOCKD] P5 unblocked.
+[18:09:57] [INFO    ] P1 processed: [MSG#64 | P3->P1 | MEDIUM | 18:09:55 | "Hello from P3"]
+[18:09:57] [SENT    ] QUEUED  [MSG#70 | P2->P1 | MEDIUM | 18:09:57 | "Hello from P2"]
+[18:09:57] [RECV    ] DELIVRD [MSG#70 | P2->P1 | MEDIUM | 18:09:57 | "Hello from P2"] -> P1
+[18:09:57] [INFO    ] P3 processed: [MSG#67 | P1->P3 | MEDIUM | 18:09:56 | "Hello from P1"]
+[18:09:57] [SENT    ] QUEUED  [MSG#71 | P1->P2 | LOW | 18:09:57 | "Hello from P1"]
+[18:09:57] [RECV    ] DELIVRD [MSG#71 | P1->P2 | LOW | 18:09:57 | "Hello from P1"] -> P2
+[18:09:57] [INFO    ] P2 processed: [MSG#54 | P5->P2 | MEDIUM | 18:09:53 | "Hello from P5"]
+[18:09:57] [INFO    ] P4 processed: [MSG#68 | P3->P4 | MEDIUM | 18:09:56 | "Hello from P3"]
+[18:09:58] [INFO    ] P1 processed: [MSG#70 | P2->P1 | MEDIUM | 18:09:57 | "Hello from P2"]
+[18:09:58] [SENT    ] QUEUED  [MSG#72 | P5->P4 | LOW | 18:09:58 | "Hello from P5"]
+[18:09:58] [RECV    ] DELIVRD [MSG#72 | P5->P4 | LOW | 18:09:58 | "Hello from P5"] -> P4
+[18:09:58] [SENT    ] QUEUED  [MSG#73 | P2->P5 | LOW | 18:09:58 | "Hello from P2"]
+[18:09:58] [RECV    ] DELIVRD [MSG#73 | P2->P5 | LOW | 18:09:58 | "Hello from P2"] -> P5
+[18:09:58] [INFO    ] P5 processed: [MSG#73 | P2->P5 | LOW | 18:09:58 | "Hello from P2"]
+[18:09:58] [SENT    ] QUEUED  [MSG#74 | P3->P5 | MEDIUM | 18:09:58 | "Hello from P3"]
+[18:09:58] [RECV    ] DELIVRD [MSG#74 | P3->P5 | MEDIUM | 18:09:58 | "Hello from P3"] -> P5
+[18:09:58] [INFO    ] P2 processed: [MSG#62 | P4->P2 | MEDIUM | 18:09:55 | "Hello from P4"]
+[18:09:58] [SENT    ] QUEUED  [MSG#75 | P4->P1 | MEDIUM | 18:09:58 | "Hello from P4"]
+[18:09:58] [SENT    ] QUEUED  [MSG#76 | P1->P3 | LOW | 18:09:58 | "Hello from P1"]
+[18:09:58] [RECV    ] DELIVRD [MSG#75 | P4->P1 | MEDIUM | 18:09:58 | "Hello from P4"] -> P1
+[18:09:58] [RECV    ] DELIVRD [MSG#76 | P1->P3 | LOW | 18:09:58 | "Hello from P1"] -> P3
+[18:09:58] [INFO    ] P1 processed: [MSG#75 | P4->P1 | MEDIUM | 18:09:58 | "Hello from P4"]
+[18:09:58] [INFO    ] P4 processed: [MSG#72 | P5->P4 | LOW | 18:09:58 | "Hello from P5"]
+[18:09:58] [SENT    ] QUEUED  [MSG#77 | P2->P3 | HIGH | 18:09:58 | "Hello from P2"]
+[18:09:58] [SENT    ] QUEUED  [MSG#78 | P5->P3 | HIGH | 18:09:58 | "Hello from P5"]
+[18:09:58] [RECV    ] DELIVRD [MSG#77 | P2->P3 | HIGH | 18:09:58 | "Hello from P2"] -> P3
+[18:09:58] [INFO    ] P3 processed: [MSG#77 | P2->P3 | HIGH | 18:09:58 | "Hello from P2"]
+[18:09:58] [RECV    ] DELIVRD [MSG#78 | P5->P3 | HIGH | 18:09:58 | "Hello from P5"] -> P3
+[18:09:59] [SENT    ] QUEUED  [MSG#79 | P4->P1 | MEDIUM | 18:09:59 | "Hello from P4"]
+[18:09:59] [RECV    ] DELIVRD [MSG#79 | P4->P1 | MEDIUM | 18:09:59 | "Hello from P4"] -> P1
+[18:09:59] [INFO    ] P2 processed: [MSG#56 | P3->P2 | MEDIUM | 18:09:54 | "Hello from P3"]
+[18:09:59] [INFO    ] P5 processed: [MSG#74 | P3->P5 | MEDIUM | 18:09:58 | "Hello from P3"]
+[18:09:59] [SENT    ] QUEUED  [MSG#80 | P3->P2 | LOW | 18:09:59 | "Hello from P3"]
+[18:09:59] [SENT    ] QUEUED  [MSG#81 | P1->P4 | LOW | 18:09:59 | "Hello from P1"]
+[18:09:59] [RECV    ] DELIVRD [MSG#80 | P3->P2 | LOW | 18:09:59 | "Hello from P3"] -> P2
+[18:09:59] [RECV    ] DELIVRD [MSG#81 | P1->P4 | LOW | 18:09:59 | "Hello from P1"] -> P4
+[18:09:59] [SENT    ] QUEUED  [MSG#82 | P5->P3 | LOW | 18:09:59 | "Hello from P5"]
+[18:09:59] [RECV    ] DELIVRD [MSG#82 | P5->P3 | LOW | 18:09:59 | "Hello from P5"] -> P3
+[18:09:59] [INFO    ] P1 processed: [MSG#79 | P4->P1 | MEDIUM | 18:09:59 | "Hello from P4"]
+[18:09:59] [INFO    ] P4 processed: [MSG#81 | P1->P4 | LOW | 18:09:59 | "Hello from P1"]
+[18:09:59] [BLOCKED ] P5 is blocking on receive...
+[18:09:59] [INFO    ] P3 processed: [MSG#78 | P5->P3 | HIGH | 18:09:58 | "Hello from P5"]
+[18:10:00] [SENT    ] QUEUED  [MSG#83 | P2->P1 | MEDIUM | 18:10:00 | "Hello from P2"]
+[18:10:00] [RECV    ] DELIVRD [MSG#83 | P2->P1 | MEDIUM | 18:10:00 | "Hello from P2"] -> P1
+[18:10:00] [SENT    ] QUEUED  [MSG#84 | P4->P3 | HIGH | 18:10:00 | "Hello from P4"]
+[18:10:00] [RECV    ] DELIVRD [MSG#84 | P4->P3 | HIGH | 18:10:00 | "Hello from P4"] -> P3
+[18:10:00] [UNBLOCKD] P5 unblocked.
+[18:10:00] [INFO    ] P2 processed: [MSG#65 | P5->P2 | MEDIUM | 18:09:56 | "Hello from P5"]
+[18:10:00] [SENT    ] QUEUED  [MSG#85 | P1->P5 | HIGH | 18:10:00 | "Hello from P1"]
+[18:10:00] [RECV    ] DELIVRD [MSG#85 | P1->P5 | HIGH | 18:10:00 | "Hello from P1"] -> P5
+[18:10:00] [SENT    ] QUEUED  [MSG#86 | P3->P5 | LOW | 18:10:00 | "Hello from P3"]
+[18:10:00] [RECV    ] DELIVRD [MSG#86 | P3->P5 | LOW | 18:10:00 | "Hello from P3"] -> P5
+[18:10:00] [SENT    ] QUEUED  [MSG#87 | P5->P1 | MEDIUM | 18:10:00 | "Hello from P5"]
+[18:10:00] [RECV    ] DELIVRD [MSG#87 | P5->P1 | MEDIUM | 18:10:00 | "Hello from P5"] -> P1
+[18:10:00] [BLOCKED ] P4 is blocking on receive...
+[18:10:00] [SENT    ] QUEUED  [MSG#88 | P2->P5 | MEDIUM | 18:10:00 | "Hello from P2"]
+[18:10:00] [INFO    ] P5 processed: [MSG#85 | P1->P5 | HIGH | 18:10:00 | "Hello from P1"]
+[18:10:00] [INFO    ] P3 processed: [MSG#84 | P4->P3 | HIGH | 18:10:00 | "Hello from P4"]
+[18:10:00] [RECV    ] DELIVRD [MSG#88 | P2->P5 | MEDIUM | 18:10:00 | "Hello from P2"] -> P5
+[18:10:00] [UNBLOCKD] P4 unblocked.
+[18:10:00] [INFO    ] P1 processed: [MSG#83 | P2->P1 | MEDIUM | 18:10:00 | "Hello from P2"]
+[18:10:00] [SENT    ] QUEUED  [MSG#89 | P3->P1 | LOW | 18:10:00 | "Hello from P3"]
+[18:10:00] [RECV    ] DELIVRD [MSG#89 | P3->P1 | LOW | 18:10:00 | "Hello from P3"] -> P1
+[18:10:01] [INFO    ] P2 processed: [MSG#19 | P3->P2 | LOW | 18:09:46 | "Hello from P3"]
+[18:10:01] [SENT    ] QUEUED  [MSG#90 | P1->P5 | LOW | 18:10:01 | "Hello from P1"]
+[18:10:01] [RECV    ] DELIVRD [MSG#90 | P1->P5 | LOW | 18:10:01 | "Hello from P1"] -> P5
+[18:10:01] [SENT    ] QUEUED  [MSG#91 | P5->P4 | MEDIUM | 18:10:01 | "Hello from P5"]
+[18:10:01] [RECV    ] DELIVRD [MSG#91 | P5->P4 | MEDIUM | 18:10:01 | "Hello from P5"] -> P4
+[18:10:01] [SENT    ] QUEUED  [MSG#92 | P2->P5 | LOW | 18:10:01 | "Hello from P2"]
+[18:10:01] [RECV    ] DELIVRD [MSG#92 | P2->P5 | LOW | 18:10:01 | "Hello from P2"] -> P5
+[18:10:01] [INFO    ] P1 processed: [MSG#87 | P5->P1 | MEDIUM | 18:10:00 | "Hello from P5"]
+[18:10:01] [SENT    ] QUEUED  [MSG#93 | P4->P5 | HIGH | 18:10:01 | "Hello from P4"]
+[18:10:01] [RECV    ] DELIVRD [MSG#93 | P4->P5 | HIGH | 18:10:01 | "Hello from P4"] -> P5
+[18:10:01] [INFO    ] P5 processed: [MSG#93 | P4->P5 | HIGH | 18:10:01 | "Hello from P4"]
+[18:10:01] [INFO    ] P3 processed: [MSG#76 | P1->P3 | LOW | 18:09:58 | "Hello from P1"]
+[18:10:01] [INFO    ] P2 processed: [MSG#80 | P3->P2 | LOW | 18:09:59 | "Hello from P3"]
+[18:10:02] [INFO    ] P4 processed: [MSG#91 | P5->P4 | MEDIUM | 18:10:01 | "Hello from P5"]
+[18:10:02] [SENT    ] QUEUED  [MSG#94 | P5->P4 | LOW | 18:10:02 | "Hello from P5"]
+[18:10:02] [RECV    ] DELIVRD [MSG#94 | P5->P4 | LOW | 18:10:02 | "Hello from P5"] -> P4
+[18:10:02] [SENT    ] QUEUED  [MSG#95 | P1->P2 | MEDIUM | 18:10:02 | "Hello from P1"]
+[18:10:02] [SENT    ] QUEUED  [MSG#96 | P2->P5 | LOW | 18:10:02 | "Hello from P2"]
+[18:10:02] [RECV    ] DELIVRD [MSG#95 | P1->P2 | MEDIUM | 18:10:02 | "Hello from P1"] -> P2
+[18:10:02] [RECV    ] DELIVRD [MSG#96 | P2->P5 | LOW | 18:10:02 | "Hello from P2"] -> P5
+[18:10:02] [INFO    ] P5 processed: [MSG#88 | P2->P5 | MEDIUM | 18:10:00 | "Hello from P2"]
+[18:10:02] [SENT    ] QUEUED  [MSG#97 | P3->P1 | LOW | 18:10:02 | "Hello from P3"]
+[18:10:02] [RECV    ] DELIVRD [MSG#97 | P3->P1 | LOW | 18:10:02 | "Hello from P3"] -> P1
+[18:10:02] [SENT    ] QUEUED  [MSG#98 | P4->P5 | MEDIUM | 18:10:02 | "Hello from P4"]
+[18:10:02] [RECV    ] DELIVRD [MSG#98 | P4->P5 | MEDIUM | 18:10:02 | "Hello from P4"] -> P5
+[18:10:02] [SENT    ] QUEUED  [MSG#99 | P5->P1 | MEDIUM | 18:10:02 | "Hello from P5"]
+[18:10:02] [RECV    ] DELIVRD [MSG#99 | P5->P1 | MEDIUM | 18:10:02 | "Hello from P5"] -> P1
+[18:10:02] [INFO    ] P1 processed: [MSG#99 | P5->P1 | MEDIUM | 18:10:02 | "Hello from P5"]
+[18:10:02] [INFO    ] P3 processed: [MSG#82 | P5->P3 | LOW | 18:09:59 | "Hello from P5"]
+[18:10:02] [INFO    ] P4 processed: [MSG#94 | P5->P4 | LOW | 18:10:02 | "Hello from P5"]
+[18:10:03] [INFO    ] P2 processed: [MSG#95 | P1->P2 | MEDIUM | 18:10:02 | "Hello from P1"]
+[18:10:03] [SENT    ] QUEUED  [MSG#100 | P2->P5 | MEDIUM | 18:10:03 | "Hello from P2"]
+[18:10:03] [RECV    ] DELIVRD [MSG#100 | P2->P5 | MEDIUM | 18:10:03 | "Hello from P2"] -> P5
+[18:10:03] [INFO    ] P5 processed: [MSG#98 | P4->P5 | MEDIUM | 18:10:02 | "Hello from P4"]
+[18:10:03] [SENT    ] QUEUED  [MSG#101 | P1->P4 | MEDIUM | 18:10:03 | "Hello from P1"]
+[18:10:03] [RECV    ] DELIVRD [MSG#101 | P1->P4 | MEDIUM | 18:10:03 | "Hello from P1"] -> P4
+[18:10:03] [SENT    ] QUEUED  [MSG#102 | P3->P1 | MEDIUM | 18:10:03 | "Hello from P3"]
+[18:10:03] [RECV    ] DELIVRD [MSG#102 | P3->P1 | MEDIUM | 18:10:03 | "Hello from P3"] -> P1
+[18:10:03] [SENT    ] QUEUED  [MSG#103 | P4->P5 | MEDIUM | 18:10:03 | "Hello from P4"]
+[18:10:03] [RECV    ] DELIVRD [MSG#103 | P4->P5 | MEDIUM | 18:10:03 | "Hello from P4"] -> P5
+[18:10:03] [SENT    ] QUEUED  [MSG#104 | P5->P2 | MEDIUM | 18:10:03 | "Hello from P5"]
+[18:10:03] [RECV    ] DELIVRD [MSG#104 | P5->P2 | MEDIUM | 18:10:03 | "Hello from P5"] -> P2
+[18:10:04] [INFO    ] P2 processed: [MSG#104 | P5->P2 | MEDIUM | 18:10:03 | "Hello from P5"]
+[18:10:04] [INFO    ] P1 processed: [MSG#102 | P3->P1 | MEDIUM | 18:10:03 | "Hello from P3"]
+[18:10:04] [INFO    ] P4 processed: [MSG#101 | P1->P4 | MEDIUM | 18:10:03 | "Hello from P1"]
+[18:10:04] [SENT    ] QUEUED  [MSG#105 | P2->P5 | MEDIUM | 18:10:04 | "Hello from P2"]
+[18:10:04] [INFO    ] P5 processed: [MSG#100 | P2->P5 | MEDIUM | 18:10:03 | "Hello from P2"]
+[18:10:04] [RECV    ] DELIVRD [MSG#105 | P2->P5 | MEDIUM | 18:10:04 | "Hello from P2"] -> P5
+[18:10:04] [BLOCKED ] P3 is blocking on receive...
+[18:10:04] [SENT    ] QUEUED  [MSG#106 | P1->P5 | LOW | 18:10:04 | "Hello from P1"]
+[18:10:04] [RECV    ] DELIVRD [MSG#106 | P1->P5 | LOW | 18:10:04 | "Hello from P1"] -> P5
+[18:10:04] [INFO    ] P2 processed: [MSG#53 | P1->P2 | LOW | 18:09:53 | "Hello from P1"]
+[18:10:04] [UNBLOCKD] P3 unblocked.
+[18:10:04] [SENT    ] QUEUED  [MSG#107 | P5->P4 | MEDIUM | 18:10:04 | "Hello from P5"]
+[18:10:04] [RECV    ] DELIVRD [MSG#107 | P5->P4 | MEDIUM | 18:10:04 | "Hello from P5"] -> P4
+[18:10:04] [SENT    ] QUEUED  [MSG#108 | P2->P4 | MEDIUM | 18:10:04 | "Hello from P2"]
+[18:10:04] [RECV    ] DELIVRD [MSG#108 | P2->P4 | MEDIUM | 18:10:04 | "Hello from P2"] -> P4
+[18:10:05] [SENT    ] QUEUED  [MSG#109 | P4->P1 | LOW | 18:10:05 | "Hello from P4"]
+[18:10:05] [RECV    ] DELIVRD [MSG#109 | P4->P1 | LOW | 18:10:05 | "Hello from P4"] -> P1
+[18:10:05] [INFO    ] P1 processed: [MSG#69 | P4->P1 | LOW | 18:09:57 | "Hello from P4"]
+[18:10:05] [SENT    ] QUEUED  [MSG#110 | P3->P5 | HIGH | 18:10:05 | "Hello from P3"]
+[18:10:05] [RECV    ] DELIVRD [MSG#110 | P3->P5 | HIGH | 18:10:05 | "Hello from P3"] -> P5
+[18:10:05] [INFO    ] P5 processed: [MSG#110 | P3->P5 | HIGH | 18:10:05 | "Hello from P3"]
+[18:10:05] [INFO    ] P2 processed: [MSG#71 | P1->P2 | LOW | 18:09:57 | "Hello from P1"]
+[18:10:05] [SENT    ] QUEUED  [MSG#111 | P1->P4 | LOW | 18:10:05 | "Hello from P1"]
+[18:10:05] [RECV    ] DELIVRD [MSG#111 | P1->P4 | LOW | 18:10:05 | "Hello from P1"] -> P4
+[18:10:05] [INFO    ] P4 processed: [MSG#107 | P5->P4 | MEDIUM | 18:10:04 | "Hello from P5"]
+[18:10:05] [DROPPED ] DROPPED [MSG#112 | P2->P5 | LOW | 18:10:05 | "Hello from P2"]
+[18:10:05] [BLOCKED ] P3 is blocking on receive...
+[18:10:05] [SENT    ] QUEUED  [MSG#113 | P5->P3 | LOW | 18:10:05 | "Hello from P5"]
+[18:10:05] [RECV    ] DELIVRD [MSG#113 | P5->P3 | LOW | 18:10:05 | "Hello from P5"] -> P3
+[18:10:06] [UNBLOCKD] P3 unblocked.
+[18:10:06] [INFO    ] P3 processed: [MSG#113 | P5->P3 | LOW | 18:10:05 | "Hello from P5"]
+[18:10:06] [INFO    ] P2 processed: [MSG#18 | P4->P2 | LOW | 18:09:45 | "Hello from P4"]
+[18:10:06] [SENT    ] QUEUED  [MSG#114 | P4->P5 | LOW | 18:10:06 | "Hello from P4"]
+[18:10:06] [INFO    ] P1 processed: [MSG#89 | P3->P1 | LOW | 18:10:00 | "Hello from P3"]
+[18:10:06] [RECV    ] DELIVRD [MSG#114 | P4->P5 | LOW | 18:10:06 | "Hello from P4"] -> P5
+[18:10:06] [INFO    ] P5 processed: [MSG#105 | P2->P5 | MEDIUM | 18:10:04 | "Hello from P2"]
+[18:10:06] [SENT    ] QUEUED  [MSG#115 | P2->P4 | LOW | 18:10:06 | "Hello from P2"]
+[18:10:06] [RECV    ] DELIVRD [MSG#115 | P2->P4 | LOW | 18:10:06 | "Hello from P2"] -> P4
+[18:10:06] [SENT    ] QUEUED  [MSG#116 | P3->P2 | MEDIUM | 18:10:06 | "Hello from P3"]
+[18:10:06] [RECV    ] DELIVRD [MSG#116 | P3->P2 | MEDIUM | 18:10:06 | "Hello from P3"] -> P2
+[18:10:06] [SENT    ] QUEUED  [MSG#117 | P5->P3 | LOW | 18:10:06 | "Hello from P5"]
+[18:10:06] [RECV    ] DELIVRD [MSG#117 | P5->P3 | LOW | 18:10:06 | "Hello from P5"] -> P3
+[18:10:06] [SENT    ] QUEUED  [MSG#118 | P1->P2 | MEDIUM | 18:10:06 | "Hello from P1"]
+[18:10:06] [RECV    ] DELIVRD [MSG#118 | P1->P2 | MEDIUM | 18:10:06 | "Hello from P1"] -> P2
+[18:10:06] [INFO    ] P4 processed: [MSG#108 | P2->P4 | MEDIUM | 18:10:04 | "Hello from P2"]
+[18:10:06] [INFO    ] P5 processed: [MSG#103 | P4->P5 | MEDIUM | 18:10:03 | "Hello from P4"]
+[18:10:06] [INFO    ] P3 processed: [MSG#117 | P5->P3 | LOW | 18:10:06 | "Hello from P5"]
+[18:10:07] [INFO    ] P2 processed: [MSG#116 | P3->P2 | MEDIUM | 18:10:06 | "Hello from P3"]
+[18:10:07] [SENT    ] QUEUED  [MSG#119 | P5->P2 | HIGH | 18:10:07 | "Hello from P5"]
+[18:10:07] [RECV    ] DELIVRD [MSG#119 | P5->P2 | HIGH | 18:10:07 | "Hello from P5"] -> P2
+[18:10:07] [INFO    ] P1 processed: [MSG#109 | P4->P1 | LOW | 18:10:05 | "Hello from P4"]
+[18:10:07] [SENT    ] QUEUED  [MSG#120 | P2->P1 | MEDIUM | 18:10:07 | "Hello from P2"]
+[18:10:07] [RECV    ] DELIVRD [MSG#120 | P2->P1 | MEDIUM | 18:10:07 | "Hello from P2"] -> P1
+[18:10:07] [SENT    ] QUEUED  [MSG#121 | P4->P1 | HIGH | 18:10:07 | "Hello from P4"]
+[18:10:07] [RECV    ] DELIVRD [MSG#121 | P4->P1 | HIGH | 18:10:07 | "Hello from P4"] -> P1
+[18:10:07] [SENT    ] QUEUED  [MSG#122 | P3->P4 | MEDIUM | 18:10:07 | "Hello from P3"]
+[18:10:07] [RECV    ] DELIVRD [MSG#122 | P3->P4 | MEDIUM | 18:10:07 | "Hello from P3"] -> P4
+[18:10:07] [INFO    ] P2 processed: [MSG#119 | P5->P2 | HIGH | 18:10:07 | "Hello from P5"]
+[18:10:07] [INFO    ] P5 processed: [MSG#96 | P2->P5 | LOW | 18:10:02 | "Hello from P2"]
+[18:10:07] [SENT    ] QUEUED  [MSG#123 | P1->P4 | LOW | 18:10:07 | "Hello from P1"]
+[18:10:07] [RECV    ] DELIVRD [MSG#123 | P1->P4 | LOW | 18:10:07 | "Hello from P1"] -> P4
+[18:10:08] [SENT    ] QUEUED  [MSG#124 | P2->P3 | HIGH | 18:10:08 | "Hello from P2"]
+[18:10:08] [RECV    ] DELIVRD [MSG#124 | P2->P3 | HIGH | 18:10:08 | "Hello from P2"] -> P3
+[18:10:08] [INFO    ] P4 processed: [MSG#122 | P3->P4 | MEDIUM | 18:10:07 | "Hello from P3"]
+[18:10:08] [INFO    ] P3 processed: [MSG#124 | P2->P3 | HIGH | 18:10:08 | "Hello from P2"]
+[18:10:08] [SENT    ] QUEUED  [MSG#125 | P5->P1 | LOW | 18:10:08 | "Hello from P5"]
+[18:10:08] [RECV    ] DELIVRD [MSG#125 | P5->P1 | LOW | 18:10:08 | "Hello from P5"] -> P1
+[18:10:08] [INFO    ] P1 processed: [MSG#121 | P4->P1 | HIGH | 18:10:07 | "Hello from P4"]
+[18:10:08] [SENT    ] QUEUED  [MSG#126 | P4->P1 | LOW | 18:10:08 | "Hello from P4"]
+[18:10:08] [RECV    ] DELIVRD [MSG#126 | P4->P1 | LOW | 18:10:08 | "Hello from P4"] -> P1
+[18:10:08] [SENT    ] QUEUED  [MSG#127 | P3->P1 | MEDIUM | 18:10:08 | "Hello from P3"]
+[18:10:08] [RECV    ] DELIVRD [MSG#127 | P3->P1 | MEDIUM | 18:10:08 | "Hello from P3"] -> P1
+[18:10:08] [INFO    ] P4 processed: [MSG#111 | P1->P4 | LOW | 18:10:05 | "Hello from P1"]
+[18:10:08] [INFO    ] P5 processed: [MSG#106 | P1->P5 | LOW | 18:10:04 | "Hello from P1"]
+[18:10:08] [SENT    ] QUEUED  [MSG#128 | P1->P5 | HIGH | 18:10:08 | "Hello from P1"]
+[18:10:08] [INFO    ] P2 processed: [MSG#118 | P1->P2 | MEDIUM | 18:10:06 | "Hello from P1"]
+[18:10:08] [RECV    ] DELIVRD [MSG#128 | P1->P5 | HIGH | 18:10:08 | "Hello from P1"] -> P5
+[18:10:09] [SENT    ] QUEUED  [MSG#129 | P5->P1 | MEDIUM | 18:10:09 | "Hello from P5"]
+[18:10:09] [RECV    ] DELIVRD [MSG#129 | P5->P1 | MEDIUM | 18:10:09 | "Hello from P5"] -> P1
+[18:10:09] [INFO    ] P1 processed: [MSG#120 | P2->P1 | MEDIUM | 18:10:07 | "Hello from P2"]
+[18:10:09] [BLOCKED ] P3 is blocking on receive...
+[18:10:09] [INFO    ] P5 processed: [MSG#128 | P1->P5 | HIGH | 18:10:08 | "Hello from P1"]
+[18:10:09] [SENT    ] QUEUED  [MSG#130 | P4->P2 | MEDIUM | 18:10:09 | "Hello from P4"]
+[18:10:09] [RECV    ] DELIVRD [MSG#130 | P4->P2 | MEDIUM | 18:10:09 | "Hello from P4"] -> P2
+[18:10:09] [UNBLOCKD] P3 unblocked.
+[18:10:09] [SENT    ] QUEUED  [MSG#131 | P2->P4 | HIGH | 18:10:09 | "Hello from P2"]
+[18:10:09] [RECV    ] DELIVRD [MSG#131 | P2->P4 | HIGH | 18:10:09 | "Hello from P2"] -> P4
+[18:10:09] [SENT    ] QUEUED  [MSG#132 | P5->P1 | HIGH | 18:10:09 | "Hello from P5"]
+[18:10:09] [RECV    ] DELIVRD [MSG#132 | P5->P1 | HIGH | 18:10:09 | "Hello from P5"] -> P1
+[18:10:09] [SENT    ] QUEUED  [MSG#133 | P3->P5 | MEDIUM | 18:10:09 | "Hello from P3"]
+[18:10:09] [SENT    ] QUEUED  [MSG#134 | P1->P4 | MEDIUM | 18:10:09 | "Hello from P1"]
+[18:10:09] [RECV    ] DELIVRD [MSG#133 | P3->P5 | MEDIUM | 18:10:09 | "Hello from P3"] -> P5
+[18:10:09] [RECV    ] DELIVRD [MSG#134 | P1->P4 | MEDIUM | 18:10:09 | "Hello from P1"] -> P4
+[18:10:09] [INFO    ] P5 processed: [MSG#133 | P3->P5 | MEDIUM | 18:10:09 | "Hello from P3"]
+[18:10:10] [INFO    ] P4 processed: [MSG#131 | P2->P4 | HIGH | 18:10:09 | "Hello from P2"]
+[18:10:10] [INFO    ] P2 processed: [MSG#130 | P4->P2 | MEDIUM | 18:10:09 | "Hello from P4"]
+[18:10:10] [BLOCKED ] P3 is blocking on receive...
+[18:10:10] [SENT    ] QUEUED  [MSG#135 | P2->P1 | HIGH | 18:10:10 | "Hello from P2"]
+[18:10:10] [RECV    ] DELIVRD [MSG#135 | P2->P1 | HIGH | 18:10:10 | "Hello from P2"] -> P1
+[18:10:10] [SENT    ] QUEUED  [MSG#136 | P5->P2 | LOW | 18:10:10 | "Hello from P5"]
+[18:10:10] [RECV    ] DELIVRD [MSG#136 | P5->P2 | LOW | 18:10:10 | "Hello from P5"] -> P2
+[18:10:10] [INFO    ] P1 processed: [MSG#132 | P5->P1 | HIGH | 18:10:09 | "Hello from P5"]
+[18:10:10] [UNBLOCKD] P3 unblocked.
+[18:10:10] [SENT    ] QUEUED  [MSG#137 | P4->P1 | MEDIUM | 18:10:10 | "Hello from P4"]
+[18:10:10] [RECV    ] DELIVRD [MSG#137 | P4->P1 | MEDIUM | 18:10:10 | "Hello from P4"] -> P1
+[18:10:10] [INFO    ] P5 processed: [MSG#86 | P3->P5 | LOW | 18:10:00 | "Hello from P3"]
+[18:10:10] [SENT    ] QUEUED  [MSG#138 | P1->P3 | HIGH | 18:10:10 | "Hello from P1"]
+[18:10:10] [RECV    ] DELIVRD [MSG#138 | P1->P3 | HIGH | 18:10:10 | "Hello from P1"] -> P3
+[18:10:10] [INFO    ] P1 processed: [MSG#135 | P2->P1 | HIGH | 18:10:10 | "Hello from P2"]
+[18:10:11] [INFO    ] P2 processed: [MSG#136 | P5->P2 | LOW | 18:10:10 | "Hello from P5"]
+[18:10:11] [SENT    ] QUEUED  [MSG#139 | P3->P2 | MEDIUM | 18:10:11 | "Hello from P3"]
+[18:10:11] [RECV    ] DELIVRD [MSG#139 | P3->P2 | MEDIUM | 18:10:11 | "Hello from P3"] -> P2
+[18:10:11] [INFO    ] P4 processed: [MSG#134 | P1->P4 | MEDIUM | 18:10:09 | "Hello from P1"]
+[18:10:11] [SENT    ] QUEUED  [MSG#140 | P5->P1 | LOW | 18:10:11 | "Hello from P5"]
+[18:10:11] [RECV    ] DELIVRD [MSG#140 | P5->P1 | LOW | 18:10:11 | "Hello from P5"] -> P1
+[18:10:11] [SENT    ] QUEUED  [MSG#141 | P1->P3 | LOW | 18:10:11 | "Hello from P1"]
+[18:10:11] [RECV    ] DELIVRD [MSG#141 | P1->P3 | LOW | 18:10:11 | "Hello from P1"] -> P3
+[18:10:11] [INFO    ] P3 processed: [MSG#138 | P1->P3 | HIGH | 18:10:10 | "Hello from P1"]
+[18:10:11] [INFO    ] P5 processed: [MSG#90 | P1->P5 | LOW | 18:10:01 | "Hello from P1"]
+[18:10:11] [DROPPED ] DROPPED [MSG#142 | P4->P5 | LOW | 18:10:11 | "Hello from P4"]
+[18:10:11] [SENT    ] QUEUED  [MSG#143 | P2->P1 | MEDIUM | 18:10:11 | "Hello from P2"]
+[18:10:11] [RECV    ] DELIVRD [MSG#143 | P2->P1 | MEDIUM | 18:10:11 | "Hello from P2"] -> P1
+[18:10:11] [SENT    ] QUEUED  [MSG#144 | P3->P4 | MEDIUM | 18:10:11 | "Hello from P3"]
+[18:10:11] [INFO    ] P2 processed: [MSG#139 | P3->P2 | MEDIUM | 18:10:11 | "Hello from P3"]
+[18:10:11] [INFO    ] P4 processed: [MSG#123 | P1->P4 | LOW | 18:10:07 | "Hello from P1"]
+[18:10:11] [RECV    ] DELIVRD [MSG#144 | P3->P4 | MEDIUM | 18:10:11 | "Hello from P3"] -> P4
+[18:10:12] [SENT    ] QUEUED  [MSG#145 | P5->P3 | MEDIUM | 18:10:12 | "Hello from P5"]
+[18:10:12] [RECV    ] DELIVRD [MSG#145 | P5->P3 | MEDIUM | 18:10:12 | "Hello from P5"] -> P3
+[18:10:12] [INFO    ] P1 processed: [MSG#127 | P3->P1 | MEDIUM | 18:10:08 | "Hello from P3"]
+[18:10:12] [SENT    ] QUEUED  [MSG#146 | P4->P5 | MEDIUM | 18:10:12 | "Hello from P4"]
+[18:10:12] [RECV    ] DELIVRD [MSG#146 | P4->P5 | MEDIUM | 18:10:12 | "Hello from P4"] -> P5
+[18:10:12] [SENT    ] QUEUED  [MSG#147 | P2->P4 | MEDIUM | 18:10:12 | "Hello from P2"]
+[18:10:12] [RECV    ] DELIVRD [MSG#147 | P2->P4 | MEDIUM | 18:10:12 | "Hello from P2"] -> P4
+[18:10:12] [INFO    ] P5 processed: [MSG#146 | P4->P5 | MEDIUM | 18:10:12 | "Hello from P4"]
+[18:10:12] [SENT    ] QUEUED  [MSG#148 | P1->P2 | HIGH | 18:10:12 | "Hello from P1"]
+[18:10:12] [INFO    ] P4 processed: [MSG#144 | P3->P4 | MEDIUM | 18:10:11 | "Hello from P3"]
+[18:10:12] [RECV    ] DELIVRD [MSG#148 | P1->P2 | HIGH | 18:10:12 | "Hello from P1"] -> P2
+[18:10:12] [INFO    ] P3 processed: [MSG#145 | P5->P3 | MEDIUM | 18:10:12 | "Hello from P5"]
+[18:10:12] [INFO    ] P1 processed: [MSG#129 | P5->P1 | MEDIUM | 18:10:09 | "Hello from P5"]
+[18:10:12] [SENT    ] QUEUED  [MSG#149 | P5->P2 | MEDIUM | 18:10:12 | "Hello from P5"]
+[18:10:12] [RECV    ] DELIVRD [MSG#149 | P5->P2 | MEDIUM | 18:10:12 | "Hello from P5"] -> P2
+[18:10:12] [SENT    ] QUEUED  [MSG#150 | P3->P1 | HIGH | 18:10:12 | "Hello from P3"]
+[18:10:12] [RECV    ] DELIVRD [MSG#150 | P3->P1 | HIGH | 18:10:12 | "Hello from P3"] -> P1
+[18:10:12] [INFO    ] P5 processed: [MSG#114 | P4->P5 | LOW | 18:10:06 | "Hello from P4"]
+[18:10:12] [SENT    ] QUEUED  [MSG#151 | P4->P5 | MEDIUM | 18:10:12 | "Hello from P4"]
+[18:10:12] [RECV    ] DELIVRD [MSG#151 | P4->P5 | MEDIUM | 18:10:12 | "Hello from P4"] -> P5
+[18:10:12] [SENT    ] QUEUED  [MSG#152 | P1->P4 | LOW | 18:10:12 | "Hello from P1"]
+[18:10:13] [INFO    ] P2 processed: [MSG#148 | P1->P2 | HIGH | 18:10:12 | "Hello from P1"]
+[18:10:13] [RECV    ] DELIVRD [MSG#152 | P1->P4 | LOW | 18:10:12 | "Hello from P1"] -> P4
+[18:10:13] [SENT    ] QUEUED  [MSG#153 | P5->P3 | MEDIUM | 18:10:13 | "Hello from P5"]
+[18:10:13] [RECV    ] DELIVRD [MSG#153 | P5->P3 | MEDIUM | 18:10:13 | "Hello from P5"] -> P3
+[18:10:13] [INFO    ] P3 processed: [MSG#153 | P5->P3 | MEDIUM | 18:10:13 | "Hello from P5"]
+[18:10:13] [INFO    ] P4 processed: [MSG#147 | P2->P4 | MEDIUM | 18:10:12 | "Hello from P2"]
+[18:10:13] [INFO    ] P5 processed: [MSG#151 | P4->P5 | MEDIUM | 18:10:12 | "Hello from P4"]
+[18:10:13] [INFO    ] P1 processed: [MSG#150 | P3->P1 | HIGH | 18:10:12 | "Hello from P3"]
+[18:10:13] [SENT    ] QUEUED  [MSG#154 | P2->P5 | HIGH | 18:10:13 | "Hello from P2"]
+[18:10:13] [RECV    ] DELIVRD [MSG#154 | P2->P5 | HIGH | 18:10:13 | "Hello from P2"] -> P5
+[18:10:13] [SENT    ] QUEUED  [MSG#155 | P4->P5 | MEDIUM | 18:10:13 | "Hello from P4"]
+[18:10:13] [RECV    ] DELIVRD [MSG#155 | P4->P5 | MEDIUM | 18:10:13 | "Hello from P4"] -> P5
+[18:10:14] [SENT    ] QUEUED  [MSG#156 | P3->P1 | HIGH | 18:10:14 | "Hello from P3"]
+[18:10:14] [RECV    ] DELIVRD [MSG#156 | P3->P1 | HIGH | 18:10:14 | "Hello from P3"] -> P1
+[18:10:14] [SENT    ] QUEUED  [MSG#157 | P5->P2 | MEDIUM | 18:10:14 | "Hello from P5"]
+[18:10:14] [INFO    ] P3 processed: [MSG#141 | P1->P3 | LOW | 18:10:11 | "Hello from P1"]
+[18:10:14] [RECV    ] DELIVRD [MSG#157 | P5->P2 | MEDIUM | 18:10:14 | "Hello from P5"] -> P2
+[18:10:14] [INFO    ] P2 processed: [MSG#149 | P5->P2 | MEDIUM | 18:10:12 | "Hello from P5"]
+[18:10:14] [SENT    ] QUEUED  [MSG#158 | P1->P4 | MEDIUM | 18:10:14 | "Hello from P1"]
+[18:10:14] [RECV    ] DELIVRD [MSG#158 | P1->P4 | MEDIUM | 18:10:14 | "Hello from P1"] -> P4
+[18:10:14] [INFO    ] P4 processed: [MSG#158 | P1->P4 | MEDIUM | 18:10:14 | "Hello from P1"]
+[18:10:14] [INFO    ] P5 processed: [MSG#154 | P2->P5 | HIGH | 18:10:13 | "Hello from P2"]
+[18:10:14] [INFO    ] P1 processed: [MSG#156 | P3->P1 | HIGH | 18:10:14 | "Hello from P3"]
+[18:10:14] [SENT    ] QUEUED  [MSG#159 | P2->P4 | LOW | 18:10:14 | "Hello from P2"]
+[18:10:14] [RECV    ] DELIVRD [MSG#159 | P2->P4 | LOW | 18:10:14 | "Hello from P2"] -> P4
+[18:10:14] [SENT    ] QUEUED  [MSG#160 | P4->P1 | MEDIUM | 18:10:14 | "Hello from P4"]
+[18:10:14] [RECV    ] DELIVRD [MSG#160 | P4->P1 | MEDIUM | 18:10:14 | "Hello from P4"] -> P1
+[18:10:14] [SENT    ] QUEUED  [MSG#161 | P3->P2 | LOW | 18:10:14 | "Hello from P3"]
+[18:10:14] [RECV    ] DELIVRD [MSG#161 | P3->P2 | LOW | 18:10:14 | "Hello from P3"] -> P2
+[18:10:15] [SENT    ] QUEUED  [MSG#162 | P5->P4 | LOW | 18:10:15 | "Hello from P5"]
+[18:10:15] [RECV    ] DELIVRD [MSG#162 | P5->P4 | LOW | 18:10:15 | "Hello from P5"] -> P4
+[18:10:15] [SENT    ] QUEUED  [MSG#163 | P1->P2 | HIGH | 18:10:15 | "Hello from P1"]
+[18:10:15] [RECV    ] DELIVRD [MSG#163 | P1->P2 | HIGH | 18:10:15 | "Hello from P1"] -> P2
+[18:10:15] [BLOCKED ] P3 is blocking on receive...
+[18:10:15] [INFO    ] P4 processed: [MSG#152 | P1->P4 | LOW | 18:10:12 | "Hello from P1"]
+[18:10:15] [INFO    ] P2 processed: [MSG#163 | P1->P2 | HIGH | 18:10:15 | "Hello from P1"]
+[18:10:15] [UNBLOCKD] P3 unblocked.
+[18:10:15] [INFO    ] P1 processed: [MSG#143 | P2->P1 | MEDIUM | 18:10:11 | "Hello from P2"]
+[18:10:15] [SENT    ] QUEUED  [MSG#164 | P4->P5 | HIGH | 18:10:15 | "Hello from P4"]
+[18:10:15] [RECV    ] DELIVRD [MSG#164 | P4->P5 | HIGH | 18:10:15 | "Hello from P4"] -> P5
+[18:10:16] [INFO    ] P5 processed: [MSG#164 | P4->P5 | HIGH | 18:10:15 | "Hello from P4"]
+[18:10:16] [SENT    ] QUEUED  [MSG#165 | P3->P2 | HIGH | 18:10:16 | "Hello from P3"]
+[18:10:16] [RECV    ] DELIVRD [MSG#165 | P3->P2 | HIGH | 18:10:16 | "Hello from P3"] -> P2
+[18:10:16] [SENT    ] QUEUED  [MSG#166 | P5->P1 | MEDIUM | 18:10:16 | "Hello from P5"]
+[18:10:16] [RECV    ] DELIVRD [MSG#166 | P5->P1 | MEDIUM | 18:10:16 | "Hello from P5"] -> P1
+[18:10:16] [SENT    ] QUEUED  [MSG#167 | P1->P3 | LOW | 18:10:16 | "Hello from P1"]
+[18:10:16] [RECV    ] DELIVRD [MSG#167 | P1->P3 | LOW | 18:10:16 | "Hello from P1"] -> P3
+[18:10:16] [SENT    ] QUEUED  [MSG#168 | P2->P5 | LOW | 18:10:16 | "Hello from P2"]
+[18:10:16] [RECV    ] DELIVRD [MSG#168 | P2->P5 | LOW | 18:10:16 | "Hello from P2"] -> P5
+[18:10:16] [INFO    ] P4 processed: [MSG#159 | P2->P4 | LOW | 18:10:14 | "Hello from P2"]
+[18:10:16] [INFO    ] P3 processed: [MSG#167 | P1->P3 | LOW | 18:10:16 | "Hello from P1"]
+[18:10:16] [INFO    ] P1 processed: [MSG#137 | P4->P1 | MEDIUM | 18:10:10 | "Hello from P4"]
+[18:10:16] [INFO    ] P2 processed: [MSG#165 | P3->P2 | HIGH | 18:10:16 | "Hello from P3"]
+[18:10:16] [INFO    ] P5 processed: [MSG#155 | P4->P5 | MEDIUM | 18:10:13 | "Hello from P4"]
+[18:10:16] [SENT    ] QUEUED  [MSG#169 | P3->P2 | LOW | 18:10:16 | "Hello from P3"]
+[18:10:16] [SENT    ] QUEUED  [MSG#170 | P1->P5 | LOW | 18:10:16 | "Hello from P1"]
+[18:10:16] [RECV    ] DELIVRD [MSG#169 | P3->P2 | LOW | 18:10:16 | "Hello from P3"] -> P2
+[18:10:17] [SENT    ] QUEUED  [MSG#171 | P2->P1 | LOW | 18:10:17 | "Hello from P2"]
+[18:10:17] [RECV    ] DELIVRD [MSG#170 | P1->P5 | LOW | 18:10:16 | "Hello from P1"] -> P5
+[18:10:17] [RECV    ] DELIVRD [MSG#171 | P2->P1 | LOW | 18:10:17 | "Hello from P2"] -> P1
+[18:10:17] [SENT    ] QUEUED  [MSG#172 | P4->P5 | MEDIUM | 18:10:17 | "Hello from P4"]
+[18:10:17] [RECV    ] DELIVRD [MSG#172 | P4->P5 | MEDIUM | 18:10:17 | "Hello from P4"] -> P5
+[18:10:17] [BLOCKED ] P3 is blocking on receive...
+[18:10:17] [INFO    ] P2 processed: [MSG#157 | P5->P2 | MEDIUM | 18:10:14 | "Hello from P5"]
+[18:10:17] [INFO    ] P4 processed: [MSG#115 | P2->P4 | LOW | 18:10:06 | "Hello from P2"]
+[18:10:17] [SENT    ] QUEUED  [MSG#173 | P5->P4 | LOW | 18:10:17 | "Hello from P5"]
+[18:10:17] [UNBLOCKD] P3 unblocked.
+[18:10:17] [RECV    ] DELIVRD [MSG#173 | P5->P4 | LOW | 18:10:17 | "Hello from P5"] -> P4
+[18:10:17] [INFO    ] P1 processed: [MSG#160 | P4->P1 | MEDIUM | 18:10:14 | "Hello from P4"]
+[18:10:17] [SENT    ] QUEUED  [MSG#174 | P2->P3 | MEDIUM | 18:10:17 | "Hello from P2"]
+[18:10:17] [RECV    ] DELIVRD [MSG#174 | P2->P3 | MEDIUM | 18:10:17 | "Hello from P2"] -> P3
+[18:10:18] [SENT    ] QUEUED  [MSG#175 | P3->P4 | LOW | 18:10:18 | "Hello from P3"]
+[18:10:18] [RECV    ] DELIVRD [MSG#175 | P3->P4 | LOW | 18:10:18 | "Hello from P3"] -> P4
+[18:10:18] [SENT    ] QUEUED  [MSG#176 | P4->P3 | LOW | 18:10:18 | "Hello from P4"]
+[18:10:18] [RECV    ] DELIVRD [MSG#176 | P4->P3 | LOW | 18:10:18 | "Hello from P4"] -> P3
+[18:10:18] [SENT    ] QUEUED  [MSG#177 | P1->P3 | HIGH | 18:10:18 | "Hello from P1"]
+[18:10:18] [RECV    ] DELIVRD [MSG#177 | P1->P3 | HIGH | 18:10:18 | "Hello from P1"] -> P3
+[18:10:18] [INFO    ] P2 processed: [MSG#161 | P3->P2 | LOW | 18:10:14 | "Hello from P3"]
+[18:10:18] [INFO    ] P5 processed: [MSG#172 | P4->P5 | MEDIUM | 18:10:17 | "Hello from P4"]
+[18:10:18] [INFO    ] P3 processed: [MSG#177 | P1->P3 | HIGH | 18:10:18 | "Hello from P1"]
+[18:10:18] [SENT    ] QUEUED  [MSG#178 | P2->P5 | HIGH | 18:10:18 | "Hello from P2"]
+[18:10:18] [INFO    ] P4 processed: [MSG#162 | P5->P4 | LOW | 18:10:15 | "Hello from P5"]
+[18:10:18] [RECV    ] DELIVRD [MSG#178 | P2->P5 | HIGH | 18:10:18 | "Hello from P2"] -> P5
+[18:10:18] [INFO    ] P1 processed: [MSG#166 | P5->P1 | MEDIUM | 18:10:16 | "Hello from P5"]
+[18:10:18] [SENT    ] QUEUED  [MSG#179 | P4->P3 | HIGH | 18:10:18 | "Hello from P4"]
+[18:10:18] [RECV    ] DELIVRD [MSG#179 | P4->P3 | HIGH | 18:10:18 | "Hello from P4"] -> P3
+[18:10:18] [SENT    ] QUEUED  [MSG#180 | P5->P4 | HIGH | 18:10:18 | "Hello from P5"]
+[18:10:18] [RECV    ] DELIVRD [MSG#180 | P5->P4 | HIGH | 18:10:18 | "Hello from P5"] -> P4
+[18:10:18] [SENT    ] QUEUED  [MSG#181 | P3->P2 | HIGH | 18:10:18 | "Hello from P3"]
+[18:10:19] [RECV    ] DELIVRD [MSG#181 | P3->P2 | HIGH | 18:10:18 | "Hello from P3"] -> P2
+[18:10:19] [INFO    ] P2 processed: [MSG#181 | P3->P2 | HIGH | 18:10:18 | "Hello from P3"]
+[18:10:19] [INFO    ] P4 processed: [MSG#180 | P5->P4 | HIGH | 18:10:18 | "Hello from P5"]
+[18:10:19] [SENT    ] QUEUED  [MSG#182 | P1->P2 | LOW | 18:10:19 | "Hello from P1"]
+[18:10:19] [RECV    ] DELIVRD [MSG#182 | P1->P2 | LOW | 18:10:19 | "Hello from P1"] -> P2
+[18:10:19] [INFO    ] P3 processed: [MSG#179 | P4->P3 | HIGH | 18:10:18 | "Hello from P4"]
+[18:10:19] [INFO    ] P5 processed: [MSG#178 | P2->P5 | HIGH | 18:10:18 | "Hello from P2"]
+[18:10:19] [SENT    ] QUEUED  [MSG#183 | P2->P4 | MEDIUM | 18:10:19 | "Hello from P2"]
+[18:10:19] [RECV    ] DELIVRD [MSG#183 | P2->P4 | MEDIUM | 18:10:19 | "Hello from P2"] -> P4
+[18:10:19] [SENT    ] QUEUED  [MSG#184 | P3->P4 | LOW | 18:10:19 | "Hello from P3"]
+[18:10:19] [RECV    ] DELIVRD [MSG#184 | P3->P4 | LOW | 18:10:19 | "Hello from P3"] -> P4
+[18:10:19] [SENT    ] QUEUED  [MSG#185 | P5->P1 | HIGH | 18:10:19 | "Hello from P5"]
+[18:10:20] [RECV    ] DELIVRD [MSG#185 | P5->P1 | HIGH | 18:10:19 | "Hello from P5"] -> P1
+[18:10:20] [INFO    ] P1 processed: [MSG#185 | P5->P1 | HIGH | 18:10:19 | "Hello from P5"]
+[18:10:20] [SENT    ] QUEUED  [MSG#186 | P4->P1 | LOW | 18:10:20 | "Hello from P4"]
+[18:10:20] [RECV    ] DELIVRD [MSG#186 | P4->P1 | LOW | 18:10:20 | "Hello from P4"] -> P1
+[18:10:20] [INFO    ] P2 processed: [MSG#169 | P3->P2 | LOW | 18:10:16 | "Hello from P3"]
+[18:10:20] [INFO    ] P5 processed: [MSG#170 | P1->P5 | LOW | 18:10:16 | "Hello from P1"]
+[18:10:20] [INFO    ] P3 processed: [MSG#174 | P2->P3 | MEDIUM | 18:10:17 | "Hello from P2"]
+[18:10:20] [INFO    ] P4 processed: [MSG#183 | P2->P4 | MEDIUM | 18:10:19 | "Hello from P2"]
+[18:10:20] [SENT    ] QUEUED  [MSG#187 | P5->P1 | LOW | 18:10:20 | "Hello from P5"]
+[18:10:20] [SENT    ] QUEUED  [MSG#188 | P2->P4 | LOW | 18:10:20 | "Hello from P2"]
+[18:10:20] [RECV    ] DELIVRD [MSG#187 | P5->P1 | LOW | 18:10:20 | "Hello from P5"] -> P1
+[18:10:20] [RECV    ] DELIVRD [MSG#188 | P2->P4 | LOW | 18:10:20 | "Hello from P2"] -> P4
+[18:10:20] [SENT    ] QUEUED  [MSG#189 | P1->P3 | LOW | 18:10:20 | "Hello from P1"]
+[18:10:20] [RECV    ] DELIVRD [MSG#189 | P1->P3 | LOW | 18:10:20 | "Hello from P1"] -> P3
+[18:10:20] [SENT    ] QUEUED  [MSG#190 | P4->P3 | LOW | 18:10:20 | "Hello from P4"]
+[18:10:20] [SENT    ] QUEUED  [MSG#191 | P3->P1 | MEDIUM | 18:10:20 | "Hello from P3"]
+[18:10:20] [RECV    ] DELIVRD [MSG#191 | P3->P1 | MEDIUM | 18:10:20 | "Hello from P3"] -> P1
+[18:10:20] [RECV    ] DELIVRD [MSG#190 | P4->P3 | LOW | 18:10:20 | "Hello from P4"] -> P3
+[18:10:21] [INFO    ] P5 processed: [MSG#168 | P2->P5 | LOW | 18:10:16 | "Hello from P2"]
+[18:10:21] [INFO    ] P3 processed: [MSG#190 | P4->P3 | LOW | 18:10:20 | "Hello from P4"]
+[18:10:21] [INFO    ] P2 processed: [MSG#182 | P1->P2 | LOW | 18:10:19 | "Hello from P1"]
+[18:10:21] [INFO    ] P4 processed: [MSG#188 | P2->P4 | LOW | 18:10:20 | "Hello from P2"]
+[18:10:21] [INFO    ] P1 processed: [MSG#191 | P3->P1 | MEDIUM | 18:10:20 | "Hello from P3"]
+[18:10:21] [SENT    ] QUEUED  [MSG#192 | P5->P4 | HIGH | 18:10:21 | "Hello from P5"]
+[18:10:21] [RECV    ] DELIVRD [MSG#192 | P5->P4 | HIGH | 18:10:21 | "Hello from P5"] -> P4
+[18:10:21] [SENT    ] QUEUED  [MSG#193 | P2->P1 | MEDIUM | 18:10:21 | "Hello from P2"]
+[18:10:21] [RECV    ] DELIVRD [MSG#193 | P2->P1 | MEDIUM | 18:10:21 | "Hello from P2"] -> P1
+[18:10:21] [SENT    ] QUEUED  [MSG#194 | P3->P4 | LOW | 18:10:21 | "Hello from P3"]
+[18:10:21] [INFO    ] P5 processed: [MSG#92 | P2->P5 | LOW | 18:10:01 | "Hello from P2"]
+[18:10:21] [SENT    ] QUEUED  [MSG#195 | P4->P5 | MEDIUM | 18:10:21 | "Hello from P4"]
+[18:10:21] [RECV    ] DELIVRD [MSG#195 | P4->P5 | MEDIUM | 18:10:21 | "Hello from P4"] -> P5
+[18:10:21] [RECV    ] DELIVRD [MSG#194 | P3->P4 | LOW | 18:10:21 | "Hello from P3"] -> P4
+[18:10:22] [BLOCKED ] P2 is blocking on receive...
+[18:10:22] [SENT    ] QUEUED  [MSG#196 | P1->P4 | LOW | 18:10:22 | "Hello from P1"]
+[18:10:22] [RECV    ] DELIVRD [MSG#196 | P1->P4 | LOW | 18:10:22 | "Hello from P1"] -> P4
+[18:10:22] [INFO    ] P3 processed: [MSG#189 | P1->P3 | LOW | 18:10:20 | "Hello from P1"]
+[18:10:22] [UNBLOCKD] P2 unblocked.
+[18:10:22] [INFO    ] P1 processed: [MSG#193 | P2->P1 | MEDIUM | 18:10:21 | "Hello from P2"]
+[18:10:22] [INFO    ] P4 processed: [MSG#192 | P5->P4 | HIGH | 18:10:21 | "Hello from P5"]
+[18:10:22] [SENT    ] QUEUED  [MSG#197 | P5->P2 | MEDIUM | 18:10:22 | "Hello from P5"]
+[18:10:22] [RECV    ] DELIVRD [MSG#197 | P5->P2 | MEDIUM | 18:10:22 | "Hello from P5"] -> P2
+[18:10:22] [SENT    ] QUEUED  [MSG#198 | P1->P4 | MEDIUM | 18:10:22 | "Hello from P1"]
+[18:10:22] [SENT    ] QUEUED  [MSG#199 | P3->P4 | LOW | 18:10:22 | "Hello from P3"]
+[18:10:22] [RECV    ] DELIVRD [MSG#198 | P1->P4 | MEDIUM | 18:10:22 | "Hello from P1"] -> P4
+[18:10:22] [RECV    ] DELIVRD [MSG#199 | P3->P4 | LOW | 18:10:22 | "Hello from P3"] -> P4
+[18:10:23] [SENT    ] QUEUED  [MSG#200 | P2->P4 | MEDIUM | 18:10:23 | "Hello from P2"]
+[18:10:23] [RECV    ] DELIVRD [MSG#200 | P2->P4 | MEDIUM | 18:10:23 | "Hello from P2"] -> P4
+[18:10:23] [INFO    ] P5 processed: [MSG#195 | P4->P5 | MEDIUM | 18:10:21 | "Hello from P4"]
+[18:10:23] [INFO    ] P3 processed: [MSG#176 | P4->P3 | LOW | 18:10:18 | "Hello from P4"]
+[18:10:23] [SENT    ] QUEUED  [MSG#201 | P4->P2 | HIGH | 18:10:23 | "Hello from P4"]
+[18:10:23] [RECV    ] DELIVRD [MSG#201 | P4->P2 | HIGH | 18:10:23 | "Hello from P4"] -> P2
+[18:10:23] [INFO    ] P1 processed: [MSG#171 | P2->P1 | LOW | 18:10:17 | "Hello from P2"]
+[18:10:23] [INFO    ] P4 processed: [MSG#198 | P1->P4 | MEDIUM | 18:10:22 | "Hello from P1"]
+[18:10:23] [INFO    ] P2 processed: [MSG#201 | P4->P2 | HIGH | 18:10:23 | "Hello from P4"]
+[18:10:23] [SENT    ] QUEUED  [MSG#202 | P3->P5 | LOW | 18:10:23 | "Hello from P3"]
+[18:10:23] [RECV    ] DELIVRD [MSG#202 | P3->P5 | LOW | 18:10:23 | "Hello from P3"] -> P5
+[18:10:23] [SENT    ] QUEUED  [MSG#203 | P5->P4 | LOW | 18:10:23 | "Hello from P5"]
+[18:10:23] [RECV    ] DELIVRD [MSG#203 | P5->P4 | LOW | 18:10:23 | "Hello from P5"] -> P4
+[18:10:23] [SENT    ] QUEUED  [MSG#204 | P1->P2 | HIGH | 18:10:23 | "Hello from P1"]
+[18:10:23] [RECV    ] DELIVRD [MSG#204 | P1->P2 | HIGH | 18:10:23 | "Hello from P1"] -> P2
+[18:10:23] [SENT    ] QUEUED  [MSG#205 | P2->P3 | MEDIUM | 18:10:23 | "Hello from P2"]
+[18:10:24] [RECV    ] DELIVRD [MSG#205 | P2->P3 | MEDIUM | 18:10:23 | "Hello from P2"] -> P3
+[18:10:24] [INFO    ] P5 processed: [MSG#202 | P3->P5 | LOW | 18:10:23 | "Hello from P3"]
+[18:10:24] [INFO    ] P1 processed: [MSG#61 | P5->P1 | LOW | 18:09:55 | "Hello from P5"]
+[18:10:24] [SENT    ] QUEUED  [MSG#206 | P4->P5 | MEDIUM | 18:10:24 | "Hello from P4"]
+[18:10:24] [RECV    ] DELIVRD [MSG#206 | P4->P5 | MEDIUM | 18:10:24 | "Hello from P4"] -> P5
+[18:10:24] [INFO    ] P3 processed: [MSG#205 | P2->P3 | MEDIUM | 18:10:23 | "Hello from P2"]
+[18:10:24] [INFO    ] P2 processed: [MSG#204 | P1->P2 | HIGH | 18:10:23 | "Hello from P1"]
+[18:10:24] [SENT    ] QUEUED  [MSG#207 | P1->P4 | LOW | 18:10:24 | "Hello from P1"]
+[18:10:24] [RECV    ] DELIVRD [MSG#207 | P1->P4 | LOW | 18:10:24 | "Hello from P1"] -> P4
+[18:10:24] [SENT    ] QUEUED  [MSG#208 | P5->P4 | MEDIUM | 18:10:24 | "Hello from P5"]
+[18:10:24] [RECV    ] DELIVRD [MSG#208 | P5->P4 | MEDIUM | 18:10:24 | "Hello from P5"] -> P4
+[18:10:24] [INFO    ] P4 processed: [MSG#200 | P2->P4 | MEDIUM | 18:10:23 | "Hello from P2"]
+[18:10:24] [SENT    ] QUEUED  [MSG#209 | P3->P5 | MEDIUM | 18:10:24 | "Hello from P3"]
+[18:10:24] [RECV    ] DELIVRD [MSG#209 | P3->P5 | MEDIUM | 18:10:24 | "Hello from P3"] -> P5
+[18:10:25] [INFO    ] P1 processed: [MSG#44 | P3->P1 | LOW | 18:09:51 | "Hello from P3"]
+[18:10:25] [SENT    ] QUEUED  [MSG#210 | P2->P3 | LOW | 18:10:25 | "Hello from P2"]
+[18:10:25] [RECV    ] DELIVRD [MSG#210 | P2->P3 | LOW | 18:10:25 | "Hello from P2"] -> P3
+[18:10:25] [INFO    ] P3 processed: [MSG#210 | P2->P3 | LOW | 18:10:25 | "Hello from P2"]
+[18:10:25] [SENT    ] QUEUED  [MSG#211 | P4->P1 | MEDIUM | 18:10:25 | "Hello from P4"]
+[18:10:25] [RECV    ] DELIVRD [MSG#211 | P4->P1 | MEDIUM | 18:10:25 | "Hello from P4"] -> P1
+[18:10:25] [SENT    ] QUEUED  [MSG#212 | P1->P4 | MEDIUM | 18:10:25 | "Hello from P1"]
+[18:10:25] [RECV    ] DELIVRD [MSG#212 | P1->P4 | MEDIUM | 18:10:25 | "Hello from P1"] -> P4
+[18:10:25] [INFO    ] P2 processed: [MSG#197 | P5->P2 | MEDIUM | 18:10:22 | "Hello from P5"]
+[18:10:25] [INFO    ] P5 processed: [MSG#206 | P4->P5 | MEDIUM | 18:10:24 | "Hello from P4"]
+[18:10:25] [SENT    ] QUEUED  [MSG#213 | P3->P4 | HIGH | 18:10:25 | "Hello from P3"]
+[18:10:25] [RECV    ] DELIVRD [MSG#213 | P3->P4 | HIGH | 18:10:25 | "Hello from P3"] -> P4
+[18:10:25] [SENT    ] QUEUED  [MSG#214 | P5->P4 | MEDIUM | 18:10:25 | "Hello from P5"]
+[18:10:25] [RECV    ] DELIVRD [MSG#214 | P5->P4 | MEDIUM | 18:10:25 | "Hello from P5"] -> P4
+[18:10:25] [INFO    ] P1 processed: [MSG#211 | P4->P1 | MEDIUM | 18:10:25 | "Hello from P4"]
+[18:10:25] [INFO    ] P4 processed: [MSG#213 | P3->P4 | HIGH | 18:10:25 | "Hello from P3"]
+[18:10:25] [SENT    ] QUEUED  [MSG#215 | P2->P1 | LOW | 18:10:25 | "Hello from P2"]
+[18:10:25] [RECV    ] DELIVRD [MSG#215 | P2->P1 | LOW | 18:10:25 | "Hello from P2"] -> P1
+[18:10:26] [INFO    ] P5 processed: [MSG#209 | P3->P5 | MEDIUM | 18:10:24 | "Hello from P3"]
+[18:10:26] [BLOCKED ] P2 is blocking on receive...
+[18:10:26] [UNBLOCKD] P2 unblocked.
+[18:10:26] [SENT    ] QUEUED  [MSG#216 | P1->P5 | MEDIUM | 18:10:26 | "Hello from P1"]
+[18:10:26] [RECV    ] DELIVRD [MSG#216 | P1->P5 | MEDIUM | 18:10:26 | "Hello from P1"] -> P5
+[18:10:26] [BLOCKED ] P3 is blocking on receive...
+[18:10:26] [SENT    ] QUEUED  [MSG#217 | P4->P2 | MEDIUM | 18:10:26 | "Hello from P4"]
+[18:10:26] [RECV    ] DELIVRD [MSG#217 | P4->P2 | MEDIUM | 18:10:26 | "Hello from P4"] -> P2
+[18:10:26] [UNBLOCKD] P3 unblocked.
+[18:10:26] [DROPPED ] DROPPED [MSG#218 | P5->P3 | LOW | 18:10:26 | "Hello from P5"]
+[18:10:26] [INFO    ] P4 processed: [MSG#214 | P5->P4 | MEDIUM | 18:10:25 | "Hello from P5"]
+[18:10:26] [SENT    ] QUEUED  [MSG#219 | P2->P3 | MEDIUM | 18:10:26 | "Hello from P2"]
+[18:10:26] [RECV    ] DELIVRD [MSG#219 | P2->P3 | MEDIUM | 18:10:26 | "Hello from P2"] -> P3
+[18:10:26] [INFO    ] P1 processed: [MSG#187 | P5->P1 | LOW | 18:10:20 | "Hello from P5"]
+[18:10:27] [INFO    ] P5 processed: [MSG#216 | P1->P5 | MEDIUM | 18:10:26 | "Hello from P1"]
+[18:10:27] [SENT    ] QUEUED  [MSG#220 | P3->P1 | MEDIUM | 18:10:27 | "Hello from P3"]
+[18:10:27] [RECV    ] DELIVRD [MSG#220 | P3->P1 | MEDIUM | 18:10:27 | "Hello from P3"] -> P1
+[18:10:27] [SENT    ] QUEUED  [MSG#221 | P5->P1 | HIGH | 18:10:27 | "Hello from P5"]
+[18:10:27] [RECV    ] DELIVRD [MSG#221 | P5->P1 | HIGH | 18:10:27 | "Hello from P5"] -> P1
+[18:10:27] [SENT    ] QUEUED  [MSG#222 | P4->P2 | MEDIUM | 18:10:27 | "Hello from P4"]
+[18:10:27] [RECV    ] DELIVRD [MSG#222 | P4->P2 | MEDIUM | 18:10:27 | "Hello from P4"] -> P2
+[18:10:27] [BLOCKED ] P5 is blocking on receive...
+[18:10:27] [INFO    ] P3 processed: [MSG#219 | P2->P3 | MEDIUM | 18:10:26 | "Hello from P2"]
+[18:10:27] [INFO    ] P2 processed: [MSG#217 | P4->P2 | MEDIUM | 18:10:26 | "Hello from P4"]
+[18:10:27] [SENT    ] QUEUED  [MSG#223 | P1->P5 | MEDIUM | 18:10:27 | "Hello from P1"]
+[18:10:27] [RECV    ] DELIVRD [MSG#223 | P1->P5 | MEDIUM | 18:10:27 | "Hello from P1"] -> P5
+[18:10:27] [UNBLOCKD] P5 unblocked.
+[18:10:27] [INFO    ] P5 processed: [MSG#223 | P1->P5 | MEDIUM | 18:10:27 | "Hello from P1"]
+[18:10:27] [SENT    ] QUEUED  [MSG#224 | P2->P3 | LOW | 18:10:27 | "Hello from P2"]
+[18:10:27] [RECV    ] DELIVRD [MSG#224 | P2->P3 | LOW | 18:10:27 | "Hello from P2"] -> P3
+[18:10:28] [SENT    ] QUEUED  [MSG#225 | P3->P2 | MEDIUM | 18:10:28 | "Hello from P3"]
+[18:10:28] [RECV    ] DELIVRD [MSG#225 | P3->P2 | MEDIUM | 18:10:28 | "Hello from P3"] -> P2
+[18:10:28] [INFO    ] P4 processed: [MSG#208 | P5->P4 | MEDIUM | 18:10:24 | "Hello from P5"]
+[18:10:28] [INFO    ] P2 processed: [MSG#222 | P4->P2 | MEDIUM | 18:10:27 | "Hello from P4"]
+[18:10:28] [SENT    ] QUEUED  [MSG#226 | P5->P2 | LOW | 18:10:28 | "Hello from P5"]
+[18:10:28] [RECV    ] DELIVRD [MSG#226 | P5->P2 | LOW | 18:10:28 | "Hello from P5"] -> P2
+[18:10:28] [INFO    ] P1 processed: [MSG#221 | P5->P1 | HIGH | 18:10:27 | "Hello from P5"]
+[18:10:28] [SENT    ] QUEUED  [MSG#227 | P4->P1 | LOW | 18:10:28 | "Hello from P4"]
+[18:10:28] [RECV    ] DELIVRD [MSG#227 | P4->P1 | LOW | 18:10:28 | "Hello from P4"] -> P1
+[18:10:28] [INFO    ] P3 processed: [MSG#224 | P2->P3 | LOW | 18:10:27 | "Hello from P2"]
+[18:10:28] [INFO    ] P4 processed: [MSG#212 | P1->P4 | MEDIUM | 18:10:25 | "Hello from P1"]
+[18:10:28] [BLOCKED ] P5 is blocking on receive...
+[18:10:29] [SENT    ] QUEUED  [MSG#228 | P2->P1 | HIGH | 18:10:29 | "Hello from P2"]
+[18:10:29] [RECV    ] DELIVRD [MSG#228 | P2->P1 | HIGH | 18:10:29 | "Hello from P2"] -> P1
+[18:10:29] [SENT    ] QUEUED  [MSG#229 | P1->P3 | LOW | 18:10:29 | "Hello from P1"]
+[18:10:29] [RECV    ] DELIVRD [MSG#229 | P1->P3 | LOW | 18:10:29 | "Hello from P1"] -> P3
+[18:10:29] [UNBLOCKD] P5 unblocked.
+[18:10:29] [SENT    ] QUEUED  [MSG#230 | P3->P2 | LOW | 18:10:29 | "Hello from P3"]
+[18:10:29] [RECV    ] DELIVRD [MSG#230 | P3->P2 | LOW | 18:10:29 | "Hello from P3"] -> P2
+[18:10:29] [INFO    ] P1 processed: [MSG#228 | P2->P1 | HIGH | 18:10:29 | "Hello from P2"]
+[18:10:29] [SENT    ] QUEUED  [MSG#231 | P4->P3 | MEDIUM | 18:10:29 | "Hello from P4"]
+[18:10:29] [SENT    ] QUEUED  [MSG#232 | P5->P1 | LOW | 18:10:29 | "Hello from P5"]
+[18:10:29] [RECV    ] DELIVRD [MSG#231 | P4->P3 | MEDIUM | 18:10:29 | "Hello from P4"] -> P3
+[18:10:29] [INFO    ] P3 processed: [MSG#231 | P4->P3 | MEDIUM | 18:10:29 | "Hello from P4"]
+[18:10:29] [RECV    ] DELIVRD [MSG#232 | P5->P1 | LOW | 18:10:29 | "Hello from P5"] -> P1
+[18:10:29] [INFO    ] P4 processed: [MSG#199 | P3->P4 | LOW | 18:10:22 | "Hello from P3"]
+[18:10:29] [INFO    ] P2 processed: [MSG#225 | P3->P2 | MEDIUM | 18:10:28 | "Hello from P3"]
+[18:10:29] [BLOCKED ] P5 is blocking on receive...
+[18:10:29] [SENT    ] QUEUED  [MSG#233 | P1->P3 | MEDIUM | 18:10:29 | "Hello from P1"]
+[18:10:29] [RECV    ] DELIVRD [MSG#233 | P1->P3 | MEDIUM | 18:10:29 | "Hello from P1"] -> P3
+[18:10:29] [SENT    ] QUEUED  [MSG#234 | P2->P5 | MEDIUM | 18:10:29 | "Hello from P2"]
+[18:10:29] [RECV    ] DELIVRD [MSG#234 | P2->P5 | MEDIUM | 18:10:29 | "Hello from P2"] -> P5
+[18:10:30] [UNBLOCKD] P5 unblocked.
+[18:10:30] [INFO    ] P5 processed: [MSG#234 | P2->P5 | MEDIUM | 18:10:29 | "Hello from P2"]
+[18:10:30] [SENT    ] QUEUED  [MSG#235 | P3->P2 | MEDIUM | 18:10:30 | "Hello from P3"]
+[18:10:30] [RECV    ] DELIVRD [MSG#235 | P3->P2 | MEDIUM | 18:10:30 | "Hello from P3"] -> P2
+[18:10:30] [INFO    ] P1 processed: [MSG#220 | P3->P1 | MEDIUM | 18:10:27 | "Hello from P3"]
+[18:10:30] [SENT    ] QUEUED  [MSG#236 | P4->P5 | HIGH | 18:10:30 | "Hello from P4"]
+[18:10:30] [RECV    ] DELIVRD [MSG#236 | P4->P5 | HIGH | 18:10:30 | "Hello from P4"] -> P5
+[18:10:30] [SENT    ] QUEUED  [MSG#237 | P1->P4 | MEDIUM | 18:10:30 | "Hello from P1"]
+[18:10:30] [RECV    ] DELIVRD [MSG#237 | P1->P4 | MEDIUM | 18:10:30 | "Hello from P1"] -> P4
+[18:10:30] [INFO    ] P2 processed: [MSG#235 | P3->P2 | MEDIUM | 18:10:30 | "Hello from P3"]
+[18:10:30] [INFO    ] P4 processed: [MSG#237 | P1->P4 | MEDIUM | 18:10:30 | "Hello from P1"]
+[18:10:30] [INFO    ] P1 processed: [MSG#232 | P5->P1 | LOW | 18:10:29 | "Hello from P5"]
+[18:10:30] [SENT    ] QUEUED  [MSG#238 | P5->P3 | MEDIUM | 18:10:30 | "Hello from P5"]
+[18:10:30] [RECV    ] DELIVRD [MSG#238 | P5->P3 | MEDIUM | 18:10:30 | "Hello from P5"] -> P3
+[18:10:30] [INFO    ] P3 processed: [MSG#233 | P1->P3 | MEDIUM | 18:10:29 | "Hello from P1"]
+[18:10:30] [SENT    ] QUEUED  [MSG#239 | P2->P4 | LOW | 18:10:30 | "Hello from P2"]
+[18:10:31] [RECV    ] DELIVRD [MSG#239 | P2->P4 | LOW | 18:10:30 | "Hello from P2"] -> P4
+[18:10:31] [SENT    ] QUEUED  [MSG#240 | P1->P3 | LOW | 18:10:31 | "Hello from P1"]
+[18:10:31] [RECV    ] DELIVRD [MSG#240 | P1->P3 | LOW | 18:10:31 | "Hello from P1"] -> P3
+[18:10:31] [SENT    ] QUEUED  [MSG#241 | P3->P1 | LOW | 18:10:31 | "Hello from P3"]
+[18:10:31] [RECV    ] DELIVRD [MSG#241 | P3->P1 | LOW | 18:10:31 | "Hello from P3"] -> P1
+[18:10:31] [SENT    ] QUEUED  [MSG#242 | P4->P2 | MEDIUM | 18:10:31 | "Hello from P4"]
+[18:10:31] [INFO    ] P2 processed: [MSG#230 | P3->P2 | LOW | 18:10:29 | "Hello from P3"]
+[18:10:31] [RECV    ] DELIVRD [MSG#242 | P4->P2 | MEDIUM | 18:10:31 | "Hello from P4"] -> P2
+[18:10:31] [INFO    ] P5 processed: [MSG#236 | P4->P5 | HIGH | 18:10:30 | "Hello from P4"]
+[18:10:31] [INFO    ] P3 processed: [MSG#238 | P5->P3 | MEDIUM | 18:10:30 | "Hello from P5"]
+[18:10:31] [INFO    ] P1 processed: [MSG#186 | P4->P1 | LOW | 18:10:20 | "Hello from P4"]
+[18:10:31] [INFO    ] P4 processed: [MSG#194 | P3->P4 | LOW | 18:10:21 | "Hello from P3"]
+[18:10:31] [DROPPED ] DROPPED [MSG#243 | P3->P5 | LOW | 18:10:31 | "Hello from P3"]
+[18:10:32] [SENT    ] QUEUED  [MSG#244 | P2->P5 | LOW | 18:10:32 | "Hello from P2"]
+[18:10:32] [DROPPED ] DROPPED [MSG#245 | P5->P3 | HIGH | 18:10:32 | "Hello from P5"]
+[18:10:32] [RECV    ] DELIVRD [MSG#244 | P2->P5 | LOW | 18:10:32 | "Hello from P2"] -> P5
+[18:10:32] [SENT    ] QUEUED  [MSG#246 | P1->P3 | MEDIUM | 18:10:32 | "Hello from P1"]
+[18:10:32] [INFO    ] P3 processed: [MSG#229 | P1->P3 | LOW | 18:10:29 | "Hello from P1"]
+[18:10:32] [RECV    ] DELIVRD [MSG#246 | P1->P3 | MEDIUM | 18:10:32 | "Hello from P1"] -> P3
+[18:10:32] [SENT    ] QUEUED  [MSG#247 | P3->P4 | LOW | 18:10:32 | "Hello from P3"]
+[18:10:32] [INFO    ] P2 processed: [MSG#242 | P4->P2 | MEDIUM | 18:10:31 | "Hello from P4"]
+[18:10:32] [RECV    ] DELIVRD [MSG#247 | P3->P4 | LOW | 18:10:32 | "Hello from P3"] -> P4
+[18:10:32] [SENT    ] QUEUED  [MSG#248 | P4->P3 | MEDIUM | 18:10:32 | "Hello from P4"]
+[18:10:32] [RECV    ] DELIVRD [MSG#248 | P4->P3 | MEDIUM | 18:10:32 | "Hello from P4"] -> P3
+[18:10:32] [INFO    ] P1 processed: [MSG#126 | P4->P1 | LOW | 18:10:08 | "Hello from P4"]
+[18:10:32] [INFO    ] P5 processed: [MSG#244 | P2->P5 | LOW | 18:10:32 | "Hello from P2"]
+[18:10:33] [INFO    ] P4 processed: [MSG#173 | P5->P4 | LOW | 18:10:17 | "Hello from P5"]
+[18:10:33] [SENT    ] QUEUED  [MSG#249 | P2->P3 | MEDIUM | 18:10:33 | "Hello from P2"]
+[18:10:33] [RECV    ] DELIVRD [MSG#249 | P2->P3 | MEDIUM | 18:10:33 | "Hello from P2"] -> P3
+[18:10:33] [SENT    ] QUEUED  [MSG#250 | P1->P3 | LOW | 18:10:33 | "Hello from P1"]
+[18:10:33] [RECV    ] DELIVRD [MSG#250 | P1->P3 | LOW | 18:10:33 | "Hello from P1"] -> P3
+[18:10:33] [INFO    ] P3 processed: [MSG#246 | P1->P3 | MEDIUM | 18:10:32 | "Hello from P1"]
+[18:10:33] [SENT    ] QUEUED  [MSG#251 | P5->P1 | MEDIUM | 18:10:33 | "Hello from P5"]
+[18:10:33] [RECV    ] DELIVRD [MSG#251 | P5->P1 | MEDIUM | 18:10:33 | "Hello from P5"] -> P1
+[18:10:33] [SENT    ] QUEUED  [MSG#252 | P4->P5 | LOW | 18:10:33 | "Hello from P4"]
+[18:10:33] [RECV    ] DELIVRD [MSG#252 | P4->P5 | LOW | 18:10:33 | "Hello from P4"] -> P5
+[18:10:33] [INFO    ] P5 processed: [MSG#252 | P4->P5 | LOW | 18:10:33 | "Hello from P4"]
+[18:10:33] [SENT    ] QUEUED  [MSG#253 | P5->P2 | LOW | 18:10:33 | "Hello from P5"]
+[18:10:33] [RECV    ] DELIVRD [MSG#253 | P5->P2 | LOW | 18:10:33 | "Hello from P5"] -> P2
+[18:10:33] [INFO    ] P1 processed: [MSG#251 | P5->P1 | MEDIUM | 18:10:33 | "Hello from P5"]
+[18:10:33] [INFO    ] P2 processed: [MSG#226 | P5->P2 | LOW | 18:10:28 | "Hello from P5"]
+[18:10:33] [SENT    ] QUEUED  [MSG#254 | P3->P4 | LOW | 18:10:33 | "Hello from P3"]
+[18:10:33] [RECV    ] DELIVRD [MSG#254 | P3->P4 | LOW | 18:10:33 | "Hello from P3"] -> P4
+[18:10:34] [INFO    ] P4 processed: [MSG#203 | P5->P4 | LOW | 18:10:23 | "Hello from P5"]
+[18:10:34] [SENT    ] QUEUED  [MSG#255 | P2->P4 | HIGH | 18:10:34 | "Hello from P2"]
+[18:10:34] [RECV    ] DELIVRD [MSG#255 | P2->P4 | HIGH | 18:10:34 | "Hello from P2"] -> P4
+[18:10:34] [BLOCKED ] P5 is blocking on receive...
+[18:10:34] [INFO    ] P3 processed: [MSG#248 | P4->P3 | MEDIUM | 18:10:32 | "Hello from P4"]
+[18:10:34] [SENT    ] QUEUED  [MSG#256 | P1->P3 | MEDIUM | 18:10:34 | "Hello from P1"]
+[18:10:34] [RECV    ] DELIVRD [MSG#256 | P1->P3 | MEDIUM | 18:10:34 | "Hello from P1"] -> P3
+[18:10:34] [SENT    ] QUEUED  [MSG#257 | P3->P1 | MEDIUM | 18:10:34 | "Hello from P3"]
+[18:10:34] [UNBLOCKD] P5 unblocked.
+[18:10:34] [RECV    ] DELIVRD [MSG#257 | P3->P1 | MEDIUM | 18:10:34 | "Hello from P3"] -> P1
+[18:10:34] [SENT    ] QUEUED  [MSG#258 | P4->P5 | LOW | 18:10:34 | "Hello from P4"]
+[18:10:34] [RECV    ] DELIVRD [MSG#258 | P4->P5 | LOW | 18:10:34 | "Hello from P4"] -> P5
+[18:10:34] [SENT    ] QUEUED  [MSG#259 | P5->P4 | MEDIUM | 18:10:34 | "Hello from P5"]
+[18:10:34] [RECV    ] DELIVRD [MSG#259 | P5->P4 | MEDIUM | 18:10:34 | "Hello from P5"] -> P4
+[18:10:34] [INFO    ] P2 processed: [MSG#253 | P5->P2 | LOW | 18:10:33 | "Hello from P5"]
+[18:10:35] [INFO    ] P3 processed: [MSG#249 | P2->P3 | MEDIUM | 18:10:33 | "Hello from P2"]
+[18:10:35] [INFO    ] P1 processed: [MSG#257 | P3->P1 | MEDIUM | 18:10:34 | "Hello from P3"]
+[18:10:35] [SENT    ] QUEUED  [MSG#260 | P2->P4 | LOW | 18:10:35 | "Hello from P2"]
+[18:10:35] [RECV    ] DELIVRD [MSG#260 | P2->P4 | LOW | 18:10:35 | "Hello from P2"] -> P4
+[18:10:35] [INFO    ] P4 processed: [MSG#255 | P2->P4 | HIGH | 18:10:34 | "Hello from P2"]
+[18:10:35] [INFO    ] P5 processed: [MSG#258 | P4->P5 | LOW | 18:10:34 | "Hello from P4"]
+[18:10:35] [SENT    ] QUEUED  [MSG#261 | P3->P5 | LOW | 18:10:35 | "Hello from P3"]
+[18:10:35] [RECV    ] DELIVRD [MSG#261 | P3->P5 | LOW | 18:10:35 | "Hello from P3"] -> P5
+[18:10:35] [SENT    ] QUEUED  [MSG#262 | P4->P3 | LOW | 18:10:35 | "Hello from P4"]
+[18:10:35] [RECV    ] DELIVRD [MSG#262 | P4->P3 | LOW | 18:10:35 | "Hello from P4"] -> P3
+[18:10:36] [SENT    ] QUEUED  [MSG#263 | P1->P2 | MEDIUM | 18:10:36 | "Hello from P1"]
+[18:10:36] [RECV    ] DELIVRD [MSG#263 | P1->P2 | MEDIUM | 18:10:36 | "Hello from P1"] -> P2
+[18:10:36] [INFO    ] P2 processed: [MSG#263 | P1->P2 | MEDIUM | 18:10:36 | "Hello from P1"]
+[18:10:36] [SENT    ] QUEUED  [MSG#264 | P5->P4 | LOW | 18:10:36 | "Hello from P5"]
+[18:10:36] [RECV    ] DELIVRD [MSG#264 | P5->P4 | LOW | 18:10:36 | "Hello from P5"] -> P4
+[18:10:36] [INFO    ] P3 processed: [MSG#256 | P1->P3 | MEDIUM | 18:10:34 | "Hello from P1"]
+[18:10:36] [INFO    ] P4 processed: [MSG#259 | P5->P4 | MEDIUM | 18:10:34 | "Hello from P5"]
+[18:10:36] [INFO    ] P1 processed: [MSG#227 | P4->P1 | LOW | 18:10:28 | "Hello from P4"]
+[18:10:36] [SENT    ] QUEUED  [MSG#265 | P3->P1 | LOW | 18:10:36 | "Hello from P3"]
+[18:10:36] [RECV    ] DELIVRD [MSG#265 | P3->P1 | LOW | 18:10:36 | "Hello from P3"] -> P1
+[18:10:36] [SENT    ] QUEUED  [MSG#266 | P4->P1 | MEDIUM | 18:10:36 | "Hello from P4"]
+[18:10:36] [RECV    ] DELIVRD [MSG#266 | P4->P1 | MEDIUM | 18:10:36 | "Hello from P4"] -> P1
+[18:10:36] [INFO    ] P5 processed: [MSG#261 | P3->P5 | LOW | 18:10:35 | "Hello from P3"]
+[18:10:36] [SENT    ] QUEUED  [MSG#267 | P1->P2 | MEDIUM | 18:10:36 | "Hello from P1"]
+[18:10:36] [RECV    ] DELIVRD [MSG#267 | P1->P2 | MEDIUM | 18:10:36 | "Hello from P1"] -> P2
+[18:10:36] [SENT    ] QUEUED  [MSG#268 | P2->P3 | MEDIUM | 18:10:36 | "Hello from P2"]
+[18:10:36] [RECV    ] DELIVRD [MSG#268 | P2->P3 | MEDIUM | 18:10:36 | "Hello from P2"] -> P3
+[18:10:37] [INFO    ] P4 processed: [MSG#247 | P3->P4 | LOW | 18:10:32 | "Hello from P3"]
+[18:10:37] [INFO    ] P2 processed: [MSG#267 | P1->P2 | MEDIUM | 18:10:36 | "Hello from P1"]
+[18:10:37] [INFO    ] P1 processed: [MSG#266 | P4->P1 | MEDIUM | 18:10:36 | "Hello from P4"]
+[18:10:37] [INFO    ] P3 processed: [MSG#268 | P2->P3 | MEDIUM | 18:10:36 | "Hello from P2"]
+[18:10:37] [SENT    ] QUEUED  [MSG#269 | P4->P2 | LOW | 18:10:37 | "Hello from P4"]
+[18:10:37] [RECV    ] DELIVRD [MSG#269 | P4->P2 | LOW | 18:10:37 | "Hello from P4"] -> P2
+[18:10:37] [DROPPED ] DROPPED [MSG#270 | P3->P5 | HIGH | 18:10:37 | "Hello from P3"]
+[18:10:37] [SENT    ] QUEUED  [MSG#271 | P2->P5 | MEDIUM | 18:10:37 | "Hello from P2"]
+[18:10:37] [RECV    ] DELIVRD [MSG#271 | P2->P5 | MEDIUM | 18:10:37 | "Hello from P2"] -> P5
+[18:10:37] [SENT    ] QUEUED  [MSG#272 | P1->P2 | LOW | 18:10:37 | "Hello from P1"]
+[18:10:37] [SENT    ] QUEUED  [MSG#273 | P5->P2 | LOW | 18:10:37 | "Hello from P5"]
+[18:10:37] [RECV    ] DELIVRD [MSG#272 | P1->P2 | LOW | 18:10:37 | "Hello from P1"] -> P2
+[18:10:37] [RECV    ] DELIVRD [MSG#273 | P5->P2 | LOW | 18:10:37 | "Hello from P5"] -> P2
+[18:10:37] [INFO    ] P4 processed: [MSG#254 | P3->P4 | LOW | 18:10:33 | "Hello from P3"]
+[18:10:37] [INFO    ] P2 processed: [MSG#273 | P5->P2 | LOW | 18:10:37 | "Hello from P5"]
+[18:10:38] [INFO    ] P1 processed: [MSG#215 | P2->P1 | LOW | 18:10:25 | "Hello from P2"]
+[18:10:38] [INFO    ] P3 processed: [MSG#262 | P4->P3 | LOW | 18:10:35 | "Hello from P4"]
+[18:10:38] [INFO    ] P5 processed: [MSG#271 | P2->P5 | MEDIUM | 18:10:37 | "Hello from P2"]
+[18:10:38] [SENT    ] QUEUED  [MSG#274 | P2->P1 | LOW | 18:10:38 | "Hello from P2"]
+[18:10:38] [RECV    ] DELIVRD [MSG#274 | P2->P1 | LOW | 18:10:38 | "Hello from P2"] -> P1
+[18:10:38] [SENT    ] QUEUED  [MSG#275 | P4->P3 | HIGH | 18:10:38 | "Hello from P4"]
+[18:10:38] [RECV    ] DELIVRD [MSG#275 | P4->P3 | HIGH | 18:10:38 | "Hello from P4"] -> P3
+[18:10:38] [SENT    ] QUEUED  [MSG#276 | P1->P5 | HIGH | 18:10:38 | "Hello from P1"]
+[18:10:38] [SENT    ] QUEUED  [MSG#277 | P3->P1 | LOW | 18:10:38 | "Hello from P3"]
+[18:10:38] [RECV    ] DELIVRD [MSG#276 | P1->P5 | HIGH | 18:10:38 | "Hello from P1"] -> P5
+[18:10:38] [RECV    ] DELIVRD [MSG#277 | P3->P1 | LOW | 18:10:38 | "Hello from P3"] -> P1
+[18:10:38] [SENT    ] QUEUED  [MSG#278 | P5->P1 | MEDIUM | 18:10:38 | "Hello from P5"]
+[18:10:38] [RECV    ] DELIVRD [MSG#278 | P5->P1 | MEDIUM | 18:10:38 | "Hello from P5"] -> P1
+[18:10:38] [INFO    ] P4 processed: [MSG#264 | P5->P4 | LOW | 18:10:36 | "Hello from P5"]
+[18:10:39] [INFO    ] P2 processed: [MSG#272 | P1->P2 | LOW | 18:10:37 | "Hello from P1"]
+[18:10:39] [INFO    ] P5 processed: [MSG#276 | P1->P5 | HIGH | 18:10:38 | "Hello from P1"]
+[18:10:39] [INFO    ] P1 processed: [MSG#278 | P5->P1 | MEDIUM | 18:10:38 | "Hello from P5"]
+[18:10:39] [INFO    ] P3 processed: [MSG#275 | P4->P3 | HIGH | 18:10:38 | "Hello from P4"]
+[18:10:39] [SENT    ] QUEUED  [MSG#279 | P4->P2 | LOW | 18:10:39 | "Hello from P4"]
+[18:10:39] [RECV    ] DELIVRD [MSG#279 | P4->P2 | LOW | 18:10:39 | "Hello from P4"] -> P2
+[18:10:39] [SENT    ] QUEUED  [MSG#280 | P2->P4 | HIGH | 18:10:39 | "Hello from P2"]
+[18:10:39] [RECV    ] DELIVRD [MSG#280 | P2->P4 | HIGH | 18:10:39 | "Hello from P2"] -> P4
+[18:10:39] [SENT    ] QUEUED  [MSG#281 | P3->P2 | MEDIUM | 18:10:39 | "Hello from P3"]
+[18:10:39] [SENT    ] QUEUED  [MSG#282 | P5->P4 | LOW | 18:10:39 | "Hello from P5"]
+[18:10:39] [RECV    ] DELIVRD [MSG#281 | P3->P2 | MEDIUM | 18:10:39 | "Hello from P3"] -> P2
+[18:10:40] [RECV    ] DELIVRD [MSG#282 | P5->P4 | LOW | 18:10:39 | "Hello from P5"] -> P4
+[18:10:40] [SENT    ] QUEUED  [MSG#283 | P1->P4 | LOW | 18:10:40 | "Hello from P1"]
+[18:10:40] [RECV    ] DELIVRD [MSG#283 | P1->P4 | LOW | 18:10:40 | "Hello from P1"] -> P4
+[18:10:40] [INFO    ] P4 processed: [MSG#280 | P2->P4 | HIGH | 18:10:39 | "Hello from P2"]
+[18:10:40] [INFO    ] P3 processed: [MSG#240 | P1->P3 | LOW | 18:10:31 | "Hello from P1"]
+[18:10:40] [BLOCKED ] P5 is blocking on receive...
+[18:10:40] [INFO    ] P2 processed: [MSG#281 | P3->P2 | MEDIUM | 18:10:39 | "Hello from P3"]
+[18:10:40] [SENT    ] QUEUED  [MSG#284 | P3->P4 | MEDIUM | 18:10:40 | "Hello from P3"]
+[18:10:40] [RECV    ] DELIVRD [MSG#284 | P3->P4 | MEDIUM | 18:10:40 | "Hello from P3"] -> P4
+[18:10:40] [DROPPED ] DROPPED [MSG#285 | P2->P1 | LOW | 18:10:40 | "Hello from P2"]
+[18:10:40] [SENT    ] QUEUED  [MSG#286 | P4->P5 | MEDIUM | 18:10:40 | "Hello from P4"]
+[18:10:40] [UNBLOCKD] P5 unblocked.
+[18:10:40] [RECV    ] DELIVRD [MSG#286 | P4->P5 | MEDIUM | 18:10:40 | "Hello from P4"] -> P5
+[18:10:41] [INFO    ] P1 processed: [MSG#277 | P3->P1 | LOW | 18:10:38 | "Hello from P3"]
+[18:10:41] [SENT    ] QUEUED  [MSG#287 | P5->P4 | LOW | 18:10:41 | "Hello from P5"]
+[18:10:41] [RECV    ] DELIVRD [MSG#287 | P5->P4 | LOW | 18:10:41 | "Hello from P5"] -> P4
+[18:10:41] [INFO    ] P3 processed: [MSG#250 | P1->P3 | LOW | 18:10:33 | "Hello from P1"]
+[18:10:41] [SENT    ] QUEUED  [MSG#288 | P1->P2 | LOW | 18:10:41 | "Hello from P1"]
+[18:10:41] [RECV    ] DELIVRD [MSG#288 | P1->P2 | LOW | 18:10:41 | "Hello from P1"] -> P2
+[18:10:41] [INFO    ] P2 processed: [MSG#279 | P4->P2 | LOW | 18:10:39 | "Hello from P4"]
+[18:10:41] [INFO    ] P4 processed: [MSG#284 | P3->P4 | MEDIUM | 18:10:40 | "Hello from P3"]
+[18:10:41] [INFO    ] P5 processed: [MSG#286 | P4->P5 | MEDIUM | 18:10:40 | "Hello from P4"]
+[18:10:41] [SENT    ] QUEUED  [MSG#289 | P3->P5 | MEDIUM | 18:10:41 | "Hello from P3"]
+[18:10:41] [RECV    ] DELIVRD [MSG#289 | P3->P5 | MEDIUM | 18:10:41 | "Hello from P3"] -> P5
+[18:10:41] [SENT    ] QUEUED  [MSG#290 | P4->P2 | LOW | 18:10:41 | "Hello from P4"]
+[18:10:41] [INFO    ] P1 processed: [MSG#265 | P3->P1 | LOW | 18:10:36 | "Hello from P3"]
+[18:10:41] [RECV    ] DELIVRD [MSG#290 | P4->P2 | LOW | 18:10:41 | "Hello from P4"] -> P2
+[18:10:41] [SENT    ] QUEUED  [MSG#291 | P2->P4 | LOW | 18:10:41 | "Hello from P2"]
+[18:10:42] [RECV    ] DELIVRD [MSG#291 | P2->P4 | LOW | 18:10:41 | "Hello from P2"] -> P4
+[18:10:42] [INFO    ] P2 processed: [MSG#269 | P4->P2 | LOW | 18:10:37 | "Hello from P4"]
+[18:10:42] [SENT    ] QUEUED  [MSG#292 | P1->P2 | MEDIUM | 18:10:42 | "Hello from P1"]
+[18:10:42] [RECV    ] DELIVRD [MSG#292 | P1->P2 | MEDIUM | 18:10:42 | "Hello from P1"] -> P2
+[18:10:42] [INFO    ] P4 processed: [MSG#282 | P5->P4 | LOW | 18:10:39 | "Hello from P5"]
+[18:10:42] [BLOCKED ] P3 is blocking on receive...
+[18:10:42] [SENT    ] QUEUED  [MSG#293 | P5->P3 | MEDIUM | 18:10:42 | "Hello from P5"]
+[18:10:42] [RECV    ] DELIVRD [MSG#293 | P5->P3 | MEDIUM | 18:10:42 | "Hello from P5"] -> P3
+[18:10:42] [UNBLOCKD] P3 unblocked.
+[18:10:42] [INFO    ] P3 processed: [MSG#293 | P5->P3 | MEDIUM | 18:10:42 | "Hello from P5"]
+[18:10:42] [SENT    ] QUEUED  [MSG#294 | P2->P1 | LOW | 18:10:42 | "Hello from P2"]
+[18:10:42] [RECV    ] DELIVRD [MSG#294 | P2->P1 | LOW | 18:10:42 | "Hello from P2"] -> P1
+[18:10:42] [SENT    ] QUEUED  [MSG#295 | P4->P2 | HIGH | 18:10:42 | "Hello from P4"]
+[18:10:42] [INFO    ] P5 processed: [MSG#289 | P3->P5 | MEDIUM | 18:10:41 | "Hello from P3"]
+[18:10:42] [RECV    ] DELIVRD [MSG#295 | P4->P2 | HIGH | 18:10:42 | "Hello from P4"] -> P2
+[18:10:42] [INFO    ] P2 processed: [MSG#295 | P4->P2 | HIGH | 18:10:42 | "Hello from P4"]
+[18:10:42] [INFO    ] P1 processed: [MSG#274 | P2->P1 | LOW | 18:10:38 | "Hello from P2"]
+[18:10:43] [SENT    ] QUEUED  [MSG#296 | P3->P5 | MEDIUM | 18:10:43 | "Hello from P3"]
+[18:10:43] [RECV    ] DELIVRD [MSG#296 | P3->P5 | MEDIUM | 18:10:43 | "Hello from P3"] -> P5
+[18:10:43] [SENT    ] QUEUED  [MSG#297 | P5->P2 | MEDIUM | 18:10:43 | "Hello from P5"]
+[18:10:43] [RECV    ] DELIVRD [MSG#297 | P5->P2 | MEDIUM | 18:10:43 | "Hello from P5"] -> P2
+[18:10:43] [SENT    ] QUEUED  [MSG#298 | P2->P1 | MEDIUM | 18:10:43 | "Hello from P2"]
+[18:10:43] [BLOCKED ] P3 is blocking on receive...
+[18:10:43] [RECV    ] DELIVRD [MSG#298 | P2->P1 | MEDIUM | 18:10:43 | "Hello from P2"] -> P1
+[18:10:43] [INFO    ] P4 processed: [MSG#196 | P1->P4 | LOW | 18:10:22 | "Hello from P1"]
+[18:10:43] [UNBLOCKD] P3 unblocked.
+[18:10:43] [SENT    ] QUEUED  [MSG#299 | P1->P5 | LOW | 18:10:43 | "Hello from P1"]
+[18:10:43] [RECV    ] DELIVRD [MSG#299 | P1->P5 | LOW | 18:10:43 | "Hello from P1"] -> P5
+[18:10:43] [SENT    ] QUEUED  [MSG#300 | P4->P2 | MEDIUM | 18:10:43 | "Hello from P4"]
+[18:10:43] [INFO    ] P5 processed: [MSG#296 | P3->P5 | MEDIUM | 18:10:43 | "Hello from P3"]
+[18:10:43] [RECV    ] DELIVRD [MSG#300 | P4->P2 | MEDIUM | 18:10:43 | "Hello from P4"] -> P2
+[18:10:43] [INFO    ] P2 processed: [MSG#292 | P1->P2 | MEDIUM | 18:10:42 | "Hello from P1"]
+[18:10:44] [SENT    ] QUEUED  [MSG#301 | P2->P4 | LOW | 18:10:44 | "Hello from P2"]
+[18:10:44] [SENT    ] QUEUED  [MSG#302 | P3->P5 | LOW | 18:10:44 | "Hello from P3"]
+[18:10:44] [INFO    ] P1 processed: [MSG#298 | P2->P1 | MEDIUM | 18:10:43 | "Hello from P2"]
+[18:10:44] [RECV    ] DELIVRD [MSG#301 | P2->P4 | LOW | 18:10:44 | "Hello from P2"] -> P4
+[18:10:44] [RECV    ] DELIVRD [MSG#302 | P3->P5 | LOW | 18:10:44 | "Hello from P3"] -> P5
+[18:10:44] [SENT    ] QUEUED  [MSG#303 | P5->P1 | HIGH | 18:10:44 | "Hello from P5"]
+[18:10:44] [RECV    ] DELIVRD [MSG#303 | P5->P1 | HIGH | 18:10:44 | "Hello from P5"] -> P1
+[18:10:44] [INFO    ] P4 processed: [MSG#207 | P1->P4 | LOW | 18:10:24 | "Hello from P1"]
+[18:10:44] [BLOCKED ] P3 is blocking on receive...
+[18:10:44] [INFO    ] P5 processed: [MSG#302 | P3->P5 | LOW | 18:10:44 | "Hello from P3"]
+[18:10:44] [SENT    ] QUEUED  [MSG#304 | P4->P1 | MEDIUM | 18:10:44 | "Hello from P4"]
+[18:10:44] [RECV    ] DELIVRD [MSG#304 | P4->P1 | MEDIUM | 18:10:44 | "Hello from P4"] -> P1
+[18:10:45] [SENT    ] QUEUED  [MSG#305 | P1->P4 | MEDIUM | 18:10:45 | "Hello from P1"]
+[18:10:45] [RECV    ] DELIVRD [MSG#305 | P1->P4 | MEDIUM | 18:10:45 | "Hello from P1"] -> P4
+[18:10:45] [INFO    ] P2 processed: [MSG#297 | P5->P2 | MEDIUM | 18:10:43 | "Hello from P5"]
+[18:10:45] [UNBLOCKD] P3 unblocked.
+[18:10:45] [INFO    ] P1 processed: [MSG#303 | P5->P1 | HIGH | 18:10:44 | "Hello from P5"]
+[18:10:45] [SENT    ] QUEUED  [MSG#306 | P5->P4 | HIGH | 18:10:45 | "Hello from P5"]
+[18:10:45] [RECV    ] DELIVRD [MSG#306 | P5->P4 | HIGH | 18:10:45 | "Hello from P5"] -> P4
+[18:10:45] [SENT    ] QUEUED  [MSG#307 | P2->P1 | MEDIUM | 18:10:45 | "Hello from P2"]
+[18:10:45] [INFO    ] P4 processed: [MSG#306 | P5->P4 | HIGH | 18:10:45 | "Hello from P5"]
+[18:10:45] [RECV    ] DELIVRD [MSG#307 | P2->P1 | MEDIUM | 18:10:45 | "Hello from P2"] -> P1
+[18:10:45] [SENT    ] QUEUED  [MSG#308 | P3->P1 | LOW | 18:10:45 | "Hello from P3"]
+[18:10:45] [RECV    ] DELIVRD [MSG#308 | P3->P1 | LOW | 18:10:45 | "Hello from P3"] -> P1
+[18:10:45] [INFO    ] P2 processed: [MSG#300 | P4->P2 | MEDIUM | 18:10:43 | "Hello from P4"]
+[18:10:45] [SENT    ] QUEUED  [MSG#309 | P4->P5 | MEDIUM | 18:10:45 | "Hello from P4"]
+[18:10:45] [RECV    ] DELIVRD [MSG#309 | P4->P5 | MEDIUM | 18:10:45 | "Hello from P4"] -> P5
+[18:10:46] [INFO    ] P5 processed: [MSG#309 | P4->P5 | MEDIUM | 18:10:45 | "Hello from P4"]
+[18:10:46] [SENT    ] QUEUED  [MSG#310 | P1->P2 | HIGH | 18:10:46 | "Hello from P1"]
+[18:10:46] [RECV    ] DELIVRD [MSG#310 | P1->P2 | HIGH | 18:10:46 | "Hello from P1"] -> P2
+[18:10:46] [INFO    ] P4 processed: [MSG#305 | P1->P4 | MEDIUM | 18:10:45 | "Hello from P1"]
+[18:10:46] [SENT    ] QUEUED  [MSG#311 | P2->P1 | MEDIUM | 18:10:46 | "Hello from P2"]
+[18:10:46] [RECV    ] DELIVRD [MSG#311 | P2->P1 | MEDIUM | 18:10:46 | "Hello from P2"] -> P1
+[18:10:46] [BLOCKED ] P3 is blocking on receive...
+[18:10:46] [SENT    ] QUEUED  [MSG#312 | P5->P1 | HIGH | 18:10:46 | "Hello from P5"]
+[18:10:46] [RECV    ] DELIVRD [MSG#312 | P5->P1 | HIGH | 18:10:46 | "Hello from P5"] -> P1
+[18:10:46] [UNBLOCKD] P3 unblocked.
+[18:10:46] [INFO    ] P2 processed: [MSG#310 | P1->P2 | HIGH | 18:10:46 | "Hello from P1"]
+[18:10:46] [INFO    ] P1 processed: [MSG#312 | P5->P1 | HIGH | 18:10:46 | "Hello from P5"]
+[18:10:47] [SENT    ] QUEUED  [MSG#313 | P4->P1 | LOW | 18:10:47 | "Hello from P4"]
+[18:10:47] [RECV    ] DELIVRD [MSG#313 | P4->P1 | LOW | 18:10:47 | "Hello from P4"] -> P1
+[18:10:47] [SENT    ] QUEUED  [MSG#314 | P3->P4 | LOW | 18:10:47 | "Hello from P3"]
+[18:10:47] [RECV    ] DELIVRD [MSG#314 | P3->P4 | LOW | 18:10:47 | "Hello from P3"] -> P4
+[18:10:47] [SENT    ] QUEUED  [MSG#315 | P1->P3 | LOW | 18:10:47 | "Hello from P1"]
+[18:10:47] [RECV    ] DELIVRD [MSG#315 | P1->P3 | LOW | 18:10:47 | "Hello from P1"] -> P3
+[18:10:47] [SENT    ] QUEUED  [MSG#316 | P2->P5 | MEDIUM | 18:10:47 | "Hello from P2"]
+[18:10:47] [INFO    ] P4 processed: [MSG#184 | P3->P4 | LOW | 18:10:19 | "Hello from P3"]
+[18:10:47] [RECV    ] DELIVRD [MSG#316 | P2->P5 | MEDIUM | 18:10:47 | "Hello from P2"] -> P5
+[18:10:47] [INFO    ] P5 processed: [MSG#316 | P2->P5 | MEDIUM | 18:10:47 | "Hello from P2"]
+[18:10:47] [INFO    ] P1 processed: [MSG#307 | P2->P1 | MEDIUM | 18:10:45 | "Hello from P2"]
+[18:10:47] [INFO    ] P3 processed: [MSG#315 | P1->P3 | LOW | 18:10:47 | "Hello from P1"]
+[18:10:47] [INFO    ] P2 processed: [MSG#288 | P1->P2 | LOW | 18:10:41 | "Hello from P1"]
+[18:10:47] [SENT    ] QUEUED  [MSG#317 | P4->P2 | MEDIUM | 18:10:47 | "Hello from P4"]
+[18:10:47] [RECV    ] DELIVRD [MSG#317 | P4->P2 | MEDIUM | 18:10:47 | "Hello from P4"] -> P2
+[18:10:48] [SENT    ] QUEUED  [MSG#318 | P5->P4 | LOW | 18:10:48 | "Hello from P5"]
+[18:10:48] [RECV    ] DELIVRD [MSG#318 | P5->P4 | LOW | 18:10:48 | "Hello from P5"] -> P4
+[18:10:48] [SENT    ] QUEUED  [MSG#319 | P1->P5 | HIGH | 18:10:48 | "Hello from P1"]
+[18:10:48] [INFO    ] P4 processed: [MSG#301 | P2->P4 | LOW | 18:10:44 | "Hello from P2"]
+[18:10:48] [RECV    ] DELIVRD [MSG#319 | P1->P5 | HIGH | 18:10:48 | "Hello from P1"] -> P5
+[18:10:48] [SENT    ] QUEUED  [MSG#320 | P2->P4 | MEDIUM | 18:10:48 | "Hello from P2"]
+[18:10:48] [RECV    ] DELIVRD [MSG#320 | P2->P4 | MEDIUM | 18:10:48 | "Hello from P2"] -> P4
+[18:10:48] [SENT    ] QUEUED  [MSG#321 | P3->P1 | HIGH | 18:10:48 | "Hello from P3"]
+[18:10:48] [RECV    ] DELIVRD [MSG#321 | P3->P1 | HIGH | 18:10:48 | "Hello from P3"] -> P1
+[18:10:48] [INFO    ] P1 processed: [MSG#321 | P3->P1 | HIGH | 18:10:48 | "Hello from P3"]
+[18:10:48] [INFO    ] P5 processed: [MSG#319 | P1->P5 | HIGH | 18:10:48 | "Hello from P1"]
+[18:10:48] [INFO    ] P2 processed: [MSG#317 | P4->P2 | MEDIUM | 18:10:47 | "Hello from P4"]
+[18:10:48] [SENT    ] QUEUED  [MSG#322 | P4->P3 | HIGH | 18:10:48 | "Hello from P4"]
+[18:10:48] [RECV    ] DELIVRD [MSG#322 | P4->P3 | HIGH | 18:10:48 | "Hello from P4"] -> P3
+[18:10:48] [SENT    ] QUEUED  [MSG#323 | P1->P5 | LOW | 18:10:48 | "Hello from P1"]
+[18:10:48] [RECV    ] DELIVRD [MSG#323 | P1->P5 | LOW | 18:10:48 | "Hello from P1"] -> P5
+[18:10:49] [INFO    ] P3 processed: [MSG#322 | P4->P3 | HIGH | 18:10:48 | "Hello from P4"]
+[18:10:49] [SENT    ] QUEUED  [MSG#324 | P5->P3 | HIGH | 18:10:49 | "Hello from P5"]
+[18:10:49] [RECV    ] DELIVRD [MSG#324 | P5->P3 | HIGH | 18:10:49 | "Hello from P5"] -> P3
+[18:10:49] [SENT    ] QUEUED  [MSG#325 | P2->P4 | LOW | 18:10:49 | "Hello from P2"]
+[18:10:49] [RECV    ] DELIVRD [MSG#325 | P2->P4 | LOW | 18:10:49 | "Hello from P2"] -> P4
+[18:10:49] [INFO    ] P4 processed: [MSG#320 | P2->P4 | MEDIUM | 18:10:48 | "Hello from P2"]
+[18:10:49] [INFO    ] P5 processed: [MSG#299 | P1->P5 | LOW | 18:10:43 | "Hello from P1"]
+[18:10:49] [INFO    ] P2 processed: [MSG#290 | P4->P2 | LOW | 18:10:41 | "Hello from P4"]
+[18:10:49] [SENT    ] QUEUED  [MSG#326 | P4->P1 | MEDIUM | 18:10:49 | "Hello from P4"]
+[18:10:49] [SENT    ] QUEUED  [MSG#327 | P3->P4 | MEDIUM | 18:10:49 | "Hello from P3"]
+[18:10:49] [RECV    ] DELIVRD [MSG#326 | P4->P1 | MEDIUM | 18:10:49 | "Hello from P4"] -> P1
+[18:10:49] [INFO    ] P1 processed: [MSG#304 | P4->P1 | MEDIUM | 18:10:44 | "Hello from P4"]
+[18:10:49] [RECV    ] DELIVRD [MSG#327 | P3->P4 | MEDIUM | 18:10:49 | "Hello from P3"] -> P4
+[18:10:49] [SENT    ] QUEUED  [MSG#328 | P2->P1 | LOW | 18:10:49 | "Hello from P2"]
+[18:10:49] [RECV    ] DELIVRD [MSG#328 | P2->P1 | LOW | 18:10:49 | "Hello from P2"] -> P1
+[18:10:50] [SENT    ] QUEUED  [MSG#329 | P1->P3 | HIGH | 18:10:50 | "Hello from P1"]
+[18:10:50] [RECV    ] DELIVRD [MSG#329 | P1->P3 | HIGH | 18:10:50 | "Hello from P1"] -> P3
+[18:10:50] [INFO    ] P4 processed: [MSG#327 | P3->P4 | MEDIUM | 18:10:49 | "Hello from P3"]
+[18:10:50] [SENT    ] QUEUED  [MSG#330 | P5->P3 | LOW | 18:10:50 | "Hello from P5"]
+[18:10:50] [RECV    ] DELIVRD [MSG#330 | P5->P3 | LOW | 18:10:50 | "Hello from P5"] -> P3
+[18:10:50] [INFO    ] P3 processed: [MSG#324 | P5->P3 | HIGH | 18:10:49 | "Hello from P5"]
+[18:10:50] [INFO    ] P5 processed: [MSG#323 | P1->P5 | LOW | 18:10:48 | "Hello from P1"]
+[18:10:50] [BLOCKED ] P2 is blocking on receive...
+[18:10:50] [INFO    ] P1 processed: [MSG#311 | P2->P1 | MEDIUM | 18:10:46 | "Hello from P2"]
+[18:10:50] [UNBLOCKD] P2 unblocked.
+[18:10:50] [SENT    ] QUEUED  [MSG#331 | P4->P2 | LOW | 18:10:50 | "Hello from P4"]
+[18:10:50] [RECV    ] DELIVRD [MSG#331 | P4->P2 | LOW | 18:10:50 | "Hello from P4"] -> P2
+[18:10:50] [SENT    ] QUEUED  [MSG#332 | P3->P4 | LOW | 18:10:50 | "Hello from P3"]
+[18:10:50] [RECV    ] DELIVRD [MSG#332 | P3->P4 | LOW | 18:10:50 | "Hello from P3"] -> P4
+[18:10:50] [SENT    ] QUEUED  [MSG#333 | P5->P3 | MEDIUM | 18:10:50 | "Hello from P5"]
+[18:10:50] [SENT    ] QUEUED  [MSG#334 | P1->P2 | MEDIUM | 18:10:50 | "Hello from P1"]
+[18:10:50] [RECV    ] DELIVRD [MSG#333 | P5->P3 | MEDIUM | 18:10:50 | "Hello from P5"] -> P3
+[18:10:51] [RECV    ] DELIVRD [MSG#334 | P1->P2 | MEDIUM | 18:10:50 | "Hello from P1"] -> P2
+[18:10:51] [BLOCKED ] P5 is blocking on receive...
+[18:10:51] [INFO    ] P1 processed: [MSG#326 | P4->P1 | MEDIUM | 18:10:49 | "Hello from P4"]
+[18:10:51] [INFO    ] P3 processed: [MSG#329 | P1->P3 | HIGH | 18:10:50 | "Hello from P1"]
+[18:10:51] [SENT    ] QUEUED  [MSG#335 | P2->P4 | LOW | 18:10:51 | "Hello from P2"]
+[18:10:51] [RECV    ] DELIVRD [MSG#335 | P2->P4 | LOW | 18:10:51 | "Hello from P2"] -> P4
+[18:10:51] [INFO    ] P4 processed: [MSG#318 | P5->P4 | LOW | 18:10:48 | "Hello from P5"]
+[18:10:51] [UNBLOCKD] P5 unblocked.
+[18:10:51] [SENT    ] QUEUED  [MSG#336 | P3->P4 | HIGH | 18:10:51 | "Hello from P3"]
+[18:10:51] [RECV    ] DELIVRD [MSG#336 | P3->P4 | HIGH | 18:10:51 | "Hello from P3"] -> P4
+[18:10:51] [SENT    ] QUEUED  [MSG#337 | P4->P2 | MEDIUM | 18:10:51 | "Hello from P4"]
+[18:10:51] [RECV    ] DELIVRD [MSG#337 | P4->P2 | MEDIUM | 18:10:51 | "Hello from P4"] -> P2
+[18:10:51] [SENT    ] QUEUED  [MSG#338 | P1->P5 | MEDIUM | 18:10:51 | "Hello from P1"]
+[18:10:51] [RECV    ] DELIVRD [MSG#338 | P1->P5 | MEDIUM | 18:10:51 | "Hello from P1"] -> P5
+[18:10:51] [SENT    ] QUEUED  [MSG#339 | P5->P2 | LOW | 18:10:51 | "Hello from P5"]
+[18:10:51] [RECV    ] DELIVRD [MSG#339 | P5->P2 | LOW | 18:10:51 | "Hello from P5"] -> P2
+[18:10:52] [INFO    ] P4 processed: [MSG#336 | P3->P4 | HIGH | 18:10:51 | "Hello from P3"]
+[18:10:52] [INFO    ] P2 processed: [MSG#334 | P1->P2 | MEDIUM | 18:10:50 | "Hello from P1"]
+[18:10:52] [INFO    ] P3 processed: [MSG#333 | P5->P3 | MEDIUM | 18:10:50 | "Hello from P5"]
+[18:10:52] [INFO    ] P1 processed: [MSG#294 | P2->P1 | LOW | 18:10:42 | "Hello from P2"]
+[18:10:52] [SENT    ] QUEUED  [MSG#340 | P2->P5 | MEDIUM | 18:10:52 | "Hello from P2"]
+[18:10:52] [RECV    ] DELIVRD [MSG#340 | P2->P5 | MEDIUM | 18:10:52 | "Hello from P2"] -> P5
+[18:10:52] [SENT    ] QUEUED  [MSG#341 | P4->P3 | LOW | 18:10:52 | "Hello from P4"]
+[18:10:52] [INFO    ] P5 processed: [MSG#338 | P1->P5 | MEDIUM | 18:10:51 | "Hello from P1"]
+[18:10:52] [RECV    ] DELIVRD [MSG#341 | P4->P3 | LOW | 18:10:52 | "Hello from P4"] -> P3
+[18:10:52] [SENT    ] QUEUED  [MSG#342 | P3->P2 | HIGH | 18:10:52 | "Hello from P3"]
+[18:10:52] [INFO    ] P2 processed: [MSG#337 | P4->P2 | MEDIUM | 18:10:51 | "Hello from P4"]
+[18:10:52] [RECV    ] DELIVRD [MSG#342 | P3->P2 | HIGH | 18:10:52 | "Hello from P3"] -> P2
+[18:10:53] [SENT    ] QUEUED  [MSG#343 | P5->P4 | LOW | 18:10:53 | "Hello from P5"]
+[18:10:53] [RECV    ] DELIVRD [MSG#343 | P5->P4 | LOW | 18:10:53 | "Hello from P5"] -> P4
+[18:10:53] [INFO    ] P4 processed: [MSG#287 | P5->P4 | LOW | 18:10:41 | "Hello from P5"]
+[18:10:53] [SENT    ] QUEUED  [MSG#344 | P2->P1 | MEDIUM | 18:10:53 | "Hello from P2"]
+[18:10:53] [RECV    ] DELIVRD [MSG#344 | P2->P1 | MEDIUM | 18:10:53 | "Hello from P2"] -> P1
+[18:10:53] [SENT    ] QUEUED  [MSG#345 | P1->P5 | MEDIUM | 18:10:53 | "Hello from P1"]
+[18:10:53] [INFO    ] P3 processed: [MSG#330 | P5->P3 | LOW | 18:10:50 | "Hello from P5"]
+[18:10:53] [RECV    ] DELIVRD [MSG#345 | P1->P5 | MEDIUM | 18:10:53 | "Hello from P1"] -> P5
+[18:10:53] [INFO    ] P2 processed: [MSG#342 | P3->P2 | HIGH | 18:10:52 | "Hello from P3"]
+[18:10:53] [INFO    ] P1 processed: [MSG#344 | P2->P1 | MEDIUM | 18:10:53 | "Hello from P2"]
+[18:10:53] [SENT    ] QUEUED  [MSG#346 | P4->P3 | LOW | 18:10:53 | "Hello from P4"]
+[18:10:53] [INFO    ] P5 processed: [MSG#340 | P2->P5 | MEDIUM | 18:10:52 | "Hello from P2"]
+[18:10:53] [RECV    ] DELIVRD [MSG#346 | P4->P3 | LOW | 18:10:53 | "Hello from P4"] -> P3
+[18:10:53] [SENT    ] QUEUED  [MSG#347 | P3->P2 | MEDIUM | 18:10:53 | "Hello from P3"]
+[18:10:53] [RECV    ] DELIVRD [MSG#347 | P3->P2 | MEDIUM | 18:10:53 | "Hello from P3"] -> P2
+[18:10:53] [INFO    ] P4 processed: [MSG#335 | P2->P4 | LOW | 18:10:51 | "Hello from P2"]
+[18:10:54] [INFO    ] P3 processed: [MSG#341 | P4->P3 | LOW | 18:10:52 | "Hello from P4"]
+[18:10:54] [SENT    ] QUEUED  [MSG#348 | P2->P5 | HIGH | 18:10:54 | "Hello from P2"]
+[18:10:54] [DROPPED ] DROPPED [MSG#349 | P4->P1 | MEDIUM | 18:10:54 | "Hello from P4"]
+[18:10:54] [RECV    ] DELIVRD [MSG#348 | P2->P5 | HIGH | 18:10:54 | "Hello from P2"] -> P5
+[18:10:54] [SENT    ] QUEUED  [MSG#350 | P1->P3 | LOW | 18:10:54 | "Hello from P1"]
+[18:10:54] [RECV    ] DELIVRD [MSG#350 | P1->P3 | LOW | 18:10:54 | "Hello from P1"] -> P3
+[18:10:54] [INFO    ] P2 processed: [MSG#347 | P3->P2 | MEDIUM | 18:10:53 | "Hello from P3"]
+[18:10:54] [SENT    ] QUEUED  [MSG#351 | P5->P3 | LOW | 18:10:54 | "Hello from P5"]
+[18:10:54] [RECV    ] DELIVRD [MSG#351 | P5->P3 | LOW | 18:10:54 | "Hello from P5"] -> P3
+[18:10:54] [SENT    ] QUEUED  [MSG#352 | P3->P5 | LOW | 18:10:54 | "Hello from P3"]
+[18:10:54] [RECV    ] DELIVRD [MSG#352 | P3->P5 | LOW | 18:10:54 | "Hello from P3"] -> P5
+[18:10:54] [INFO    ] P4 processed: [MSG#260 | P2->P4 | LOW | 18:10:35 | "Hello from P2"]
+[18:10:54] [INFO    ] P1 processed: [MSG#97 | P3->P1 | LOW | 18:10:02 | "Hello from P3"]
+[18:10:54] [SENT    ] QUEUED  [MSG#353 | P2->P1 | MEDIUM | 18:10:54 | "Hello from P2"]
+[18:10:54] [RECV    ] DELIVRD [MSG#353 | P2->P1 | MEDIUM | 18:10:54 | "Hello from P2"] -> P1
+[18:10:54] [INFO    ] P5 processed: [MSG#348 | P2->P5 | HIGH | 18:10:54 | "Hello from P2"]
+[18:10:54] [INFO    ] P3 processed: [MSG#346 | P4->P3 | LOW | 18:10:53 | "Hello from P4"]
+[18:10:55] [SENT    ] QUEUED  [MSG#354 | P1->P5 | MEDIUM | 18:10:55 | "Hello from P1"]
+[18:10:55] [SENT    ] QUEUED  [MSG#355 | P4->P3 | MEDIUM | 18:10:55 | "Hello from P4"]
+[18:10:55] [RECV    ] DELIVRD [MSG#354 | P1->P5 | MEDIUM | 18:10:55 | "Hello from P1"] -> P5
+[18:10:55] [RECV    ] DELIVRD [MSG#355 | P4->P3 | MEDIUM | 18:10:55 | "Hello from P4"] -> P3
+[18:10:55] [SENT    ] QUEUED  [MSG#356 | P5->P3 | HIGH | 18:10:55 | "Hello from P5"]
+[18:10:55] [RECV    ] DELIVRD [MSG#356 | P5->P3 | HIGH | 18:10:55 | "Hello from P5"] -> P3
+[18:10:55] [INFO    ] P2 processed: [MSG#331 | P4->P2 | LOW | 18:10:50 | "Hello from P4"]
+[18:10:55] [SENT    ] QUEUED  [MSG#357 | P3->P1 | LOW | 18:10:55 | "Hello from P3"]
+[18:10:55] [RECV    ] DELIVRD [MSG#357 | P3->P1 | LOW | 18:10:55 | "Hello from P3"] -> P1
+[18:10:55] [INFO    ] P4 processed: [MSG#343 | P5->P4 | LOW | 18:10:53 | "Hello from P5"]
+[18:10:55] [INFO    ] P1 processed: [MSG#353 | P2->P1 | MEDIUM | 18:10:54 | "Hello from P2"]
+[18:10:55] [INFO    ] P3 processed: [MSG#356 | P5->P3 | HIGH | 18:10:55 | "Hello from P5"]
+[18:10:55] [INFO    ] P5 processed: [MSG#345 | P1->P5 | MEDIUM | 18:10:53 | "Hello from P1"]
+[18:10:56] [SENT    ] QUEUED  [MSG#358 | P2->P1 | MEDIUM | 18:10:56 | "Hello from P2"]
+[18:10:56] [RECV    ] DELIVRD [MSG#358 | P2->P1 | MEDIUM | 18:10:56 | "Hello from P2"] -> P1
+[18:10:56] [SENT    ] QUEUED  [MSG#359 | P1->P4 | LOW | 18:10:56 | "Hello from P1"]
+[18:10:56] [RECV    ] DELIVRD [MSG#359 | P1->P4 | LOW | 18:10:56 | "Hello from P1"] -> P4
+[18:10:56] [SENT    ] QUEUED  [MSG#360 | P4->P2 | HIGH | 18:10:56 | "Hello from P4"]
+[18:10:56] [RECV    ] DELIVRD [MSG#360 | P4->P2 | HIGH | 18:10:56 | "Hello from P4"] -> P2
+[18:10:56] [SENT    ] QUEUED  [MSG#361 | P3->P4 | MEDIUM | 18:10:56 | "Hello from P3"]
+[18:10:56] [RECV    ] DELIVRD [MSG#361 | P3->P4 | MEDIUM | 18:10:56 | "Hello from P3"] -> P4
+[18:10:56] [INFO    ] P4 processed: [MSG#361 | P3->P4 | MEDIUM | 18:10:56 | "Hello from P3"]
+[18:10:56] [INFO    ] P3 processed: [MSG#355 | P4->P3 | MEDIUM | 18:10:55 | "Hello from P4"]
+[18:10:56] [INFO    ] P2 processed: [MSG#360 | P4->P2 | HIGH | 18:10:56 | "Hello from P4"]
+[18:10:56] [SENT    ] QUEUED  [MSG#362 | P5->P3 | LOW | 18:10:56 | "Hello from P5"]
+[18:10:56] [RECV    ] DELIVRD [MSG#362 | P5->P3 | LOW | 18:10:56 | "Hello from P5"] -> P3
+[18:10:56] [DROPPED ] DROPPED [MSG#363 | P3->P4 | MEDIUM | 18:10:56 | "Hello from P3"]
+[18:10:56] [INFO    ] P1 processed: [MSG#358 | P2->P1 | MEDIUM | 18:10:56 | "Hello from P2"]
+[18:10:56] [SENT    ] QUEUED  [MSG#364 | P4->P3 | HIGH | 18:10:56 | "Hello from P4"]
+[18:10:56] [RECV    ] DELIVRD [MSG#364 | P4->P3 | HIGH | 18:10:56 | "Hello from P4"] -> P3
+[18:10:57] [INFO    ] P3 processed: [MSG#364 | P4->P3 | HIGH | 18:10:56 | "Hello from P4"]
+[18:10:57] [SENT    ] QUEUED  [MSG#365 | P1->P3 | HIGH | 18:10:57 | "Hello from P1"]
+[18:10:57] [RECV    ] DELIVRD [MSG#365 | P1->P3 | HIGH | 18:10:57 | "Hello from P1"] -> P3
+[18:10:57] [DROPPED ] DROPPED [MSG#366 | P2->P1 | MEDIUM | 18:10:57 | "Hello from P2"]
+[18:10:57] [INFO    ] P5 processed: [MSG#354 | P1->P5 | MEDIUM | 18:10:55 | "Hello from P1"]
+[18:10:57] [INFO    ] P1 processed: [MSG#241 | P3->P1 | LOW | 18:10:31 | "Hello from P3"]
+[18:10:57] [INFO    ] P4 processed: [MSG#283 | P1->P4 | LOW | 18:10:40 | "Hello from P1"]
+[18:10:57] [SENT    ] QUEUED  [MSG#367 | P3->P5 | MEDIUM | 18:10:57 | "Hello from P3"]
+[18:10:57] [RECV    ] DELIVRD [MSG#367 | P3->P5 | MEDIUM | 18:10:57 | "Hello from P3"] -> P5
+[18:10:57] [SENT    ] QUEUED  [MSG#368 | P5->P4 | MEDIUM | 18:10:57 | "Hello from P5"]
+[18:10:57] [SENT    ] QUEUED  [MSG#369 | P4->P5 | MEDIUM | 18:10:57 | "Hello from P4"]
+[18:10:57] [RECV    ] DELIVRD [MSG#368 | P5->P4 | MEDIUM | 18:10:57 | "Hello from P5"] -> P4
+[18:10:57] [RECV    ] DELIVRD [MSG#369 | P4->P5 | MEDIUM | 18:10:57 | "Hello from P4"] -> P5
+[18:10:57] [INFO    ] P2 processed: [MSG#339 | P5->P2 | LOW | 18:10:51 | "Hello from P5"]
+[18:10:58] [SENT    ] QUEUED  [MSG#370 | P2->P3 | LOW | 18:10:58 | "Hello from P2"]
+[18:10:58] [RECV    ] DELIVRD [MSG#370 | P2->P3 | LOW | 18:10:58 | "Hello from P2"] -> P3
+[18:10:58] [INFO    ] P4 processed: [MSG#368 | P5->P4 | MEDIUM | 18:10:57 | "Hello from P5"]
+[18:10:58] [SENT    ] QUEUED  [MSG#371 | P1->P5 | MEDIUM | 18:10:58 | "Hello from P1"]
+[18:10:58] [RECV    ] DELIVRD [MSG#371 | P1->P5 | MEDIUM | 18:10:58 | "Hello from P1"] -> P5
+[18:10:58] [INFO    ] P5 processed: [MSG#369 | P4->P5 | MEDIUM | 18:10:57 | "Hello from P4"]
+[18:10:58] [BLOCKED ] P2 is blocking on receive...
+[18:10:58] [INFO    ] P3 processed: [MSG#365 | P1->P3 | HIGH | 18:10:57 | "Hello from P1"]
+[18:10:58] [UNBLOCKD] P2 unblocked.
+[18:10:58] [SENT    ] QUEUED  [MSG#372 | P3->P1 | LOW | 18:10:58 | "Hello from P3"]
+[18:10:58] [RECV    ] DELIVRD [MSG#372 | P3->P1 | LOW | 18:10:58 | "Hello from P3"] -> P1
+[18:10:58] [SENT    ] QUEUED  [MSG#373 | P4->P2 | LOW | 18:10:58 | "Hello from P4"]
+[18:10:58] [INFO    ] P1 processed: [MSG#357 | P3->P1 | LOW | 18:10:55 | "Hello from P3"]
+[18:10:58] [RECV    ] DELIVRD [MSG#373 | P4->P2 | LOW | 18:10:58 | "Hello from P4"] -> P2
+[18:10:59] [SENT    ] QUEUED  [MSG#374 | P5->P4 | LOW | 18:10:59 | "Hello from P5"]
+[18:10:59] [RECV    ] DELIVRD [MSG#374 | P5->P4 | LOW | 18:10:59 | "Hello from P5"] -> P4
+[18:10:59] [SENT    ] QUEUED  [MSG#375 | P2->P3 | HIGH | 18:10:59 | "Hello from P2"]
+[18:10:59] [RECV    ] DELIVRD [MSG#375 | P2->P3 | HIGH | 18:10:59 | "Hello from P2"] -> P3
+[18:10:59] [INFO    ] P3 processed: [MSG#375 | P2->P3 | HIGH | 18:10:59 | "Hello from P2"]
+[18:10:59] [INFO    ] P2 processed: [MSG#373 | P4->P2 | LOW | 18:10:58 | "Hello from P4"]
+[18:10:59] [INFO    ] P4 processed: [MSG#291 | P2->P4 | LOW | 18:10:41 | "Hello from P2"]
+[18:10:59] [DROPPED ] DROPPED [MSG#376 | P3->P1 | HIGH | 18:10:59 | "Hello from P3"]
+[18:10:59] [SENT    ] QUEUED  [MSG#377 | P1->P4 | LOW | 18:10:59 | "Hello from P1"]
+[18:10:59] [RECV    ] DELIVRD [MSG#377 | P1->P4 | LOW | 18:10:59 | "Hello from P1"] -> P4
+[18:10:59] [INFO    ] P5 processed: [MSG#367 | P3->P5 | MEDIUM | 18:10:57 | "Hello from P3"]
+[18:10:59] [SENT    ] QUEUED  [MSG#378 | P4->P1 | MEDIUM | 18:10:59 | "Hello from P4"]
+[18:10:59] [RECV    ] DELIVRD [MSG#378 | P4->P1 | MEDIUM | 18:10:59 | "Hello from P4"] -> P1
+[18:10:59] [INFO    ] P3 processed: [MSG#370 | P2->P3 | LOW | 18:10:58 | "Hello from P2"]
+[18:10:59] [SENT    ] QUEUED  [MSG#379 | P2->P4 | MEDIUM | 18:10:59 | "Hello from P2"]
+[18:11:00] [RECV    ] DELIVRD [MSG#379 | P2->P4 | MEDIUM | 18:10:59 | "Hello from P2"] -> P4
+[18:11:00] [BLOCKED ] P2 is blocking on receive...
+[18:11:00] [INFO    ] P1 processed: [MSG#378 | P4->P1 | MEDIUM | 18:10:59 | "Hello from P4"]
+[18:11:00] [SENT    ] QUEUED  [MSG#380 | P5->P3 | HIGH | 18:11:00 | "Hello from P5"]
+[18:11:00] [RECV    ] DELIVRD [MSG#380 | P5->P3 | HIGH | 18:11:00 | "Hello from P5"] -> P3
+[18:11:00] [INFO    ] P4 processed: [MSG#379 | P2->P4 | MEDIUM | 18:10:59 | "Hello from P2"]
+[18:11:00] [UNBLOCKD] P2 unblocked.
+[18:11:00] [SENT    ] QUEUED  [MSG#381 | P4->P1 | LOW | 18:11:00 | "Hello from P4"]
+[18:11:00] [RECV    ] DELIVRD [MSG#381 | P4->P1 | LOW | 18:11:00 | "Hello from P4"] -> P1
+[18:11:00] [SENT    ] QUEUED  [MSG#382 | P3->P4 | LOW | 18:11:00 | "Hello from P3"]
+[18:11:00] [INFO    ] P5 processed: [MSG#371 | P1->P5 | MEDIUM | 18:10:58 | "Hello from P1"]
+[18:11:00] [RECV    ] DELIVRD [MSG#382 | P3->P4 | LOW | 18:11:00 | "Hello from P3"] -> P4
+[18:11:00] [SENT    ] QUEUED  [MSG#383 | P1->P2 | HIGH | 18:11:00 | "Hello from P1"]
+[18:11:01] [RECV    ] DELIVRD [MSG#383 | P1->P2 | HIGH | 18:11:00 | "Hello from P1"] -> P2
+[18:11:01] [INFO    ] P4 processed: [MSG#325 | P2->P4 | LOW | 18:10:49 | "Hello from P2"]
+[18:11:01] [SENT    ] QUEUED  [MSG#384 | P2->P4 | LOW | 18:11:01 | "Hello from P2"]
+[18:11:01] [RECV    ] DELIVRD [MSG#384 | P2->P4 | LOW | 18:11:01 | "Hello from P2"] -> P4
+[18:11:01] [SENT    ] QUEUED  [MSG#385 | P5->P3 | LOW | 18:11:01 | "Hello from P5"]
+[18:11:01] [RECV    ] DELIVRD [MSG#385 | P5->P3 | LOW | 18:11:01 | "Hello from P5"] -> P3
+[18:11:01] [INFO    ] P3 processed: [MSG#380 | P5->P3 | HIGH | 18:11:00 | "Hello from P5"]
+[18:11:01] [INFO    ] P1 processed: [MSG#140 | P5->P1 | LOW | 18:10:11 | "Hello from P5"]
+[18:11:01] [INFO    ] P2 processed: [MSG#383 | P1->P2 | HIGH | 18:11:00 | "Hello from P1"]
+[18:11:01] [SENT    ] QUEUED  [MSG#386 | P4->P3 | LOW | 18:11:01 | "Hello from P4"]
+[18:11:01] [RECV    ] DELIVRD [MSG#386 | P4->P3 | LOW | 18:11:01 | "Hello from P4"] -> P3
+[18:11:01] [SENT    ] QUEUED  [MSG#387 | P3->P1 | HIGH | 18:11:01 | "Hello from P3"]
+[18:11:01] [RECV    ] DELIVRD [MSG#387 | P3->P1 | HIGH | 18:11:01 | "Hello from P3"] -> P1
+[18:11:01] [SENT    ] QUEUED  [MSG#388 | P1->P3 | LOW | 18:11:01 | "Hello from P1"]
+[18:11:01] [INFO    ] P5 processed: [MSG#352 | P3->P5 | LOW | 18:10:54 | "Hello from P3"]
+[18:11:01] [RECV    ] DELIVRD [MSG#388 | P1->P3 | LOW | 18:11:01 | "Hello from P1"] -> P3
+[18:11:02] [INFO    ] P4 processed: [MSG#374 | P5->P4 | LOW | 18:10:59 | "Hello from P5"]
+[18:11:02] [SENT    ] QUEUED  [MSG#389 | P2->P5 | LOW | 18:11:02 | "Hello from P2"]
+[18:11:02] [RECV    ] DELIVRD [MSG#389 | P2->P5 | LOW | 18:11:02 | "Hello from P2"] -> P5
+[18:11:02] [INFO    ] P3 processed: [MSG#351 | P5->P3 | LOW | 18:10:54 | "Hello from P5"]
+[18:11:02] [SENT    ] QUEUED  [MSG#390 | P4->P2 | MEDIUM | 18:11:02 | "Hello from P4"]
+[18:11:02] [INFO    ] P1 processed: [MSG#387 | P3->P1 | HIGH | 18:11:01 | "Hello from P3"]
+[18:11:02] [RECV    ] DELIVRD [MSG#390 | P4->P2 | MEDIUM | 18:11:02 | "Hello from P4"] -> P2
+[18:11:02] [SENT    ] QUEUED  [MSG#391 | P5->P1 | MEDIUM | 18:11:02 | "Hello from P5"]
+[18:11:02] [RECV    ] DELIVRD [MSG#391 | P5->P1 | MEDIUM | 18:11:02 | "Hello from P5"] -> P1
+[18:11:02] [SENT    ] QUEUED  [MSG#392 | P1->P5 | LOW | 18:11:02 | "Hello from P1"]
+[18:11:02] [INFO    ] P4 processed: [MSG#332 | P3->P4 | LOW | 18:10:50 | "Hello from P3"]
+[18:11:02] [INFO    ] P2 processed: [MSG#390 | P4->P2 | MEDIUM | 18:11:02 | "Hello from P4"]
+[18:11:02] [RECV    ] DELIVRD [MSG#392 | P1->P5 | LOW | 18:11:02 | "Hello from P1"] -> P5
+[18:11:02] [SENT    ] QUEUED  [MSG#393 | P3->P1 | HIGH | 18:11:02 | "Hello from P3"]
+[18:11:02] [RECV    ] DELIVRD [MSG#393 | P3->P1 | HIGH | 18:11:02 | "Hello from P3"] -> P1
+[18:11:02] [INFO    ] P5 processed: [MSG#389 | P2->P5 | LOW | 18:11:02 | "Hello from P2"]
+[18:11:03] [SENT    ] QUEUED  [MSG#394 | P2->P5 | MEDIUM | 18:11:03 | "Hello from P2"]
+[18:11:03] [RECV    ] DELIVRD [MSG#394 | P2->P5 | MEDIUM | 18:11:03 | "Hello from P2"] -> P5
+[18:11:03] [INFO    ] P1 processed: [MSG#393 | P3->P1 | HIGH | 18:11:02 | "Hello from P3"]
+[18:11:03] [SENT    ] QUEUED  [MSG#395 | P5->P4 | MEDIUM | 18:11:03 | "Hello from P5"]
+[18:11:03] [SENT    ] QUEUED  [MSG#396 | P4->P3 | LOW | 18:11:03 | "Hello from P4"]
+[18:11:03] [RECV    ] DELIVRD [MSG#395 | P5->P4 | MEDIUM | 18:11:03 | "Hello from P5"] -> P4
+[18:11:03] [RECV    ] DELIVRD [MSG#396 | P4->P3 | LOW | 18:11:03 | "Hello from P4"] -> P3
+[18:11:03] [INFO    ] P3 processed: [MSG#396 | P4->P3 | LOW | 18:11:03 | "Hello from P4"]
+[18:11:03] [INFO    ] P4 processed: [MSG#395 | P5->P4 | MEDIUM | 18:11:03 | "Hello from P5"]
+[18:11:03] [BLOCKED ] P2 is blocking on receive...
+[18:11:03] [SENT    ] QUEUED  [MSG#397 | P1->P3 | LOW | 18:11:03 | "Hello from P1"]
+[18:11:03] [RECV    ] DELIVRD [MSG#397 | P1->P3 | LOW | 18:11:03 | "Hello from P1"] -> P3
+[18:11:04] [INFO    ] P5 processed: [MSG#394 | P2->P5 | MEDIUM | 18:11:03 | "Hello from P2"]
+[18:11:04] [UNBLOCKD] P2 unblocked.
+[18:11:04] [SENT    ] QUEUED  [MSG#398 | P3->P1 | LOW | 18:11:04 | "Hello from P3"]
+[18:11:04] [RECV    ] DELIVRD [MSG#398 | P3->P1 | LOW | 18:11:04 | "Hello from P3"] -> P1
+[18:11:04] [SENT    ] QUEUED  [MSG#399 | P4->P2 | MEDIUM | 18:11:04 | "Hello from P4"]
+[18:11:04] [RECV    ] DELIVRD [MSG#399 | P4->P2 | MEDIUM | 18:11:04 | "Hello from P4"] -> P2
+[18:11:04] [SENT    ] QUEUED  [MSG#400 | P5->P3 | HIGH | 18:11:04 | "Hello from P5"]
+[18:11:04] [RECV    ] DELIVRD [MSG#400 | P5->P3 | HIGH | 18:11:04 | "Hello from P5"] -> P3
+[18:11:04] [INFO    ] P3 processed: [MSG#400 | P5->P3 | HIGH | 18:11:04 | "Hello from P5"]
+[18:11:04] [SENT    ] QUEUED  [MSG#401 | P2->P5 | HIGH | 18:11:04 | "Hello from P2"]
+[18:11:04] [RECV    ] DELIVRD [MSG#401 | P2->P5 | HIGH | 18:11:04 | "Hello from P2"] -> P5
+[18:11:04] [INFO    ] P1 processed: [MSG#391 | P5->P1 | MEDIUM | 18:11:02 | "Hello from P5"]
+[18:11:04] [INFO    ] P5 processed: [MSG#401 | P2->P5 | HIGH | 18:11:04 | "Hello from P2"]
+[18:11:04] [SENT    ] QUEUED  [MSG#402 | P3->P4 | MEDIUM | 18:11:04 | "Hello from P3"]
+[18:11:04] [RECV    ] DELIVRD [MSG#402 | P3->P4 | MEDIUM | 18:11:04 | "Hello from P3"] -> P4
+[18:11:04] [INFO    ] P4 processed: [MSG#402 | P3->P4 | MEDIUM | 18:11:04 | "Hello from P3"]
+[18:11:05] [INFO    ] P2 processed: [MSG#399 | P4->P2 | MEDIUM | 18:11:04 | "Hello from P4"]
+[18:11:05] [SENT    ] QUEUED  [MSG#403 | P1->P5 | MEDIUM | 18:11:05 | "Hello from P1"]
+[18:11:05] [RECV    ] DELIVRD [MSG#403 | P1->P5 | MEDIUM | 18:11:05 | "Hello from P1"] -> P5
+[18:11:05] [INFO    ] P3 processed: [MSG#385 | P5->P3 | LOW | 18:11:01 | "Hello from P5"]
+[18:11:05] [SENT    ] QUEUED  [MSG#404 | P5->P3 | MEDIUM | 18:11:05 | "Hello from P5"]
+[18:11:05] [RECV    ] DELIVRD [MSG#404 | P5->P3 | MEDIUM | 18:11:05 | "Hello from P5"] -> P3
+[18:11:05] [SENT    ] QUEUED  [MSG#405 | P4->P1 | HIGH | 18:11:05 | "Hello from P4"]
+[18:11:05] [RECV    ] DELIVRD [MSG#405 | P4->P1 | HIGH | 18:11:05 | "Hello from P4"] -> P1
+[18:11:05] [INFO    ] P5 processed: [MSG#403 | P1->P5 | MEDIUM | 18:11:05 | "Hello from P1"]
+[18:11:05] [INFO    ] P1 processed: [MSG#405 | P4->P1 | HIGH | 18:11:05 | "Hello from P4"]
+[18:11:05] [SENT    ] QUEUED  [MSG#406 | P2->P4 | MEDIUM | 18:11:05 | "Hello from P2"]
+[18:11:05] [RECV    ] DELIVRD [MSG#406 | P2->P4 | MEDIUM | 18:11:05 | "Hello from P2"] -> P4
+[18:11:05] [SENT    ] QUEUED  [MSG#407 | P3->P2 | MEDIUM | 18:11:05 | "Hello from P3"]
+[18:11:05] [RECV    ] DELIVRD [MSG#407 | P3->P2 | MEDIUM | 18:11:05 | "Hello from P3"] -> P2
+[18:11:06] [INFO    ] P4 processed: [MSG#406 | P2->P4 | MEDIUM | 18:11:05 | "Hello from P2"]
+[18:11:06] [SENT    ] QUEUED  [MSG#408 | P5->P3 | LOW | 18:11:06 | "Hello from P5"]
+[18:11:06] [RECV    ] DELIVRD [MSG#408 | P5->P3 | LOW | 18:11:06 | "Hello from P5"] -> P3
+[18:11:06] [SENT    ] QUEUED  [MSG#409 | P4->P1 | LOW | 18:11:06 | "Hello from P4"]
+[18:11:06] [SENT    ] QUEUED  [MSG#410 | P1->P2 | HIGH | 18:11:06 | "Hello from P1"]
+[18:11:06] [RECV    ] DELIVRD [MSG#410 | P1->P2 | HIGH | 18:11:06 | "Hello from P1"] -> P2
+[18:11:06] [INFO    ] P2 processed: [MSG#410 | P1->P2 | HIGH | 18:11:06 | "Hello from P1"]
+[18:11:06] [RECV    ] DELIVRD [MSG#409 | P4->P1 | LOW | 18:11:06 | "Hello from P4"] -> P1
+[18:11:06] [INFO    ] P3 processed: [MSG#404 | P5->P3 | MEDIUM | 18:11:05 | "Hello from P5"]
+[18:11:06] [INFO    ] P5 processed: [MSG#392 | P1->P5 | LOW | 18:11:02 | "Hello from P1"]
+[18:11:06] [SENT    ] QUEUED  [MSG#411 | P2->P3 | MEDIUM | 18:11:06 | "Hello from P2"]
+[18:11:06] [RECV    ] DELIVRD [MSG#411 | P2->P3 | MEDIUM | 18:11:06 | "Hello from P2"] -> P3
+[18:11:07] [INFO    ] P1 processed: [MSG#409 | P4->P1 | LOW | 18:11:06 | "Hello from P4"]
+[18:11:07] [INFO    ] P4 processed: [MSG#239 | P2->P4 | LOW | 18:10:30 | "Hello from P2"]
+[18:11:07] [SENT    ] QUEUED  [MSG#412 | P5->P2 | HIGH | 18:11:07 | "Hello from P5"]
+[18:11:07] [RECV    ] DELIVRD [MSG#412 | P5->P2 | HIGH | 18:11:07 | "Hello from P5"] -> P2
+[18:11:07] [SENT    ] QUEUED  [MSG#413 | P3->P4 | MEDIUM | 18:11:07 | "Hello from P3"]
+[18:11:07] [RECV    ] DELIVRD [MSG#413 | P3->P4 | MEDIUM | 18:11:07 | "Hello from P3"] -> P4
+[18:11:07] [SENT    ] QUEUED  [MSG#414 | P1->P3 | LOW | 18:11:07 | "Hello from P1"]
+[18:11:07] [RECV    ] DELIVRD [MSG#414 | P1->P3 | LOW | 18:11:07 | "Hello from P1"] -> P3
+[18:11:07] [INFO    ] P2 processed: [MSG#412 | P5->P2 | HIGH | 18:11:07 | "Hello from P5"]
+[18:11:07] [SENT    ] QUEUED  [MSG#415 | P4->P2 | LOW | 18:11:07 | "Hello from P4"]
+[18:11:07] [RECV    ] DELIVRD [MSG#415 | P4->P2 | LOW | 18:11:07 | "Hello from P4"] -> P2
+[18:11:07] [BLOCKED ] P5 is blocking on receive...
+[18:11:08] [INFO    ] P1 processed: [MSG#398 | P3->P1 | LOW | 18:11:04 | "Hello from P3"]
+[18:11:08] [INFO    ] P3 processed: [MSG#411 | P2->P3 | MEDIUM | 18:11:06 | "Hello from P2"]
+[18:11:08] [SENT    ] QUEUED  [MSG#416 | P2->P1 | MEDIUM | 18:11:08 | "Hello from P2"]
+[18:11:08] [RECV    ] DELIVRD [MSG#416 | P2->P1 | MEDIUM | 18:11:08 | "Hello from P2"] -> P1
+[18:11:08] [UNBLOCKD] P5 unblocked.
+[18:11:08] [SENT    ] QUEUED  [MSG#417 | P3->P5 | LOW | 18:11:08 | "Hello from P3"]
+[18:11:08] [RECV    ] DELIVRD [MSG#417 | P3->P5 | LOW | 18:11:08 | "Hello from P3"] -> P5
+[18:11:08] [INFO    ] P4 processed: [MSG#413 | P3->P4 | MEDIUM | 18:11:07 | "Hello from P3"]
+[18:11:08] [SENT    ] QUEUED  [MSG#418 | P1->P2 | HIGH | 18:11:08 | "Hello from P1"]
+[18:11:08] [INFO    ] P3 processed: [MSG#397 | P1->P3 | LOW | 18:11:03 | "Hello from P1"]
+[18:11:08] [RECV    ] DELIVRD [MSG#418 | P1->P2 | HIGH | 18:11:08 | "Hello from P1"] -> P2
+[18:11:08] [INFO    ] P2 processed: [MSG#418 | P1->P2 | HIGH | 18:11:08 | "Hello from P1"]
+[18:11:08] [INFO    ] P1 processed: [MSG#416 | P2->P1 | MEDIUM | 18:11:08 | "Hello from P2"]
+[18:11:09] [SENT    ] QUEUED  [MSG#419 | P5->P1 | LOW | 18:11:09 | "Hello from P5"]
+[18:11:09] [RECV    ] DELIVRD [MSG#419 | P5->P1 | LOW | 18:11:09 | "Hello from P5"] -> P1
+[18:11:09] [SENT    ] QUEUED  [MSG#420 | P4->P3 | HIGH | 18:11:09 | "Hello from P4"]
+[18:11:09] [RECV    ] DELIVRD [MSG#420 | P4->P3 | HIGH | 18:11:09 | "Hello from P4"] -> P3
+[18:11:09] [SENT    ] QUEUED  [MSG#421 | P2->P3 | MEDIUM | 18:11:09 | "Hello from P2"]
+[18:11:09] [RECV    ] DELIVRD [MSG#421 | P2->P3 | MEDIUM | 18:11:09 | "Hello from P2"] -> P3
+[18:11:09] [SENT    ] QUEUED  [MSG#422 | P3->P1 | MEDIUM | 18:11:09 | "Hello from P3"]
+[18:11:09] [SENT    ] QUEUED  [MSG#423 | P1->P2 | LOW | 18:11:09 | "Hello from P1"]
+[18:11:09] [RECV    ] DELIVRD [MSG#422 | P3->P1 | MEDIUM | 18:11:09 | "Hello from P3"] -> P1
+[18:11:09] [RECV    ] DELIVRD [MSG#423 | P1->P2 | LOW | 18:11:09 | "Hello from P1"] -> P2
+[18:11:09] [INFO    ] P5 processed: [MSG#417 | P3->P5 | LOW | 18:11:08 | "Hello from P3"]
+[18:11:09] [INFO    ] P1 processed: [MSG#422 | P3->P1 | MEDIUM | 18:11:09 | "Hello from P3"]
+[18:11:09] [INFO    ] P2 processed: [MSG#407 | P3->P2 | MEDIUM | 18:11:05 | "Hello from P3"]
+[18:11:09] [INFO    ] P3 processed: [MSG#420 | P4->P3 | HIGH | 18:11:09 | "Hello from P4"]
+[18:11:09] [SENT    ] QUEUED  [MSG#424 | P5->P3 | MEDIUM | 18:11:09 | "Hello from P5"]
+[18:11:09] [RECV    ] DELIVRD [MSG#424 | P5->P3 | MEDIUM | 18:11:09 | "Hello from P5"] -> P3
+[18:11:09] [INFO    ] P4 processed: [MSG#359 | P1->P4 | LOW | 18:10:56 | "Hello from P1"]
+[18:11:10] [BLOCKED ] P5 is blocking on receive...
+[18:11:10] [SENT    ] QUEUED  [MSG#425 | P2->P1 | MEDIUM | 18:11:10 | "Hello from P2"]
+[18:11:10] [RECV    ] DELIVRD [MSG#425 | P2->P1 | MEDIUM | 18:11:10 | "Hello from P2"] -> P1
+[18:11:10] [SENT    ] QUEUED  [MSG#426 | P1->P4 | MEDIUM | 18:11:10 | "Hello from P1"]
+[18:11:10] [RECV    ] DELIVRD [MSG#426 | P1->P4 | MEDIUM | 18:11:10 | "Hello from P1"] -> P4
+[18:11:10] [SENT    ] QUEUED  [MSG#427 | P3->P4 | LOW | 18:11:10 | "Hello from P3"]
+[18:11:10] [RECV    ] DELIVRD [MSG#427 | P3->P4 | LOW | 18:11:10 | "Hello from P3"] -> P4
+[18:11:10] [UNBLOCKD] P5 unblocked.
+[18:11:10] [SENT    ] QUEUED  [MSG#428 | P4->P1 | MEDIUM | 18:11:10 | "Hello from P4"]
+[18:11:10] [RECV    ] DELIVRD [MSG#428 | P4->P1 | MEDIUM | 18:11:10 | "Hello from P4"] -> P1
+[18:11:10] [INFO    ] P4 processed: [MSG#426 | P1->P4 | MEDIUM | 18:11:10 | "Hello from P1"]
+[18:11:11] [INFO    ] P2 processed: [MSG#423 | P1->P2 | LOW | 18:11:09 | "Hello from P1"]
+[18:11:11] [INFO    ] P1 processed: [MSG#425 | P2->P1 | MEDIUM | 18:11:10 | "Hello from P2"]
+[18:11:11] [SENT    ] QUEUED  [MSG#429 | P4->P5 | MEDIUM | 18:11:11 | "Hello from P4"]
+[18:11:11] [RECV    ] DELIVRD [MSG#429 | P4->P5 | MEDIUM | 18:11:11 | "Hello from P4"] -> P5
+[18:11:11] [SENT    ] QUEUED  [MSG#430 | P5->P4 | MEDIUM | 18:11:11 | "Hello from P5"]
+[18:11:11] [INFO    ] P3 processed: [MSG#421 | P2->P3 | MEDIUM | 18:11:09 | "Hello from P2"]
+[18:11:11] [RECV    ] DELIVRD [MSG#430 | P5->P4 | MEDIUM | 18:11:11 | "Hello from P5"] -> P4
+[18:11:11] [INFO    ] P4 processed: [MSG#430 | P5->P4 | MEDIUM | 18:11:11 | "Hello from P5"]
+[18:11:11] [SENT    ] QUEUED  [MSG#431 | P2->P5 | HIGH | 18:11:11 | "Hello from P2"]
+[18:11:11] [RECV    ] DELIVRD [MSG#431 | P2->P5 | HIGH | 18:11:11 | "Hello from P2"] -> P5
+[18:11:11] [SENT    ] QUEUED  [MSG#432 | P1->P5 | MEDIUM | 18:11:11 | "Hello from P1"]
+[18:11:11] [SENT    ] QUEUED  [MSG#433 | P3->P2 | MEDIUM | 18:11:11 | "Hello from P3"]
+[18:11:11] [RECV    ] DELIVRD [MSG#432 | P1->P5 | MEDIUM | 18:11:11 | "Hello from P1"] -> P5
+[18:11:11] [RECV    ] DELIVRD [MSG#433 | P3->P2 | MEDIUM | 18:11:11 | "Hello from P3"] -> P2
+[18:11:11] [INFO    ] P5 processed: [MSG#431 | P2->P5 | HIGH | 18:11:11 | "Hello from P2"]
+[18:11:12] [INFO    ] P2 processed: [MSG#433 | P3->P2 | MEDIUM | 18:11:11 | "Hello from P3"]
+[18:11:12] [SENT    ] QUEUED  [MSG#434 | P4->P2 | LOW | 18:11:12 | "Hello from P4"]
+[18:11:12] [RECV    ] DELIVRD [MSG#434 | P4->P2 | LOW | 18:11:12 | "Hello from P4"] -> P2
+[18:11:12] [INFO    ] P1 processed: [MSG#428 | P4->P1 | MEDIUM | 18:11:10 | "Hello from P4"]
+[18:11:12] [INFO    ] P3 processed: [MSG#424 | P5->P3 | MEDIUM | 18:11:09 | "Hello from P5"]
+[18:11:12] [INFO    ] P4 processed: [MSG#382 | P3->P4 | LOW | 18:11:00 | "Hello from P3"]
+[18:11:12] [SENT    ] QUEUED  [MSG#435 | P5->P1 | MEDIUM | 18:11:12 | "Hello from P5"]
+[18:11:12] [RECV    ] DELIVRD [MSG#435 | P5->P1 | MEDIUM | 18:11:12 | "Hello from P5"] -> P1
+[18:11:12] [SENT    ] QUEUED  [MSG#436 | P1->P2 | HIGH | 18:11:12 | "Hello from P1"]
+[18:11:12] [RECV    ] DELIVRD [MSG#436 | P1->P2 | HIGH | 18:11:12 | "Hello from P1"] -> P2
+[18:11:12] [SENT    ] QUEUED  [MSG#437 | P4->P5 | MEDIUM | 18:11:12 | "Hello from P4"]
+[18:11:12] [RECV    ] DELIVRD [MSG#437 | P4->P5 | MEDIUM | 18:11:12 | "Hello from P4"] -> P5
+[18:11:12] [SENT    ] QUEUED  [MSG#438 | P2->P5 | MEDIUM | 18:11:12 | "Hello from P2"]
+[18:11:12] [RECV    ] DELIVRD [MSG#438 | P2->P5 | MEDIUM | 18:11:12 | "Hello from P2"] -> P5
+[18:11:13] [INFO    ] P5 processed: [MSG#429 | P4->P5 | MEDIUM | 18:11:11 | "Hello from P4"]
+[18:11:13] [INFO    ] P1 processed: [MSG#435 | P5->P1 | MEDIUM | 18:11:12 | "Hello from P5"]
+[18:11:13] [SENT    ] QUEUED  [MSG#439 | P3->P5 | MEDIUM | 18:11:13 | "Hello from P3"]
+[18:11:13] [INFO    ] P4 processed: [MSG#427 | P3->P4 | LOW | 18:11:10 | "Hello from P3"]
+[18:11:13] [RECV    ] DELIVRD [MSG#439 | P3->P5 | MEDIUM | 18:11:13 | "Hello from P3"] -> P5
+[18:11:13] [INFO    ] P2 processed: [MSG#436 | P1->P2 | HIGH | 18:11:12 | "Hello from P1"]
+[18:11:13] [SENT    ] QUEUED  [MSG#440 | P1->P5 | HIGH | 18:11:13 | "Hello from P1"]
+[18:11:13] [RECV    ] DELIVRD [MSG#440 | P1->P5 | HIGH | 18:11:13 | "Hello from P1"] -> P5
+[18:11:13] [SENT    ] QUEUED  [MSG#441 | P4->P3 | MEDIUM | 18:11:13 | "Hello from P4"]
+[18:11:13] [RECV    ] DELIVRD [MSG#441 | P4->P3 | MEDIUM | 18:11:13 | "Hello from P4"] -> P3
+[18:11:13] [INFO    ] P3 processed: [MSG#441 | P4->P3 | MEDIUM | 18:11:13 | "Hello from P4"]
+[18:11:13] [SENT    ] QUEUED  [MSG#442 | P2->P3 | HIGH | 18:11:13 | "Hello from P2"]
+[18:11:13] [RECV    ] DELIVRD [MSG#442 | P2->P3 | HIGH | 18:11:13 | "Hello from P2"] -> P3
+[18:11:13] [INFO    ] P1 processed: [MSG#372 | P3->P1 | LOW | 18:10:58 | "Hello from P3"]
+[18:11:13] [SENT    ] QUEUED  [MSG#443 | P5->P4 | MEDIUM | 18:11:13 | "Hello from P5"]
+[18:11:13] [RECV    ] DELIVRD [MSG#443 | P5->P4 | MEDIUM | 18:11:13 | "Hello from P5"] -> P4
+[18:11:13] [INFO    ] P4 processed: [MSG#443 | P5->P4 | MEDIUM | 18:11:13 | "Hello from P5"]
+[18:11:14] [INFO    ] P2 processed: [MSG#434 | P4->P2 | LOW | 18:11:12 | "Hello from P4"]
+[18:11:14] [SENT    ] QUEUED  [MSG#444 | P3->P5 | LOW | 18:11:14 | "Hello from P3"]
+[18:11:14] [RECV    ] DELIVRD [MSG#444 | P3->P5 | LOW | 18:11:14 | "Hello from P3"] -> P5
+[18:11:14] [INFO    ] P5 processed: [MSG#440 | P1->P5 | HIGH | 18:11:13 | "Hello from P1"]
+[18:11:14] [DROPPED ] DROPPED [MSG#445 | P1->P3 | LOW | 18:11:14 | "Hello from P1"]
+[18:11:14] [SENT    ] QUEUED  [MSG#446 | P4->P1 | MEDIUM | 18:11:14 | "Hello from P4"]
+[18:11:14] [RECV    ] DELIVRD [MSG#446 | P4->P1 | MEDIUM | 18:11:14 | "Hello from P4"] -> P1
+[18:11:14] [INFO    ] P3 processed: [MSG#442 | P2->P3 | HIGH | 18:11:13 | "Hello from P2"]
+[18:11:14] [INFO    ] P1 processed: [MSG#446 | P4->P1 | MEDIUM | 18:11:14 | "Hello from P4"]
+[18:11:14] [INFO    ] P4 processed: [MSG#314 | P3->P4 | LOW | 18:10:47 | "Hello from P3"]
+[18:11:14] [SENT    ] QUEUED  [MSG#447 | P2->P1 | HIGH | 18:11:14 | "Hello from P2"]
+[18:11:14] [RECV    ] DELIVRD [MSG#447 | P2->P1 | HIGH | 18:11:14 | "Hello from P2"] -> P1
+[18:11:14] [SENT    ] QUEUED  [MSG#448 | P5->P4 | MEDIUM | 18:11:14 | "Hello from P5"]
+[18:11:14] [RECV    ] DELIVRD [MSG#448 | P5->P4 | MEDIUM | 18:11:14 | "Hello from P5"] -> P4
+[18:11:14] [SENT    ] QUEUED  [MSG#449 | P3->P5 | LOW | 18:11:14 | "Hello from P3"]
+[18:11:14] [RECV    ] DELIVRD [MSG#449 | P3->P5 | LOW | 18:11:14 | "Hello from P3"] -> P5
+[18:11:15] [INFO    ] P2 processed: [MSG#415 | P4->P2 | LOW | 18:11:07 | "Hello from P4"]
+[18:11:15] [INFO    ] P3 processed: [MSG#388 | P1->P3 | LOW | 18:11:01 | "Hello from P1"]
+[18:11:15] [SENT    ] QUEUED  [MSG#450 | P4->P5 | MEDIUM | 18:11:15 | "Hello from P4"]
+[18:11:15] [RECV    ] DELIVRD [MSG#450 | P4->P5 | MEDIUM | 18:11:15 | "Hello from P4"] -> P5
+[18:11:15] [SENT    ] QUEUED  [MSG#451 | P1->P2 | HIGH | 18:11:15 | "Hello from P1"]
+[18:11:15] [RECV    ] DELIVRD [MSG#451 | P1->P2 | HIGH | 18:11:15 | "Hello from P1"] -> P2
+[18:11:15] [INFO    ] P5 processed: [MSG#438 | P2->P5 | MEDIUM | 18:11:12 | "Hello from P2"]
+[18:11:15] [SENT    ] QUEUED  [MSG#452 | P3->P1 | HIGH | 18:11:15 | "Hello from P3"]
+[18:11:15] [RECV    ] DELIVRD [MSG#452 | P3->P1 | HIGH | 18:11:15 | "Hello from P3"] -> P1
+[18:11:15] [SENT    ] QUEUED  [MSG#453 | P2->P1 | HIGH | 18:11:15 | "Hello from P2"]
+[18:11:15] [RECV    ] DELIVRD [MSG#453 | P2->P1 | HIGH | 18:11:15 | "Hello from P2"] -> P1
+[18:11:15] [INFO    ] P1 processed: [MSG#447 | P2->P1 | HIGH | 18:11:14 | "Hello from P2"]
+[18:11:15] [INFO    ] P3 processed: [MSG#414 | P1->P3 | LOW | 18:11:07 | "Hello from P1"]
+[18:11:16] [INFO    ] P2 processed: [MSG#451 | P1->P2 | HIGH | 18:11:15 | "Hello from P1"]
+[18:11:16] [INFO    ] P4 processed: [MSG#448 | P5->P4 | MEDIUM | 18:11:14 | "Hello from P5"]
+[18:11:16] [SENT    ] QUEUED  [MSG#454 | P5->P3 | HIGH | 18:11:16 | "Hello from P5"]
+[18:11:16] [RECV    ] DELIVRD [MSG#454 | P5->P3 | HIGH | 18:11:16 | "Hello from P5"] -> P3
+[18:11:16] [SENT    ] QUEUED  [MSG#455 | P3->P2 | MEDIUM | 18:11:16 | "Hello from P3"]
+[18:11:16] [RECV    ] DELIVRD [MSG#455 | P3->P2 | MEDIUM | 18:11:16 | "Hello from P3"] -> P2
+[18:11:16] [SENT    ] QUEUED  [MSG#456 | P1->P3 | LOW | 18:11:16 | "Hello from P1"]
+[18:11:16] [RECV    ] DELIVRD [MSG#456 | P1->P3 | LOW | 18:11:16 | "Hello from P1"] -> P3
+[18:11:16] [INFO    ] P3 processed: [MSG#454 | P5->P3 | HIGH | 18:11:16 | "Hello from P5"]
+[18:11:16] [SENT    ] QUEUED  [MSG#457 | P2->P4 | LOW | 18:11:16 | "Hello from P2"]
+[18:11:16] [INFO    ] P5 processed: [MSG#450 | P4->P5 | MEDIUM | 18:11:15 | "Hello from P4"]
+[18:11:16] [RECV    ] DELIVRD [MSG#457 | P2->P4 | LOW | 18:11:16 | "Hello from P2"] -> P4
+[18:11:16] [SENT    ] QUEUED  [MSG#458 | P4->P3 | MEDIUM | 18:11:16 | "Hello from P4"]
+[18:11:16] [RECV    ] DELIVRD [MSG#458 | P4->P3 | MEDIUM | 18:11:16 | "Hello from P4"] -> P3
+[18:11:17] [INFO    ] P2 processed: [MSG#455 | P3->P2 | MEDIUM | 18:11:16 | "Hello from P3"]
+[18:11:17] [INFO    ] P1 processed: [MSG#452 | P3->P1 | HIGH | 18:11:15 | "Hello from P3"]
+[18:11:17] [SENT    ] QUEUED  [MSG#459 | P5->P1 | HIGH | 18:11:17 | "Hello from P5"]
+[18:11:17] [RECV    ] DELIVRD [MSG#459 | P5->P1 | HIGH | 18:11:17 | "Hello from P5"] -> P1
+[18:11:17] [SENT    ] QUEUED  [MSG#460 | P3->P1 | MEDIUM | 18:11:17 | "Hello from P3"]
+[18:11:17] [RECV    ] DELIVRD [MSG#460 | P3->P1 | MEDIUM | 18:11:17 | "Hello from P3"] -> P1
+[18:11:17] [INFO    ] P4 processed: [MSG#384 | P2->P4 | LOW | 18:11:01 | "Hello from P2"]
+[18:11:17] [INFO    ] P5 processed: [MSG#437 | P4->P5 | MEDIUM | 18:11:12 | "Hello from P4"]
+[18:11:17] [SENT    ] QUEUED  [MSG#461 | P2->P5 | MEDIUM | 18:11:17 | "Hello from P2"]
+[18:11:17] [RECV    ] DELIVRD [MSG#461 | P2->P5 | MEDIUM | 18:11:17 | "Hello from P2"] -> P5
+[18:11:17] [DROPPED ] DROPPED [MSG#462 | P1->P4 | HIGH | 18:11:17 | "Hello from P1"]
+[18:11:18] [INFO    ] P3 processed: [MSG#458 | P4->P3 | MEDIUM | 18:11:16 | "Hello from P4"]
+[18:11:18] [INFO    ] P1 processed: [MSG#453 | P2->P1 | HIGH | 18:11:15 | "Hello from P2"]
+[18:11:18] [SENT    ] QUEUED  [MSG#463 | P4->P2 | MEDIUM | 18:11:18 | "Hello from P4"]
+[18:11:18] [RECV    ] DELIVRD [MSG#463 | P4->P2 | MEDIUM | 18:11:18 | "Hello from P4"] -> P2
+[18:11:18] [SENT    ] QUEUED  [MSG#464 | P3->P1 | LOW | 18:11:18 | "Hello from P3"]
+[18:11:18] [RECV    ] DELIVRD [MSG#464 | P3->P1 | LOW | 18:11:18 | "Hello from P3"] -> P1
+[18:11:18] [INFO    ] P2 processed: [MSG#463 | P4->P2 | MEDIUM | 18:11:18 | "Hello from P4"]
+[18:11:18] [SENT    ] QUEUED  [MSG#465 | P5->P2 | MEDIUM | 18:11:18 | "Hello from P5"]
+[18:11:18] [RECV    ] DELIVRD [MSG#465 | P5->P2 | MEDIUM | 18:11:18 | "Hello from P5"] -> P2
+[18:11:18] [SENT    ] QUEUED  [MSG#466 | P1->P3 | MEDIUM | 18:11:18 | "Hello from P1"]
+[18:11:18] [RECV    ] DELIVRD [MSG#466 | P1->P3 | MEDIUM | 18:11:18 | "Hello from P1"] -> P3
+[18:11:18] [INFO    ] P3 processed: [MSG#466 | P1->P3 | MEDIUM | 18:11:18 | "Hello from P1"]
+[18:11:18] [INFO    ] P4 processed: [MSG#175 | P3->P4 | LOW | 18:10:18 | "Hello from P3"]
+[18:11:18] [INFO    ] P1 processed: [MSG#459 | P5->P1 | HIGH | 18:11:17 | "Hello from P5"]
+[18:11:18] [SENT    ] QUEUED  [MSG#467 | P2->P4 | LOW | 18:11:18 | "Hello from P2"]
+[18:11:18] [RECV    ] DELIVRD [MSG#467 | P2->P4 | LOW | 18:11:18 | "Hello from P2"] -> P4
+[18:11:18] [INFO    ] P5 processed: [MSG#432 | P1->P5 | MEDIUM | 18:11:11 | "Hello from P1"]
+[18:11:19] [SENT    ] QUEUED  [MSG#468 | P4->P2 | HIGH | 18:11:19 | "Hello from P4"]
+[18:11:19] [RECV    ] DELIVRD [MSG#468 | P4->P2 | HIGH | 18:11:19 | "Hello from P4"] -> P2
+[18:11:19] [SENT    ] QUEUED  [MSG#469 | P3->P5 | LOW | 18:11:19 | "Hello from P3"]
+[18:11:19] [INFO    ] P2 processed: [MSG#468 | P4->P2 | HIGH | 18:11:19 | "Hello from P4"]
+[18:11:19] [RECV    ] DELIVRD [MSG#469 | P3->P5 | LOW | 18:11:19 | "Hello from P3"] -> P5
+[18:11:19] [SENT    ] QUEUED  [MSG#470 | P5->P3 | LOW | 18:11:19 | "Hello from P5"]
+[18:11:19] [RECV    ] DELIVRD [MSG#470 | P5->P3 | LOW | 18:11:19 | "Hello from P5"] -> P3
+[18:11:19] [INFO    ] P4 processed: [MSG#377 | P1->P4 | LOW | 18:10:59 | "Hello from P1"]
+[18:11:19] [SENT    ] QUEUED  [MSG#471 | P1->P4 | MEDIUM | 18:11:19 | "Hello from P1"]
+[18:11:19] [INFO    ] P3 processed: [MSG#362 | P5->P3 | LOW | 18:10:56 | "Hello from P5"]
+[18:11:19] [RECV    ] DELIVRD [MSG#471 | P1->P4 | MEDIUM | 18:11:19 | "Hello from P1"] -> P4
+[18:11:19] [INFO    ] P1 processed: [MSG#460 | P3->P1 | MEDIUM | 18:11:17 | "Hello from P3"]
+[18:11:19] [SENT    ] QUEUED  [MSG#472 | P3->P1 | LOW | 18:11:19 | "Hello from P3"]
+[18:11:19] [RECV    ] DELIVRD [MSG#472 | P3->P1 | LOW | 18:11:19 | "Hello from P3"] -> P1
+[18:11:20] [SENT    ] QUEUED  [MSG#473 | P4->P1 | HIGH | 18:11:20 | "Hello from P4"]
+[18:11:20] [SENT    ] QUEUED  [MSG#474 | P2->P4 | LOW | 18:11:20 | "Hello from P2"]
+[18:11:20] [RECV    ] DELIVRD [MSG#473 | P4->P1 | HIGH | 18:11:20 | "Hello from P4"] -> P1
+[18:11:20] [INFO    ] P5 processed: [MSG#439 | P3->P5 | MEDIUM | 18:11:13 | "Hello from P3"]
+[18:11:20] [RECV    ] DELIVRD [MSG#474 | P2->P4 | LOW | 18:11:20 | "Hello from P2"] -> P4
+[18:11:20] [SENT    ] QUEUED  [MSG#475 | P1->P3 | LOW | 18:11:20 | "Hello from P1"]
+[18:11:20] [RECV    ] DELIVRD [MSG#475 | P1->P3 | LOW | 18:11:20 | "Hello from P1"] -> P3
+[18:11:20] [INFO    ] P2 processed: [MSG#465 | P5->P2 | MEDIUM | 18:11:18 | "Hello from P5"]
+[18:11:20] [INFO    ] P1 processed: [MSG#473 | P4->P1 | HIGH | 18:11:20 | "Hello from P4"]
+[18:11:20] [INFO    ] P3 processed: [MSG#456 | P1->P3 | LOW | 18:11:16 | "Hello from P1"]
+[18:11:20] [SENT    ] QUEUED  [MSG#476 | P5->P1 | LOW | 18:11:20 | "Hello from P5"]
+[18:11:20] [RECV    ] DELIVRD [MSG#476 | P5->P1 | LOW | 18:11:20 | "Hello from P5"] -> P1
+[18:11:20] [SENT    ] QUEUED  [MSG#477 | P1->P3 | MEDIUM | 18:11:20 | "Hello from P1"]
+[18:11:20] [INFO    ] P4 processed: [MSG#471 | P1->P4 | MEDIUM | 18:11:19 | "Hello from P1"]
+[18:11:20] [RECV    ] DELIVRD [MSG#477 | P1->P3 | MEDIUM | 18:11:20 | "Hello from P1"] -> P3
+[18:11:20] [SENT    ] QUEUED  [MSG#478 | P2->P4 | MEDIUM | 18:11:20 | "Hello from P2"]
+[18:11:20] [RECV    ] DELIVRD [MSG#478 | P2->P4 | MEDIUM | 18:11:20 | "Hello from P2"] -> P4
+[18:11:21] [INFO    ] P1 processed: [MSG#328 | P2->P1 | LOW | 18:10:49 | "Hello from P2"]
+[18:11:21] [SENT    ] QUEUED  [MSG#479 | P3->P1 | MEDIUM | 18:11:21 | "Hello from P3"]
+[18:11:21] [RECV    ] DELIVRD [MSG#479 | P3->P1 | MEDIUM | 18:11:21 | "Hello from P3"] -> P1
+[18:11:21] [INFO    ] P5 processed: [MSG#461 | P2->P5 | MEDIUM | 18:11:17 | "Hello from P2"]
+[18:11:21] [BLOCKED ] P2 is blocking on receive...
+[18:11:21] [SENT    ] QUEUED  [MSG#480 | P4->P2 | MEDIUM | 18:11:21 | "Hello from P4"]
+[18:11:21] [RECV    ] DELIVRD [MSG#480 | P4->P2 | MEDIUM | 18:11:21 | "Hello from P4"] -> P2
+[18:11:21] [SENT    ] QUEUED  [MSG#481 | P1->P4 | LOW | 18:11:21 | "Hello from P1"]
+[18:11:21] [RECV    ] DELIVRD [MSG#481 | P1->P4 | LOW | 18:11:21 | "Hello from P1"] -> P4
+[18:11:21] [UNBLOCKD] P2 unblocked.
+[18:11:21] [INFO    ] P2 processed: [MSG#480 | P4->P2 | MEDIUM | 18:11:21 | "Hello from P4"]
+[18:11:22] [INFO    ] P1 processed: [MSG#479 | P3->P1 | MEDIUM | 18:11:21 | "Hello from P3"]
+[18:11:22] [SENT    ] QUEUED  [MSG#482 | P5->P4 | HIGH | 18:11:22 | "Hello from P5"]
+[18:11:22] [INFO    ] P3 processed: [MSG#477 | P1->P3 | MEDIUM | 18:11:20 | "Hello from P1"]
+[18:11:22] [RECV    ] DELIVRD [MSG#482 | P5->P4 | HIGH | 18:11:22 | "Hello from P5"] -> P4
+[18:11:22] [SENT    ] QUEUED  [MSG#483 | P2->P3 | HIGH | 18:11:22 | "Hello from P2"]
+[18:11:22] [RECV    ] DELIVRD [MSG#483 | P2->P3 | HIGH | 18:11:22 | "Hello from P2"] -> P3
+[18:11:22] [INFO    ] P4 processed: [MSG#482 | P5->P4 | HIGH | 18:11:22 | "Hello from P5"]
+[18:11:22] [SENT    ] QUEUED  [MSG#484 | P1->P2 | MEDIUM | 18:11:22 | "Hello from P1"]
+[18:11:22] [RECV    ] DELIVRD [MSG#484 | P1->P2 | MEDIUM | 18:11:22 | "Hello from P1"] -> P2
+[18:11:22] [SENT    ] QUEUED  [MSG#485 | P3->P2 | MEDIUM | 18:11:22 | "Hello from P3"]
+[18:11:22] [RECV    ] DELIVRD [MSG#485 | P3->P2 | MEDIUM | 18:11:22 | "Hello from P3"] -> P2
+[18:11:22] [INFO    ] P2 processed: [MSG#484 | P1->P2 | MEDIUM | 18:11:22 | "Hello from P1"]
+[18:11:22] [INFO    ] P5 processed: [MSG#449 | P3->P5 | LOW | 18:11:14 | "Hello from P3"]
+[18:11:22] [SENT    ] QUEUED  [MSG#486 | P2->P4 | LOW | 18:11:22 | "Hello from P2"]
+[18:11:22] [SENT    ] QUEUED  [MSG#487 | P4->P3 | MEDIUM | 18:11:22 | "Hello from P4"]
+[18:11:23] [RECV    ] DELIVRD [MSG#487 | P4->P3 | MEDIUM | 18:11:22 | "Hello from P4"] -> P3
+[18:11:23] [SENT    ] QUEUED  [MSG#488 | P5->P1 | HIGH | 18:11:23 | "Hello from P5"]
+[18:11:23] [RECV    ] DELIVRD [MSG#488 | P5->P1 | HIGH | 18:11:23 | "Hello from P5"] -> P1
+[18:11:23] [RECV    ] DELIVRD [MSG#486 | P2->P4 | LOW | 18:11:22 | "Hello from P2"] -> P4
+[18:11:23] [INFO    ] P1 processed: [MSG#488 | P5->P1 | HIGH | 18:11:23 | "Hello from P5"]
+[18:11:23] [INFO    ] P3 processed: [MSG#483 | P2->P3 | HIGH | 18:11:22 | "Hello from P2"]
+[18:11:23] [INFO    ] P2 processed: [MSG#485 | P3->P2 | MEDIUM | 18:11:22 | "Hello from P3"]
+[18:11:23] [INFO    ] P4 processed: [MSG#478 | P2->P4 | MEDIUM | 18:11:20 | "Hello from P2"]
+[18:11:23] [SENT    ] QUEUED  [MSG#489 | P4->P2 | MEDIUM | 18:11:23 | "Hello from P4"]
+[18:11:23] [RECV    ] DELIVRD [MSG#489 | P4->P2 | MEDIUM | 18:11:23 | "Hello from P4"] -> P2
+[18:11:23] [INFO    ] P5 processed: [MSG#444 | P3->P5 | LOW | 18:11:14 | "Hello from P3"]
+[18:11:23] [SENT    ] QUEUED  [MSG#490 | P3->P5 | MEDIUM | 18:11:23 | "Hello from P3"]
+[18:11:23] [RECV    ] DELIVRD [MSG#490 | P3->P5 | MEDIUM | 18:11:23 | "Hello from P3"] -> P5
+[18:11:23] [SENT    ] QUEUED  [MSG#491 | P2->P1 | HIGH | 18:11:23 | "Hello from P2"]
+[18:11:23] [RECV    ] DELIVRD [MSG#491 | P2->P1 | HIGH | 18:11:23 | "Hello from P2"] -> P1
+[18:11:23] [SENT    ] QUEUED  [MSG#492 | P1->P5 | MEDIUM | 18:11:23 | "Hello from P1"]
+[18:11:23] [RECV    ] DELIVRD [MSG#492 | P1->P5 | MEDIUM | 18:11:23 | "Hello from P1"] -> P5
+[18:11:24] [INFO    ] P1 processed: [MSG#491 | P2->P1 | HIGH | 18:11:23 | "Hello from P2"]
+[18:11:24] [SENT    ] QUEUED  [MSG#493 | P5->P3 | MEDIUM | 18:11:24 | "Hello from P5"]
+[18:11:24] [INFO    ] P3 processed: [MSG#487 | P4->P3 | MEDIUM | 18:11:22 | "Hello from P4"]
+[18:11:24] [INFO    ] P2 processed: [MSG#489 | P4->P2 | MEDIUM | 18:11:23 | "Hello from P4"]
+[18:11:24] [RECV    ] DELIVRD [MSG#493 | P5->P3 | MEDIUM | 18:11:24 | "Hello from P5"] -> P3
+[18:11:24] [INFO    ] P4 processed: [MSG#486 | P2->P4 | LOW | 18:11:22 | "Hello from P2"]
+[18:11:24] [SENT    ] QUEUED  [MSG#494 | P1->P3 | LOW | 18:11:24 | "Hello from P1"]
+[18:11:24] [RECV    ] DELIVRD [MSG#494 | P1->P3 | LOW | 18:11:24 | "Hello from P1"] -> P3
+[18:11:24] [INFO    ] P5 processed: [MSG#490 | P3->P5 | MEDIUM | 18:11:23 | "Hello from P3"]
+[18:11:24] [SENT    ] QUEUED  [MSG#495 | P4->P5 | MEDIUM | 18:11:24 | "Hello from P4"]
+[18:11:24] [RECV    ] DELIVRD [MSG#495 | P4->P5 | MEDIUM | 18:11:24 | "Hello from P4"] -> P5
+[18:11:24] [INFO    ] P1 processed: [MSG#419 | P5->P1 | LOW | 18:11:09 | "Hello from P5"]
+[18:11:24] [SENT    ] QUEUED  [MSG#496 | P2->P4 | MEDIUM | 18:11:24 | "Hello from P2"]
+[18:11:24] [SENT    ] QUEUED  [MSG#497 | P3->P5 | LOW | 18:11:24 | "Hello from P3"]
+[18:11:24] [RECV    ] DELIVRD [MSG#496 | P2->P4 | MEDIUM | 18:11:24 | "Hello from P2"] -> P4
+[18:11:24] [RECV    ] DELIVRD [MSG#497 | P3->P5 | LOW | 18:11:24 | "Hello from P3"] -> P5
+[18:11:24] [SENT    ] QUEUED  [MSG#498 | P5->P3 | LOW | 18:11:24 | "Hello from P5"]
+[18:11:24] [RECV    ] DELIVRD [MSG#498 | P5->P3 | LOW | 18:11:24 | "Hello from P5"] -> P3
+[18:11:25] [BLOCKED ] P2 is blocking on receive...
+[18:11:25] [INFO    ] P4 processed: [MSG#496 | P2->P4 | MEDIUM | 18:11:24 | "Hello from P2"]
+[18:11:25] [UNBLOCKD] P2 unblocked.
+[18:11:25] [INFO    ] P5 processed: [MSG#492 | P1->P5 | MEDIUM | 18:11:23 | "Hello from P1"]
+[18:11:25] [SENT    ] QUEUED  [MSG#499 | P1->P3 | HIGH | 18:11:25 | "Hello from P1"]
+[18:11:25] [RECV    ] DELIVRD [MSG#499 | P1->P3 | HIGH | 18:11:25 | "Hello from P1"] -> P3
+[18:11:25] [INFO    ] P3 processed: [MSG#499 | P1->P3 | HIGH | 18:11:25 | "Hello from P1"]
+[18:11:25] [SENT    ] QUEUED  [MSG#500 | P2->P4 | HIGH | 18:11:25 | "Hello from P2"]
+[18:11:25] [SENT    ] QUEUED  [MSG#501 | P4->P1 | MEDIUM | 18:11:25 | "Hello from P4"]
+[18:11:25] [RECV    ] DELIVRD [MSG#500 | P2->P4 | HIGH | 18:11:25 | "Hello from P2"] -> P4
+[18:11:25] [SENT    ] QUEUED  [MSG#502 | P3->P4 | MEDIUM | 18:11:25 | "Hello from P3"]
+[18:11:25] [RECV    ] DELIVRD [MSG#501 | P4->P1 | MEDIUM | 18:11:25 | "Hello from P4"] -> P1
+[18:11:25] [RECV    ] DELIVRD [MSG#502 | P3->P4 | MEDIUM | 18:11:25 | "Hello from P3"] -> P4
+[18:11:25] [SENT    ] QUEUED  [MSG#503 | P5->P4 | HIGH | 18:11:25 | "Hello from P5"]
+[18:11:25] [RECV    ] DELIVRD [MSG#503 | P5->P4 | HIGH | 18:11:25 | "Hello from P5"] -> P4
+[18:11:26] [INFO    ] P4 processed: [MSG#500 | P2->P4 | HIGH | 18:11:25 | "Hello from P2"]
+[18:11:26] [INFO    ] P1 processed: [MSG#501 | P4->P1 | MEDIUM | 18:11:25 | "Hello from P4"]
+[18:11:26] [INFO    ] P3 processed: [MSG#493 | P5->P3 | MEDIUM | 18:11:24 | "Hello from P5"]
+[18:11:26] [BLOCKED ] P2 is blocking on receive...
+[18:11:26] [INFO    ] P5 processed: [MSG#495 | P4->P5 | MEDIUM | 18:11:24 | "Hello from P4"]
+[18:11:26] [SENT    ] QUEUED  [MSG#504 | P1->P3 | LOW | 18:11:26 | "Hello from P1"]
+[18:11:26] [RECV    ] DELIVRD [MSG#504 | P1->P3 | LOW | 18:11:26 | "Hello from P1"] -> P3
+[18:11:26] [SENT    ] QUEUED  [MSG#505 | P4->P5 | LOW | 18:11:26 | "Hello from P4"]
+[18:11:26] [RECV    ] DELIVRD [MSG#505 | P4->P5 | LOW | 18:11:26 | "Hello from P4"] -> P5
+[18:11:26] [UNBLOCKD] P2 unblocked.
+[18:11:26] [SENT    ] QUEUED  [MSG#506 | P3->P1 | HIGH | 18:11:26 | "Hello from P3"]
+[18:11:26] [RECV    ] DELIVRD [MSG#506 | P3->P1 | HIGH | 18:11:26 | "Hello from P3"] -> P1
+[18:11:26] [SENT    ] QUEUED  [MSG#507 | P5->P2 | HIGH | 18:11:26 | "Hello from P5"]
+[18:11:26] [RECV    ] DELIVRD [MSG#507 | P5->P2 | HIGH | 18:11:26 | "Hello from P5"] -> P2
+[18:11:26] [SENT    ] QUEUED  [MSG#508 | P2->P4 | HIGH | 18:11:26 | "Hello from P2"]
+[18:11:27] [RECV    ] DELIVRD [MSG#508 | P2->P4 | HIGH | 18:11:26 | "Hello from P2"] -> P4
+[18:11:27] [INFO    ] P4 processed: [MSG#503 | P5->P4 | HIGH | 18:11:25 | "Hello from P5"]
+[18:11:27] [INFO    ] P1 processed: [MSG#506 | P3->P1 | HIGH | 18:11:26 | "Hello from P3"]
+[18:11:27] [INFO    ] P3 processed: [MSG#475 | P1->P3 | LOW | 18:11:20 | "Hello from P1"]
+[18:11:27] [SENT    ] QUEUED  [MSG#509 | P4->P5 | LOW | 18:11:27 | "Hello from P4"]
+[18:11:27] [RECV    ] DELIVRD [MSG#509 | P4->P5 | LOW | 18:11:27 | "Hello from P4"] -> P5
+[18:11:27] [INFO    ] P5 processed: [MSG#497 | P3->P5 | LOW | 18:11:24 | "Hello from P3"]
+[18:11:27] [INFO    ] P2 processed: [MSG#507 | P5->P2 | HIGH | 18:11:26 | "Hello from P5"]
+[18:11:27] [SENT    ] QUEUED  [MSG#510 | P3->P4 | LOW | 18:11:27 | "Hello from P3"]
+[18:11:27] [SENT    ] QUEUED  [MSG#511 | P2->P4 | HIGH | 18:11:27 | "Hello from P2"]
+[18:11:27] [RECV    ] DELIVRD [MSG#511 | P2->P4 | HIGH | 18:11:27 | "Hello from P2"] -> P4
+[18:11:28] [RECV    ] DELIVRD [MSG#510 | P3->P4 | LOW | 18:11:27 | "Hello from P3"] -> P4
+[18:11:28] [SENT    ] QUEUED  [MSG#512 | P1->P3 | MEDIUM | 18:11:28 | "Hello from P1"]
+[18:11:28] [RECV    ] DELIVRD [MSG#512 | P1->P3 | MEDIUM | 18:11:28 | "Hello from P1"] -> P3
+[18:11:28] [INFO    ] P3 processed: [MSG#512 | P1->P3 | MEDIUM | 18:11:28 | "Hello from P1"]
+[18:11:28] [INFO    ] P4 processed: [MSG#508 | P2->P4 | HIGH | 18:11:26 | "Hello from P2"]
+[18:11:28] [SENT    ] QUEUED  [MSG#513 | P5->P4 | MEDIUM | 18:11:28 | "Hello from P5"]
+[18:11:28] [RECV    ] DELIVRD [MSG#513 | P5->P4 | MEDIUM | 18:11:28 | "Hello from P5"] -> P4
+[18:11:28] [INFO    ] P1 processed: [MSG#472 | P3->P1 | LOW | 18:11:19 | "Hello from P3"]
+[18:11:28] [SENT    ] QUEUED  [MSG#514 | P3->P5 | MEDIUM | 18:11:28 | "Hello from P3"]
+[18:11:28] [RECV    ] DELIVRD [MSG#514 | P3->P5 | MEDIUM | 18:11:28 | "Hello from P3"] -> P5
+[18:11:28] [BLOCKED ] P2 is blocking on receive...
+[18:11:28] [SENT    ] QUEUED  [MSG#515 | P4->P2 | LOW | 18:11:28 | "Hello from P4"]
+[18:11:28] [RECV    ] DELIVRD [MSG#515 | P4->P2 | LOW | 18:11:28 | "Hello from P4"] -> P2
+[18:11:28] [INFO    ] P5 processed: [MSG#514 | P3->P5 | MEDIUM | 18:11:28 | "Hello from P3"]
+[18:11:28] [UNBLOCKD] P2 unblocked.
+[18:11:28] [INFO    ] P2 processed: [MSG#515 | P4->P2 | LOW | 18:11:28 | "Hello from P4"]
+[18:11:29] [SENT    ] QUEUED  [MSG#516 | P1->P4 | HIGH | 18:11:29 | "Hello from P1"]
+[18:11:29] [RECV    ] DELIVRD [MSG#516 | P1->P4 | HIGH | 18:11:29 | "Hello from P1"] -> P4
+[18:11:29] [SENT    ] QUEUED  [MSG#517 | P5->P4 | LOW | 18:11:29 | "Hello from P5"]
+[18:11:29] [RECV    ] DELIVRD [MSG#517 | P5->P4 | LOW | 18:11:29 | "Hello from P5"] -> P4
+[18:11:29] [INFO    ] P3 processed: [MSG#498 | P5->P3 | LOW | 18:11:24 | "Hello from P5"]
+[18:11:29] [INFO    ] P4 processed: [MSG#511 | P2->P4 | HIGH | 18:11:27 | "Hello from P2"]
+[18:11:29] [SENT    ] QUEUED  [MSG#518 | P2->P3 | MEDIUM | 18:11:29 | "Hello from P2"]
+[18:11:29] [RECV    ] DELIVRD [MSG#518 | P2->P3 | MEDIUM | 18:11:29 | "Hello from P2"] -> P3
+[18:11:29] [SENT    ] QUEUED  [MSG#519 | P3->P4 | LOW | 18:11:29 | "Hello from P3"]
+[18:11:29] [RECV    ] DELIVRD [MSG#519 | P3->P4 | LOW | 18:11:29 | "Hello from P3"] -> P4
+[18:11:29] [INFO    ] P5 processed: [MSG#509 | P4->P5 | LOW | 18:11:27 | "Hello from P4"]
+[18:11:29] [INFO    ] P1 processed: [MSG#125 | P5->P1 | LOW | 18:10:08 | "Hello from P5"]
+[18:11:29] [DROPPED ] DROPPED [MSG#520 | P4->P3 | LOW | 18:11:29 | "Hello from P4"]
+[18:11:29] [BLOCKED ] P2 is blocking on receive...
+[18:11:30] [SENT    ] QUEUED  [MSG#521 | P5->P1 | HIGH | 18:11:30 | "Hello from P5"]
+[18:11:30] [UNBLOCKD] P2 unblocked.
+[18:11:30] [INFO    ] P3 processed: [MSG#518 | P2->P3 | MEDIUM | 18:11:29 | "Hello from P2"]
+[18:11:30] [RECV    ] DELIVRD [MSG#521 | P5->P1 | HIGH | 18:11:30 | "Hello from P5"] -> P1
+[18:11:30] [SENT    ] QUEUED  [MSG#522 | P1->P2 | LOW | 18:11:30 | "Hello from P1"]
+[18:11:30] [RECV    ] DELIVRD [MSG#522 | P1->P2 | LOW | 18:11:30 | "Hello from P1"] -> P2
+[18:11:30] [INFO    ] P4 processed: [MSG#516 | P1->P4 | HIGH | 18:11:29 | "Hello from P1"]
+[18:11:30] [SENT    ] QUEUED  [MSG#523 | P3->P4 | MEDIUM | 18:11:30 | "Hello from P3"]
+[18:11:30] [RECV    ] DELIVRD [MSG#523 | P3->P4 | MEDIUM | 18:11:30 | "Hello from P3"] -> P4
+[18:11:30] [INFO    ] P1 processed: [MSG#521 | P5->P1 | HIGH | 18:11:30 | "Hello from P5"]
+[18:11:30] [SENT    ] QUEUED  [MSG#524 | P2->P4 | MEDIUM | 18:11:30 | "Hello from P2"]
+[18:11:30] [RECV    ] DELIVRD [MSG#524 | P2->P4 | MEDIUM | 18:11:30 | "Hello from P2"] -> P4
+[18:11:30] [INFO    ] P5 processed: [MSG#505 | P4->P5 | LOW | 18:11:26 | "Hello from P4"]
+[18:11:30] [SENT    ] QUEUED  [MSG#525 | P4->P2 | LOW | 18:11:30 | "Hello from P4"]
+[18:11:30] [RECV    ] DELIVRD [MSG#525 | P4->P2 | LOW | 18:11:30 | "Hello from P4"] -> P2
+[18:11:31] [INFO    ] P3 processed: [MSG#504 | P1->P3 | LOW | 18:11:26 | "Hello from P1"]
+[18:11:31] [SENT    ] QUEUED  [MSG#526 | P5->P1 | HIGH | 18:11:31 | "Hello from P5"]
+[18:11:31] [INFO    ] P4 processed: [MSG#502 | P3->P4 | MEDIUM | 18:11:25 | "Hello from P3"]
+[18:11:31] [RECV    ] DELIVRD [MSG#526 | P5->P1 | HIGH | 18:11:31 | "Hello from P5"] -> P1
+[18:11:31] [INFO    ] P2 processed: [MSG#522 | P1->P2 | LOW | 18:11:30 | "Hello from P1"]
+[18:11:31] [SENT    ] QUEUED  [MSG#527 | P1->P5 | MEDIUM | 18:11:31 | "Hello from P1"]
+[18:11:31] [RECV    ] DELIVRD [MSG#527 | P1->P5 | MEDIUM | 18:11:31 | "Hello from P1"] -> P5
+[18:11:31] [INFO    ] P5 processed: [MSG#527 | P1->P5 | MEDIUM | 18:11:31 | "Hello from P1"]
+[18:11:31] [SENT    ] QUEUED  [MSG#528 | P3->P4 | HIGH | 18:11:31 | "Hello from P3"]
+[18:11:31] [RECV    ] DELIVRD [MSG#528 | P3->P4 | HIGH | 18:11:31 | "Hello from P3"] -> P4
+[18:11:31] [SENT    ] QUEUED  [MSG#529 | P4->P5 | LOW | 18:11:31 | "Hello from P4"]
+[18:11:31] [RECV    ] DELIVRD [MSG#529 | P4->P5 | LOW | 18:11:31 | "Hello from P4"] -> P5
+[18:11:31] [INFO    ] P1 processed: [MSG#526 | P5->P1 | HIGH | 18:11:31 | "Hello from P5"]
+[18:11:31] [SENT    ] QUEUED  [MSG#530 | P2->P3 | MEDIUM | 18:11:31 | "Hello from P2"]
+[18:11:32] [RECV    ] DELIVRD [MSG#530 | P2->P3 | MEDIUM | 18:11:31 | "Hello from P2"] -> P3
+[18:11:32] [SENT    ] QUEUED  [MSG#531 | P5->P1 | LOW | 18:11:32 | "Hello from P5"]
+[18:11:32] [RECV    ] DELIVRD [MSG#531 | P5->P1 | LOW | 18:11:32 | "Hello from P5"] -> P1
+[18:11:32] [SENT    ] QUEUED  [MSG#532 | P1->P3 | MEDIUM | 18:11:32 | "Hello from P1"]
+[18:11:32] [RECV    ] DELIVRD [MSG#532 | P1->P3 | MEDIUM | 18:11:32 | "Hello from P1"] -> P3
+[18:11:32] [INFO    ] P2 processed: [MSG#525 | P4->P2 | LOW | 18:11:30 | "Hello from P4"]
+[18:11:32] [INFO    ] P4 processed: [MSG#528 | P3->P4 | HIGH | 18:11:31 | "Hello from P3"]
+[18:11:32] [INFO    ] P5 processed: [MSG#469 | P3->P5 | LOW | 18:11:19 | "Hello from P3"]
+[18:11:32] [INFO    ] P3 processed: [MSG#530 | P2->P3 | MEDIUM | 18:11:31 | "Hello from P2"]
+[18:11:32] [INFO    ] P1 processed: [MSG#313 | P4->P1 | LOW | 18:10:47 | "Hello from P4"]
+[18:11:32] [SENT    ] QUEUED  [MSG#533 | P2->P3 | HIGH | 18:11:32 | "Hello from P2"]
+[18:11:32] [RECV    ] DELIVRD [MSG#533 | P2->P3 | HIGH | 18:11:32 | "Hello from P2"] -> P3
+[18:11:32] [SENT    ] QUEUED  [MSG#534 | P4->P2 | MEDIUM | 18:11:32 | "Hello from P4"]
+[18:11:32] [SENT    ] QUEUED  [MSG#535 | P1->P5 | MEDIUM | 18:11:32 | "Hello from P1"]
+[18:11:32] [RECV    ] DELIVRD [MSG#534 | P4->P2 | MEDIUM | 18:11:32 | "Hello from P4"] -> P2
+[18:11:32] [SENT    ] QUEUED  [MSG#536 | P3->P5 | MEDIUM | 18:11:32 | "Hello from P3"]
+[18:11:33] [RECV    ] DELIVRD [MSG#535 | P1->P5 | MEDIUM | 18:11:32 | "Hello from P1"] -> P5
+[18:11:33] [RECV    ] DELIVRD [MSG#536 | P3->P5 | MEDIUM | 18:11:32 | "Hello from P3"] -> P5
+[18:11:33] [INFO    ] P2 processed: [MSG#534 | P4->P2 | MEDIUM | 18:11:32 | "Hello from P4"]
+[18:11:33] [SENT    ] QUEUED  [MSG#537 | P5->P1 | MEDIUM | 18:11:33 | "Hello from P5"]
+[18:11:33] [RECV    ] DELIVRD [MSG#537 | P5->P1 | MEDIUM | 18:11:33 | "Hello from P5"] -> P1
+[18:11:33] [INFO    ] P1 processed: [MSG#537 | P5->P1 | MEDIUM | 18:11:33 | "Hello from P5"]
+[18:11:33] [INFO    ] P4 processed: [MSG#513 | P5->P4 | MEDIUM | 18:11:28 | "Hello from P5"]
+[18:11:33] [INFO    ] P3 processed: [MSG#533 | P2->P3 | HIGH | 18:11:32 | "Hello from P2"]
+[18:11:33] [INFO    ] P5 processed: [MSG#535 | P1->P5 | MEDIUM | 18:11:32 | "Hello from P1"]
+[18:11:33] [SENT    ] QUEUED  [MSG#538 | P2->P5 | MEDIUM | 18:11:33 | "Hello from P2"]
+[18:11:33] [RECV    ] DELIVRD [MSG#538 | P2->P5 | MEDIUM | 18:11:33 | "Hello from P2"] -> P5
+[18:11:33] [SENT    ] QUEUED  [MSG#539 | P1->P5 | MEDIUM | 18:11:33 | "Hello from P1"]
+[18:11:33] [RECV    ] DELIVRD [MSG#539 | P1->P5 | MEDIUM | 18:11:33 | "Hello from P1"] -> P5
+[18:11:34] [BLOCKED ] P2 is blocking on receive...
+[18:11:34] [SENT    ] QUEUED  [MSG#540 | P3->P2 | MEDIUM | 18:11:34 | "Hello from P3"]
+[18:11:34] [RECV    ] DELIVRD [MSG#540 | P3->P2 | MEDIUM | 18:11:34 | "Hello from P3"] -> P2
+[18:11:34] [SENT    ] QUEUED  [MSG#541 | P5->P2 | HIGH | 18:11:34 | "Hello from P5"]
+[18:11:34] [SENT    ] QUEUED  [MSG#542 | P4->P5 | MEDIUM | 18:11:34 | "Hello from P4"]
+[18:11:34] [RECV    ] DELIVRD [MSG#541 | P5->P2 | HIGH | 18:11:34 | "Hello from P5"] -> P2
+[18:11:34] [RECV    ] DELIVRD [MSG#542 | P4->P5 | MEDIUM | 18:11:34 | "Hello from P4"] -> P5
+[18:11:34] [UNBLOCKD] P2 unblocked.
+[18:11:34] [INFO    ] P2 processed: [MSG#541 | P5->P2 | HIGH | 18:11:34 | "Hello from P5"]
+[18:11:34] [INFO    ] P5 processed: [MSG#536 | P3->P5 | MEDIUM | 18:11:32 | "Hello from P3"]
+[18:11:34] [INFO    ] P1 processed: [MSG#476 | P5->P1 | LOW | 18:11:20 | "Hello from P5"]
+[18:11:34] [INFO    ] P3 processed: [MSG#532 | P1->P3 | MEDIUM | 18:11:32 | "Hello from P1"]
+[18:11:34] [INFO    ] P4 processed: [MSG#523 | P3->P4 | MEDIUM | 18:11:30 | "Hello from P3"]
+[18:11:34] [SENT    ] QUEUED  [MSG#543 | P2->P1 | LOW | 18:11:34 | "Hello from P2"]
+[18:11:34] [RECV    ] DELIVRD [MSG#543 | P2->P1 | LOW | 18:11:34 | "Hello from P2"] -> P1
+[18:11:34] [SENT    ] QUEUED  [MSG#544 | P1->P4 | HIGH | 18:11:34 | "Hello from P1"]
+[18:11:34] [RECV    ] DELIVRD [MSG#544 | P1->P4 | HIGH | 18:11:34 | "Hello from P1"] -> P4
+[18:11:34] [SENT    ] QUEUED  [MSG#545 | P3->P1 | LOW | 18:11:34 | "Hello from P3"]
+[18:11:34] [RECV    ] DELIVRD [MSG#545 | P3->P1 | LOW | 18:11:34 | "Hello from P3"] -> P1
+[18:11:35] [SENT    ] QUEUED  [MSG#546 | P4->P3 | HIGH | 18:11:35 | "Hello from P4"]
+[18:11:35] [RECV    ] DELIVRD [MSG#546 | P4->P3 | HIGH | 18:11:35 | "Hello from P4"] -> P3
+[18:11:35] [SENT    ] QUEUED  [MSG#547 | P5->P3 | LOW | 18:11:35 | "Hello from P5"]
+[18:11:35] [RECV    ] DELIVRD [MSG#547 | P5->P3 | LOW | 18:11:35 | "Hello from P5"] -> P3
+[18:11:35] [INFO    ] P2 processed: [MSG#540 | P3->P2 | MEDIUM | 18:11:34 | "Hello from P3"]
+[18:11:35] [INFO    ] P1 processed: [MSG#531 | P5->P1 | LOW | 18:11:32 | "Hello from P5"]
+[18:11:35] [INFO    ] P3 processed: [MSG#546 | P4->P3 | HIGH | 18:11:35 | "Hello from P4"]
+[18:11:35] [INFO    ] P5 processed: [MSG#542 | P4->P5 | MEDIUM | 18:11:34 | "Hello from P4"]
+[18:11:35] [INFO    ] P4 processed: [MSG#544 | P1->P4 | HIGH | 18:11:34 | "Hello from P1"]
+[18:11:35] [SENT    ] QUEUED  [MSG#548 | P2->P3 | MEDIUM | 18:11:35 | "Hello from P2"]
+[18:11:35] [RECV    ] DELIVRD [MSG#548 | P2->P3 | MEDIUM | 18:11:35 | "Hello from P2"] -> P3
+[18:11:35] [SENT    ] QUEUED  [MSG#549 | P1->P4 | HIGH | 18:11:35 | "Hello from P1"]
+[18:11:35] [SENT    ] QUEUED  [MSG#550 | P3->P1 | LOW | 18:11:35 | "Hello from P3"]
+[18:11:35] [RECV    ] DELIVRD [MSG#549 | P1->P4 | HIGH | 18:11:35 | "Hello from P1"] -> P4
+[18:11:35] [RECV    ] DELIVRD [MSG#550 | P3->P1 | LOW | 18:11:35 | "Hello from P3"] -> P1
+[18:11:36] [SENT    ] QUEUED  [MSG#551 | P4->P3 | HIGH | 18:11:36 | "Hello from P4"]
+[18:11:36] [INFO    ] P1 processed: [MSG#550 | P3->P1 | LOW | 18:11:35 | "Hello from P3"]
+[18:11:36] [RECV    ] DELIVRD [MSG#551 | P4->P3 | HIGH | 18:11:36 | "Hello from P4"] -> P3
+[18:11:36] [INFO    ] P3 processed: [MSG#551 | P4->P3 | HIGH | 18:11:36 | "Hello from P4"]
+[18:11:36] [SENT    ] QUEUED  [MSG#552 | P5->P3 | LOW | 18:11:36 | "Hello from P5"]
+[18:11:36] [RECV    ] DELIVRD [MSG#552 | P5->P3 | LOW | 18:11:36 | "Hello from P5"] -> P3
+[18:11:36] [INFO    ] P4 processed: [MSG#549 | P1->P4 | HIGH | 18:11:35 | "Hello from P1"]
+[18:11:36] [BLOCKED ] P2 is blocking on receive...
+[18:11:36] [SENT    ] QUEUED  [MSG#553 | P3->P2 | MEDIUM | 18:11:36 | "Hello from P3"]
+[18:11:36] [RECV    ] DELIVRD [MSG#553 | P3->P2 | MEDIUM | 18:11:36 | "Hello from P3"] -> P2
+[18:11:36] [UNBLOCKD] P2 unblocked.
+[18:11:36] [INFO    ] P2 processed: [MSG#553 | P3->P2 | MEDIUM | 18:11:36 | "Hello from P3"]
+[18:11:37] [SENT    ] QUEUED  [MSG#554 | P4->P2 | HIGH | 18:11:37 | "Hello from P4"]
+[18:11:37] [SENT    ] QUEUED  [MSG#555 | P1->P5 | MEDIUM | 18:11:37 | "Hello from P1"]
+[18:11:37] [RECV    ] DELIVRD [MSG#554 | P4->P2 | HIGH | 18:11:37 | "Hello from P4"] -> P2
+[18:11:37] [RECV    ] DELIVRD [MSG#555 | P1->P5 | MEDIUM | 18:11:37 | "Hello from P1"] -> P5
+[18:11:37] [INFO    ] P4 processed: [MSG#524 | P2->P4 | MEDIUM | 18:11:30 | "Hello from P2"]
+[18:11:37] [INFO    ] P5 processed: [MSG#555 | P1->P5 | MEDIUM | 18:11:37 | "Hello from P1"]
+[18:11:37] [SENT    ] QUEUED  [MSG#556 | P2->P1 | LOW | 18:11:37 | "Hello from P2"]
+[18:11:37] [RECV    ] DELIVRD [MSG#556 | P2->P1 | LOW | 18:11:37 | "Hello from P2"] -> P1
+[18:11:37] [INFO    ] P1 processed: [MSG#464 | P3->P1 | LOW | 18:11:18 | "Hello from P3"]
+[18:11:37] [INFO    ] P3 processed: [MSG#548 | P2->P3 | MEDIUM | 18:11:35 | "Hello from P2"]
+[18:11:37] [SENT    ] QUEUED  [MSG#557 | P1->P3 | MEDIUM | 18:11:37 | "Hello from P1"]
+[18:11:37] [INFO    ] P2 processed: [MSG#554 | P4->P2 | HIGH | 18:11:37 | "Hello from P4"]
+[18:11:37] [RECV    ] DELIVRD [MSG#557 | P1->P3 | MEDIUM | 18:11:37 | "Hello from P1"] -> P3
+[18:11:37] [SENT    ] QUEUED  [MSG#558 | P5->P3 | HIGH | 18:11:37 | "Hello from P5"]
+[18:11:37] [SENT    ] QUEUED  [MSG#559 | P4->P1 | HIGH | 18:11:37 | "Hello from P4"]
+[18:11:38] [RECV    ] DELIVRD [MSG#558 | P5->P3 | HIGH | 18:11:37 | "Hello from P5"] -> P3
+[18:11:38] [RECV    ] DELIVRD [MSG#559 | P4->P1 | HIGH | 18:11:37 | "Hello from P4"] -> P1
+[18:11:38] [INFO    ] P4 processed: [MSG#474 | P2->P4 | LOW | 18:11:20 | "Hello from P2"]
+[18:11:38] [INFO    ] P1 processed: [MSG#559 | P4->P1 | HIGH | 18:11:37 | "Hello from P4"]
+[18:11:38] [SENT    ] QUEUED  [MSG#560 | P3->P4 | LOW | 18:11:38 | "Hello from P3"]
+[18:11:38] [RECV    ] DELIVRD [MSG#560 | P3->P4 | LOW | 18:11:38 | "Hello from P3"] -> P4
+[18:11:38] [INFO    ] P5 processed: [MSG#538 | P2->P5 | MEDIUM | 18:11:33 | "Hello from P2"]
+[18:11:38] [DROPPED ] DROPPED [MSG#561 | P2->P4 | LOW | 18:11:38 | "Hello from P2"]
+[18:11:38] [SENT    ] QUEUED  [MSG#562 | P4->P5 | LOW | 18:11:38 | "Hello from P4"]
+[18:11:38] [RECV    ] DELIVRD [MSG#562 | P4->P5 | LOW | 18:11:38 | "Hello from P4"] -> P5
+[18:11:38] [INFO    ] P3 processed: [MSG#558 | P5->P3 | HIGH | 18:11:37 | "Hello from P5"]
+[18:11:38] [BLOCKED ] P2 is blocking on receive...
+[18:11:38] [SENT    ] QUEUED  [MSG#563 | P1->P2 | MEDIUM | 18:11:38 | "Hello from P1"]
+[18:11:38] [RECV    ] DELIVRD [MSG#563 | P1->P2 | MEDIUM | 18:11:38 | "Hello from P1"] -> P2
+[18:11:39] [SENT    ] QUEUED  [MSG#564 | P5->P3 | LOW | 18:11:39 | "Hello from P5"]
+[18:11:39] [RECV    ] DELIVRD [MSG#564 | P5->P3 | LOW | 18:11:39 | "Hello from P5"] -> P3
+[18:11:39] [UNBLOCKD] P2 unblocked.
+[18:11:39] [INFO    ] P2 processed: [MSG#563 | P1->P2 | MEDIUM | 18:11:38 | "Hello from P1"]
+[18:11:39] [INFO    ] P4 processed: [MSG#510 | P3->P4 | LOW | 18:11:27 | "Hello from P3"]
+[18:11:39] [SENT    ] QUEUED  [MSG#565 | P3->P4 | LOW | 18:11:39 | "Hello from P3"]
+[18:11:39] [RECV    ] DELIVRD [MSG#565 | P3->P4 | LOW | 18:11:39 | "Hello from P3"] -> P4
+[18:11:39] [INFO    ] P1 processed: [MSG#545 | P3->P1 | LOW | 18:11:34 | "Hello from P3"]
+[18:11:39] [SENT    ] QUEUED  [MSG#566 | P2->P5 | LOW | 18:11:39 | "Hello from P2"]
+[18:11:39] [RECV    ] DELIVRD [MSG#566 | P2->P5 | LOW | 18:11:39 | "Hello from P2"] -> P5
+[18:11:39] [SENT    ] QUEUED  [MSG#567 | P4->P2 | LOW | 18:11:39 | "Hello from P4"]
+[18:11:39] [RECV    ] DELIVRD [MSG#567 | P4->P2 | LOW | 18:11:39 | "Hello from P4"] -> P2
+[18:11:39] [INFO    ] P5 processed: [MSG#539 | P1->P5 | MEDIUM | 18:11:33 | "Hello from P1"]
+[18:11:39] [SENT    ] QUEUED  [MSG#568 | P1->P4 | LOW | 18:11:39 | "Hello from P1"]
+[18:11:39] [RECV    ] DELIVRD [MSG#568 | P1->P4 | LOW | 18:11:39 | "Hello from P1"] -> P4
+[18:11:40] [INFO    ] P3 processed: [MSG#557 | P1->P3 | MEDIUM | 18:11:37 | "Hello from P1"]
+[18:11:40] [INFO    ] P4 processed: [MSG#467 | P2->P4 | LOW | 18:11:18 | "Hello from P2"]
+[18:11:40] [INFO    ] P2 processed: [MSG#567 | P4->P2 | LOW | 18:11:39 | "Hello from P4"]
+[18:11:40] [SENT    ] QUEUED  [MSG#569 | P5->P1 | LOW | 18:11:40 | "Hello from P5"]
+[18:11:40] [SENT    ] QUEUED  [MSG#570 | P3->P5 | LOW | 18:11:40 | "Hello from P3"]
+[18:11:40] [RECV    ] DELIVRD [MSG#569 | P5->P1 | LOW | 18:11:40 | "Hello from P5"] -> P1
+[18:11:40] [RECV    ] DELIVRD [MSG#570 | P3->P5 | LOW | 18:11:40 | "Hello from P3"] -> P5
+[18:11:40] [INFO    ] P1 processed: [MSG#556 | P2->P1 | LOW | 18:11:37 | "Hello from P2"]
+[18:11:40] [INFO    ] P5 processed: [MSG#570 | P3->P5 | LOW | 18:11:40 | "Hello from P3"]
+[18:11:40] [SENT    ] QUEUED  [MSG#571 | P4->P1 | HIGH | 18:11:40 | "Hello from P4"]
+[18:11:40] [RECV    ] DELIVRD [MSG#571 | P4->P1 | HIGH | 18:11:40 | "Hello from P4"] -> P1
+[18:11:40] [SENT    ] QUEUED  [MSG#572 | P1->P3 | MEDIUM | 18:11:40 | "Hello from P1"]
+[18:11:40] [SENT    ] QUEUED  [MSG#573 | P2->P1 | LOW | 18:11:40 | "Hello from P2"]
+[18:11:40] [RECV    ] DELIVRD [MSG#572 | P1->P3 | MEDIUM | 18:11:40 | "Hello from P1"] -> P3
+[18:11:40] [RECV    ] DELIVRD [MSG#573 | P2->P1 | LOW | 18:11:40 | "Hello from P2"] -> P1
+[18:11:40] [INFO    ] === Simulation Ending ===
+[18:11:40] [INFO    ] P3 processed: [MSG#572 | P1->P3 | MEDIUM | 18:11:40 | "Hello from P1"]
+[18:11:41] [INFO    ] P1 processed: [MSG#571 | P4->P1 | HIGH | 18:11:40 | "Hello from P4"]
+[18:11:41] [INFO    ] P4 processed: [MSG#457 | P2->P4 | LOW | 18:11:16 | "Hello from P2"]
+[18:11:41] [BLOCKED ] P2 is blocking on receive...
+[18:11:41] [UNBLOCKD] P2 unblocked.
